@@ -4,1005 +4,149 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>English File Intermediate · Units 5A & 5B</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --ink: #0f1419;
-    --ink-soft: #3a4a5c;
-    --ink-mute: #6b7785;
-    --paper: #f7f4ec;
-    --paper-warm: #efeadb;
-    --line: #d8d1bf;
-    --accent: #1a4d8f;
-    --accent-soft: #e3edf8;
-    --correct: #2d6a4f;
-    --correct-soft: #d8ebe0;
-    --wrong: #b8341a;
-    --wrong-soft: #f5d9d2;
-    --hint: #7a5c00;
-    --hint-soft: #f5ecc8;
-  }
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  html, body { background: var(--paper); color: var(--ink); font-family: 'Inter', -apple-system, sans-serif; -webkit-font-smoothing: antialiased; line-height: 1.55; }
-  body { min-height: 100vh; padding: 0; }
-  .container { max-width: 780px; margin: 0 auto; padding: 32px 20px 80px; }
-
-  header { text-align: center; margin-bottom: 36px; padding-bottom: 28px; border-bottom: 1px solid var(--line); }
-  .eyebrow { font-family: 'Inter'; font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); font-weight: 600; margin-bottom: 10px; }
-  h1 { font-family: 'Fraunces', Georgia, serif; font-weight: 500; font-size: 38px; line-height: 1.1; letter-spacing: -0.02em; color: var(--ink); margin-bottom: 8px; }
-  .tagline { color: var(--ink-mute); font-size: 14px; }
-
-  .tabs { display: flex; gap: 4px; margin-bottom: 28px; background: var(--paper-warm); padding: 5px; border-radius: 12px; border: 1px solid var(--line); }
-  .tab-btn { flex: 1; padding: 10px 14px; border: none; background: transparent; cursor: pointer; font-family: 'Inter'; font-size: 13px; font-weight: 500; color: var(--ink-mute); border-radius: 8px; transition: all 0.2s; letter-spacing: 0.01em; }
-  .tab-btn:hover { color: var(--ink); }
-  .tab-btn.active { background: var(--ink); color: var(--paper); }
-
-  .panel { display: none; }
-  .panel.active { display: block; animation: fadeIn 0.3s ease; }
-  @keyframes fadeIn { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: translateY(0); } }
-
-  .unit-card { background: white; border: 1px solid var(--line); border-radius: 14px; padding: 24px; margin-bottom: 14px; cursor: pointer; transition: all 0.2s; }
-  .unit-card:hover { border-color: var(--accent); transform: translateY(-1px); box-shadow: 0 6px 18px rgba(26,77,143,0.08); }
-  .unit-card-head { display: flex; align-items: baseline; gap: 12px; margin-bottom: 8px; }
-  .unit-num { font-family: 'Fraunces'; font-size: 32px; font-weight: 600; color: var(--accent); letter-spacing: -0.02em; }
-  .unit-title { font-family: 'Fraunces'; font-size: 22px; font-weight: 500; color: var(--ink); }
-  .unit-desc { color: var(--ink-soft); font-size: 14px; margin-bottom: 12px; }
-  .unit-meta { display: flex; gap: 16px; font-size: 12px; color: var(--ink-mute); flex-wrap: wrap; }
-
-  .theory-section { background: white; border: 1px solid var(--line); border-radius: 14px; padding: 28px; margin-bottom: 18px; }
-  .theory-section h2 { font-family: 'Fraunces'; font-size: 22px; font-weight: 500; margin-bottom: 14px; color: var(--ink); letter-spacing: -0.01em; }
-  .theory-section h3 { font-family: 'Inter'; font-size: 14px; font-weight: 600; margin-top: 18px; margin-bottom: 8px; color: var(--accent); text-transform: uppercase; letter-spacing: 0.05em; }
-  .theory-section p { color: var(--ink-soft); margin-bottom: 10px; font-size: 14.5px; }
-  .theory-section ul { margin-left: 18px; margin-bottom: 12px; }
-  .theory-section li { color: var(--ink-soft); margin-bottom: 6px; font-size: 14.5px; }
-  .ex-block { background: var(--paper-warm); border-left: 3px solid var(--accent); padding: 12px 16px; margin: 12px 0; border-radius: 0 8px 8px 0; font-family: 'Fraunces'; font-size: 15px; line-height: 1.7; color: var(--ink); font-style: italic; }
-  .ex-block b { font-style: normal; font-weight: 600; color: var(--accent); }
-  .warn-block { background: var(--hint-soft); border-left: 3px solid var(--hint); padding: 12px 16px; margin: 12px 0; border-radius: 0 8px 8px 0; font-size: 14px; color: var(--ink); }
-  .warn-block b { color: var(--hint); }
-
-  .progress-bar { height: 6px; background: var(--paper-warm); border-radius: 4px; overflow: hidden; margin-bottom: 18px; border: 1px solid var(--line); }
-  .progress-fill { height: 100%; background: linear-gradient(90deg, var(--accent), #2d6a9f); transition: width 0.4s ease; }
-  .ex-meta { display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; font-size: 12.5px; color: var(--ink-mute); }
-  .ex-meta b { color: var(--correct); font-weight: 600; }
-
-  .question-card { background: white; border: 1px solid var(--line); border-radius: 14px; padding: 28px; margin-bottom: 18px; }
-  .q-type { display: inline-block; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); font-weight: 600; background: var(--accent-soft); padding: 4px 10px; border-radius: 4px; margin-bottom: 14px; }
-  .q-instruction { font-size: 13px; color: var(--ink-mute); margin-bottom: 12px; font-style: italic; }
-  .q-text { font-family: 'Fraunces'; font-size: 19px; line-height: 1.55; color: var(--ink); margin-bottom: 22px; font-weight: 400; }
-
-  .options { display: flex; flex-direction: column; gap: 8px; }
-  .option { display: block; padding: 14px 18px; background: white; border: 1.5px solid var(--line); border-radius: 10px; cursor: pointer; transition: all 0.15s; font-size: 15px; color: var(--ink); text-align: left; font-family: 'Inter'; width: 100%; }
-  .option:hover:not(:disabled) { border-color: var(--accent); background: var(--accent-soft); }
-  .option:disabled { cursor: default; }
-  .option.correct { border-color: var(--correct); background: var(--correct-soft); color: var(--correct); font-weight: 600; }
-  .option.wrong { border-color: var(--wrong); background: var(--wrong-soft); color: var(--wrong); font-weight: 600; }
-  .option.dim { opacity: 0.5; }
-
-  .gap-input-wrap { display: flex; flex-direction: column; gap: 12px; }
-  .gap-input { padding: 14px 18px; border: 1.5px solid var(--line); border-radius: 10px; font-family: 'Fraunces'; font-size: 17px; background: white; color: var(--ink); outline: none; transition: border-color 0.15s; width: 100%; }
-  .gap-input:focus { border-color: var(--accent); }
-  .gap-input.correct { border-color: var(--correct); background: var(--correct-soft); color: var(--correct); font-weight: 500; }
-  .gap-input.wrong { border-color: var(--wrong); background: var(--wrong-soft); color: var(--wrong); font-weight: 500; }
-  .gap-hint { font-size: 12.5px; color: var(--ink-mute); font-style: italic; }
-  .check-btn { padding: 12px 22px; background: var(--ink); color: var(--paper); border: none; border-radius: 10px; cursor: pointer; font-family: 'Inter'; font-weight: 500; font-size: 14px; align-self: flex-start; transition: all 0.15s; }
-  .check-btn:hover { background: var(--accent); }
-  .check-btn:disabled { opacity: 0.5; cursor: default; }
-
-  .rw-buttons { display: flex; gap: 10px; }
-  .rw-btn { flex: 1; padding: 14px; border: 1.5px solid var(--line); background: white; border-radius: 10px; cursor: pointer; font-family: 'Inter'; font-weight: 500; font-size: 15px; transition: all 0.15s; }
-  .rw-btn:hover:not(:disabled) { border-color: var(--accent); }
-  .rw-btn.selected.correct { border-color: var(--correct); background: var(--correct-soft); color: var(--correct); }
-  .rw-btn.selected.wrong { border-color: var(--wrong); background: var(--wrong-soft); color: var(--wrong); }
-  .correction-input { margin-top: 12px; padding: 12px 16px; border: 1.5px solid var(--line); border-radius: 10px; font-family: 'Fraunces'; font-size: 16px; background: white; width: 100%; outline: none; }
-  .correction-input:focus { border-color: var(--accent); }
-  .correction-input.correct { border-color: var(--correct); background: var(--correct-soft); }
-  .correction-input.wrong { border-color: var(--wrong); background: var(--wrong-soft); }
-
-  .feedback { margin-top: 20px; padding: 18px 20px; border-radius: 10px; animation: slideIn 0.3s ease; }
-  @keyframes slideIn { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: translateY(0); } }
-  .feedback.correct-fb { background: var(--correct-soft); border-left: 4px solid var(--correct); }
-  .feedback.wrong-fb { background: var(--wrong-soft); border-left: 4px solid var(--wrong); }
-  .fb-header { display: flex; align-items: center; gap: 8px; font-weight: 600; font-size: 14px; margin-bottom: 8px; }
-  .fb-header.correct-h { color: var(--correct); }
-  .fb-header.wrong-h { color: var(--wrong); }
-  .fb-body { color: var(--ink); font-size: 14.5px; line-height: 1.65; }
-  .fb-body b { color: var(--ink); font-weight: 600; }
-  .fb-body em { font-family: 'Fraunces'; font-style: italic; color: var(--accent); font-weight: 500; }
-  .fb-body .reveal { margin-top: 10px; padding: 10px 14px; background: rgba(255,255,255,0.6); border-radius: 6px; font-size: 13.5px; }
-  .fb-body .reveal b { color: var(--accent); }
-
-  .nav-buttons { display: flex; gap: 10px; margin-top: 20px; flex-wrap: wrap; }
-  .nav-btn { padding: 12px 22px; background: var(--ink); color: var(--paper); border: none; border-radius: 10px; cursor: pointer; font-family: 'Inter'; font-weight: 500; font-size: 14px; transition: all 0.15s; }
-  .nav-btn:hover { background: var(--accent); }
-  .nav-btn.secondary { background: transparent; color: var(--ink); border: 1.5px solid var(--line); }
-  .nav-btn.secondary:hover { border-color: var(--accent); color: var(--accent); background: transparent; }
-
-  .results-card { background: white; border: 1px solid var(--line); border-radius: 14px; padding: 36px; text-align: center; }
-  .results-card h2 { font-family: 'Fraunces'; font-size: 28px; font-weight: 500; margin-bottom: 8px; }
-  .score-big { font-family: 'Fraunces'; font-size: 72px; font-weight: 500; color: var(--accent); line-height: 1; margin: 18px 0; letter-spacing: -0.04em; }
-  .score-pct { font-size: 16px; color: var(--ink-mute); margin-bottom: 24px; }
-  .results-msg { font-size: 15px; color: var(--ink-soft); margin-bottom: 28px; max-width: 460px; margin-left: auto; margin-right: auto; line-height: 1.6; }
-  .review-list { margin: 24px 0; text-align: left; }
-  .review-item { padding: 12px 14px; border-radius: 8px; margin-bottom: 6px; font-size: 13.5px; display: flex; gap: 10px; align-items: flex-start; }
-  .review-item.ok { background: var(--correct-soft); }
-  .review-item.bad { background: var(--wrong-soft); }
-  .review-icon { font-weight: 700; min-width: 18px; }
-  .review-item.ok .review-icon { color: var(--correct); }
-  .review-item.bad .review-icon { color: var(--wrong); }
-
-  footer { text-align: center; padding-top: 30px; margin-top: 30px; border-top: 1px solid var(--line); color: var(--ink-mute); font-size: 12px; }
-  footer b { color: var(--ink-soft); font-weight: 500; }
-
-  @media (max-width: 600px) {
-    .container { padding: 20px 14px 60px; }
-    h1 { font-size: 28px; }
-    .q-text { font-size: 17px; }
-    .score-big { font-size: 56px; }
-    .theory-section, .question-card { padding: 20px; }
-    .unit-card { padding: 18px; }
-    .rw-buttons { flex-direction: column; }
-  }
+:root{--ink:#0f1419;--ink-soft:#3a4a5c;--ink-mute:#6b7785;--paper:#f7f4ec;--paper-warm:#efeadb;--line:#d8d1bf;--accent:#1a4d8f;--accent-soft:#e3edf8;--correct:#2d6a4f;--correct-soft:#d8ebe0;--wrong:#b8341a;--wrong-soft:#f5d9d2;--hint:#7a5c00;--hint-soft:#f5ecc8}*{box-sizing:border-box;margin:0;padding:0}html,body{background:var(--paper);color:var(--ink);font-family:'Inter',-apple-system,sans-serif;-webkit-font-smoothing:antialiased;line-height:1.55}body{min-height:100vh;padding:0}.container{max-width:780px;margin:0 auto;padding:32px 20px 80px}header{text-align:center;margin-bottom:36px;padding-bottom:28px;border-bottom:1px solid var(--line)}.eyebrow{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:10px}h1{font-family:'Fraunces',Georgia,serif;font-weight:500;font-size:38px;line-height:1.1;letter-spacing:-.02em;margin-bottom:8px}.tagline{color:var(--ink-mute);font-size:14px}.tabs{display:flex;gap:4px;margin-bottom:28px;background:var(--paper-warm);padding:5px;border-radius:12px;border:1px solid var(--line)}.tab-btn{flex:1;padding:10px 14px;border:none;background:transparent;cursor:pointer;font-size:13px;font-weight:500;color:var(--ink-mute);border-radius:8px;transition:all .2s}.tab-btn:hover{color:var(--ink)}.tab-btn.active{background:var(--ink);color:var(--paper)}.panel{display:none}.panel.active{display:block;animation:fadeIn .3s ease}@keyframes fadeIn{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:translateY(0)}}.unit-card{background:white;border:1px solid var(--line);border-radius:14px;padding:24px;margin-bottom:14px;cursor:pointer;transition:all .2s}.unit-card:hover{border-color:var(--accent);transform:translateY(-1px);box-shadow:0 6px 18px rgba(26,77,143,.08)}.unit-card-head{display:flex;align-items:baseline;gap:12px;margin-bottom:8px}.unit-num{font-family:'Fraunces';font-size:32px;font-weight:600;color:var(--accent);letter-spacing:-.02em}.unit-title{font-family:'Fraunces';font-size:22px;font-weight:500}.unit-desc{color:var(--ink-soft);font-size:14px;margin-bottom:12px}.unit-meta{display:flex;gap:16px;font-size:12px;color:var(--ink-mute);flex-wrap:wrap}.theory-section{background:white;border:1px solid var(--line);border-radius:14px;padding:28px;margin-bottom:18px}.theory-section h2{font-family:'Fraunces';font-size:22px;font-weight:500;margin-bottom:14px;letter-spacing:-.01em}.theory-section h3{font-size:14px;font-weight:600;margin-top:18px;margin-bottom:8px;color:var(--accent);text-transform:uppercase;letter-spacing:.05em}.theory-section p{color:var(--ink-soft);margin-bottom:10px;font-size:14.5px}.theory-section ul{margin-left:18px;margin-bottom:12px}.theory-section li{color:var(--ink-soft);margin-bottom:6px;font-size:14.5px}.ex-block{background:var(--paper-warm);border-left:3px solid var(--accent);padding:12px 16px;margin:12px 0;border-radius:0 8px 8px 0;font-family:'Fraunces';font-size:15px;line-height:1.7;font-style:italic}.ex-block b{font-style:normal;font-weight:600;color:var(--accent)}.warn-block{background:var(--hint-soft);border-left:3px solid var(--hint);padding:12px 16px;margin:12px 0;border-radius:0 8px 8px 0;font-size:14px}.warn-block b{color:var(--hint)}.progress-bar{height:6px;background:var(--paper-warm);border-radius:4px;overflow:hidden;margin-bottom:18px;border:1px solid var(--line)}.progress-fill{height:100%;background:linear-gradient(90deg,var(--accent),#2d6a9f);transition:width .4s ease}.ex-meta{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;font-size:12.5px;color:var(--ink-mute)}.ex-meta b{color:var(--correct);font-weight:600}.question-card{background:white;border:1px solid var(--line);border-radius:14px;padding:28px;margin-bottom:18px}.q-type{display:inline-block;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);font-weight:600;background:var(--accent-soft);padding:4px 10px;border-radius:4px;margin-bottom:14px}.q-instruction{font-size:13px;color:var(--ink-mute);margin-bottom:12px;font-style:italic}.q-text{font-family:'Fraunces';font-size:19px;line-height:1.55;margin-bottom:22px;font-weight:400}.options{display:flex;flex-direction:column;gap:8px}.option{display:block;padding:14px 18px;background:white;border:1.5px solid var(--line);border-radius:10px;cursor:pointer;transition:all .15s;font-size:15px;text-align:left;width:100%}.option:hover:not(:disabled){border-color:var(--accent);background:var(--accent-soft)}.option:disabled{cursor:default}.option.correct{border-color:var(--correct);background:var(--correct-soft);color:var(--correct);font-weight:600}.option.wrong{border-color:var(--wrong);background:var(--wrong-soft);color:var(--wrong);font-weight:600}.option.dim{opacity:.5}.gap-input-wrap{display:flex;flex-direction:column;gap:12px}.gap-input{padding:14px 18px;border:1.5px solid var(--line);border-radius:10px;font-family:'Fraunces';font-size:17px;background:white;outline:none;transition:border-color .15s;width:100%}.gap-input:focus{border-color:var(--accent)}.gap-input.correct{border-color:var(--correct);background:var(--correct-soft);color:var(--correct);font-weight:500}.gap-input.wrong{border-color:var(--wrong);background:var(--wrong-soft);color:var(--wrong);font-weight:500}.gap-hint{font-size:12.5px;color:var(--ink-mute);font-style:italic}.check-btn{padding:12px 22px;background:var(--ink);color:var(--paper);border:none;border-radius:10px;cursor:pointer;font-weight:500;font-size:14px;align-self:flex-start;transition:all .15s}.check-btn:hover{background:var(--accent)}.check-btn:disabled{opacity:.5;cursor:default}.rw-buttons{display:flex;gap:10px}.rw-btn{flex:1;padding:14px;border:1.5px solid var(--line);background:white;border-radius:10px;cursor:pointer;font-weight:500;font-size:15px;transition:all .15s}.rw-btn:hover:not(:disabled){border-color:var(--accent)}.rw-btn.selected.correct{border-color:var(--correct);background:var(--correct-soft);color:var(--correct)}.rw-btn.selected.wrong{border-color:var(--wrong);background:var(--wrong-soft);color:var(--wrong)}.correction-input{margin-top:12px;padding:12px 16px;border:1.5px solid var(--line);border-radius:10px;font-family:'Fraunces';font-size:16px;background:white;width:100%;outline:none}.correction-input:focus{border-color:var(--accent)}.correction-input.correct{border-color:var(--correct);background:var(--correct-soft)}.correction-input.wrong{border-color:var(--wrong);background:var(--wrong-soft)}.feedback{margin-top:20px;padding:18px 20px;border-radius:10px;animation:slideIn .3s ease}@keyframes slideIn{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:translateY(0)}}.feedback.correct-fb{background:var(--correct-soft);border-left:4px solid var(--correct)}.feedback.wrong-fb{background:var(--wrong-soft);border-left:4px solid var(--wrong)}.fb-header{display:flex;align-items:center;gap:8px;font-weight:600;font-size:14px;margin-bottom:8px}.fb-header.correct-h{color:var(--correct)}.fb-header.wrong-h{color:var(--wrong)}.fb-body{font-size:14.5px;line-height:1.65}.fb-body b{font-weight:600}.fb-body em{font-family:'Fraunces';font-style:italic;color:var(--accent);font-weight:500}.fb-body .reveal{margin-top:10px;padding:10px 14px;background:rgba(255,255,255,.6);border-radius:6px;font-size:13.5px}.fb-body .reveal b{color:var(--accent)}.nav-buttons{display:flex;gap:10px;margin-top:20px;flex-wrap:wrap}.nav-btn{padding:12px 22px;background:var(--ink);color:var(--paper);border:none;border-radius:10px;cursor:pointer;font-weight:500;font-size:14px;transition:all .15s}.nav-btn:hover{background:var(--accent)}.nav-btn.secondary{background:transparent;color:var(--ink);border:1.5px solid var(--line)}.nav-btn.secondary:hover{border-color:var(--accent);color:var(--accent);background:transparent}.results-card{background:white;border:1px solid var(--line);border-radius:14px;padding:36px;text-align:center}.results-card h2{font-family:'Fraunces';font-size:28px;font-weight:500;margin-bottom:8px}.score-big{font-family:'Fraunces';font-size:72px;font-weight:500;color:var(--accent);line-height:1;margin:18px 0;letter-spacing:-.04em}.score-pct{font-size:16px;color:var(--ink-mute);margin-bottom:24px}.results-msg{font-size:15px;color:var(--ink-soft);margin-bottom:28px;max-width:460px;margin-left:auto;margin-right:auto;line-height:1.6}.review-list{margin:24px 0;text-align:left}.review-item{padding:12px 14px;border-radius:8px;margin-bottom:6px;font-size:13.5px;display:flex;gap:10px;align-items:flex-start}.review-item.ok{background:var(--correct-soft)}.review-item.bad{background:var(--wrong-soft)}.review-icon{font-weight:700;min-width:18px}.review-item.ok .review-icon{color:var(--correct)}.review-item.bad .review-icon{color:var(--wrong)}.timer-display{font-family:'Fraunces';font-size:20px;font-weight:600;color:var(--accent)}.timer-display.warn{color:var(--hint)}.timer-display.danger{color:var(--wrong)}.mode-selector{display:flex;gap:8px;margin-bottom:20px;flex-wrap:wrap}.mode-btn{padding:8px 14px;background:white;border:1.5px solid var(--line);border-radius:8px;cursor:pointer;font-size:13px;font-weight:500;color:var(--ink-soft);transition:all .15s}.mode-btn:hover{border-color:var(--accent);color:var(--accent)}.mode-btn.active{background:var(--accent);color:var(--paper);border-color:var(--accent)}.flashcard{background:white;border:1px solid var(--line);border-radius:14px;padding:36px;margin-bottom:18px;min-height:300px;display:flex;flex-direction:column;justify-content:center;cursor:pointer;transition:transform .3s;perspective:1000px}.flashcard.flipped{transform:rotateY(180deg)}.flashcard-front,.flashcard-back{backface-visibility:hidden}.flashcard-back{transform:rotateY(180deg)}.fc-question{font-family:'Fraunces';font-size:24px;font-weight:500;text-align:center;margin-bottom:20px;color:var(--accent)}.fc-answer{font-family:'Fraunces';font-size:20px;line-height:1.7;color:var(--ink)}.story-card{background:white;border:1px solid var(--line);border-radius:14px;padding:28px;margin-bottom:18px}.story-title{font-family:'Fraunces';font-size:24px;font-weight:500;margin-bottom:16px;color:var(--accent)}.story-text{font-family:'Fraunces';font-size:17px;line-height:1.8;color:var(--ink);margin-bottom:16px}.story-text b{color:var(--accent);font-weight:600}.story-note{background:var(--accent-soft);padding:14px 18px;border-radius:8px;font-size:14px;color:var(--ink-soft);margin-top:16px}footer{text-align:center;padding-top:30px;margin-top:30px;border-top:1px solid var(--line);color:var(--ink-mute);font-size:12px}footer b{color:var(--ink-soft);font-weight:500}@media (max-width:600px){.container{padding:20px 14px 60px}h1{font-size:28px}.q-text{font-size:17px}.score-big{font-size:56px}.theory-section,.question-card{padding:20px}.unit-card{padding:18px}.rw-buttons{flex-direction:column}.mode-selector{gap:6px}.mode-btn{font-size:12px;padding:6px 10px}}
 </style>
 </head>
 <body>
 <div class="container">
-
-  <header>
-    <div class="eyebrow">English File · Intermediate · 4th Edition</div>
-    <h1>Grammar Practice — Units 5A &amp; 5B</h1>
-    <p class="tagline">Past tenses · Past habits and states</p>
-  </header>
-
-  <div id="panel-home" class="panel active">
-    <div class="unit-card" data-unit="5A">
-      <div class="unit-card-head">
-        <span class="unit-num">5A</span>
-        <span class="unit-title">Past tenses: simple, continuous, perfect</span>
-      </div>
-      <p class="unit-desc">Domina los tres tiempos pasados, cuándo usar cada uno y cómo combinarlos para contar historias.</p>
-      <div class="unit-meta">
-        <span>📖 Teoría completa</span>
-        <span>✍️ 20 ejercicios</span>
-        <span>⏱️ ~25 min</span>
-      </div>
-    </div>
-
-    <div class="unit-card" data-unit="5B">
-      <div class="unit-card-head">
-        <span class="unit-num">5B</span>
-        <span class="unit-title">Past and present habits and states</span>
-      </div>
-      <p class="unit-desc">used to, didn't use to, usually + present simple, be used to vs get used to. Todos los matices.</p>
-      <div class="unit-meta">
-        <span>📖 Teoría completa</span>
-        <span>✍️ 20 ejercicios</span>
-        <span>⏱️ ~25 min</span>
-      </div>
-    </div>
-
-    <footer>
-      Basado en <b>English File Intermediate (4th Edition)</b> · Oxford University Press<br>
-      Hecho para el grupo de estudio 📚
-    </footer>
-  </div>
-
-  <div id="panel-study" class="panel">
-    <div class="tabs">
-      <button class="tab-btn active" data-subtab="theory">📖 Teoría</button>
-      <button class="tab-btn" data-subtab="exercises">✍️ Ejercicios</button>
-    </div>
-    <div id="subpanel-theory"></div>
-    <div id="subpanel-exercises" style="display:none;"></div>
-    <button class="nav-btn secondary" onclick="goHome()" style="margin-top: 16px;">← Volver al inicio</button>
-  </div>
-
-  <div id="panel-results" class="panel"></div>
-
+<header>
+<div class="eyebrow">English File · Intermediate · 4th Edition</div>
+<h1>Grammar Practice — Units 5A &amp; 5B</h1>
+<p class="tagline">Past tenses · Past habits and states · Modos: Normal, Examen, Flashcards, Historias</p>
+</header>
+ 
+<div id="panel-home" class="panel active">
+<div class="unit-card" data-unit="5A">
+<div class="unit-card-head">
+<span class="unit-num">5A</span>
+<span class="unit-title">Past tenses: simple, continuous, perfect</span>
 </div>
-
+<p class="unit-desc">Domina los tres tiempos pasados y cómo combinarlos. Banco de 100 ejercicios — cada sesión toma 20 al azar.</p>
+<div class="unit-meta">
+<span>📖 Teoría</span>
+<span>✍️ 100 ejercicios</span>
+<span>🃏 Flashcards</span>
+<span>📚 Historia narrativa</span>
+</div>
+</div>
+<div class="unit-card" data-unit="5B">
+<div class="unit-card-head">
+<span class="unit-num">5B</span>
+<span class="unit-title">Past and present habits and states</span>
+</div>
+<p class="unit-desc">used to, didn't use to, usually, be used to vs get used to. Banco de 100 ejercicios — 20 aleatorios por sesión.</p>
+<div class="unit-meta">
+<span>📖 Teoría</span>
+<span>✍️ 100 ejercicios</span>
+<span>🃏 Flashcards</span>
+<span>📚 Historia narrativa</span>
+</div>
+</div>
+<footer>Basado en <b>English File Intermediate (4th Edition)</b> · Oxford University Press<br>Hecho para el grupo de estudio 📚</footer>
+</div>
+ 
+<div id="panel-study" class="panel">
+<div class="tabs">
+<button class="tab-btn active" data-subtab="theory">📖 Teoría</button>
+<button class="tab-btn" data-subtab="exercises">✍️ Ejercicios</button>
+<button class="tab-btn" data-subtab="flashcards">🃏 Flashcards</button>
+<button class="tab-btn" data-subtab="story">📚 Historia</button>
+</div>
+<div id="subpanel-theory"></div>
+<div id="subpanel-exercises" style="display:none"></div>
+<div id="subpanel-flashcards" style="display:none"></div>
+<div id="subpanel-story" style="display:none"></div>
+<button class="nav-btn secondary" onclick="goHome()" style="margin-top:16px">← Volver al inicio</button>
+</div>
+ 
+<div id="panel-results" class="panel"></div>
+</div>
+ 
 <script>
-const THEORY = {
-  '5A': `
-    <div class="theory-section">
-      <h2>Past simple</h2>
-      <p>Usamos el <b>past simple</b> para acciones <b>terminadas en el pasado</b>, cuando sabemos o decimos cuándo pasaron.</p>
-      <div class="ex-block">
-        They <b>were</b> in Mexico in 2016.<br>
-        A South African <b>won</b> the race.<br>
-        The plane <b>didn't arrive</b> on time.<br>
-        What time <b>did</b> you <b>get up</b> this morning?
-      </div>
-      <p>También para <b>acciones repetidas</b> en el pasado:</p>
-      <div class="ex-block">When I <b>lived</b> in Paris, I often <b>went</b> to watch Paris St-Germain.</div>
-      <div class="warn-block"><b>Atención:</b> recordá los verbos irregulares (went, came, took, gave, etc.)</div>
-    </div>
-
-    <div class="theory-section">
-      <h2>Past continuous</h2>
-      <p>Estructura: <b>was / were + verb + -ing</b></p>
-      <div class="ex-block">
-        I <b>was driving</b> along the motorway when it started snowing.<br>
-        While I <b>was doing</b> the housework, the children <b>were playing</b> in the garden.
-      </div>
-      <h3>Cuándo se usa</h3>
-      <ul>
-        <li>Acción <b>en progreso</b> en un momento específico del pasado.</li>
-        <li>Una acción <b>interrumpida</b> por otra (con <em>when</em> o <em>as</em>): <em>I was driving when it started snowing.</em></li>
-        <li>Dos acciones <b>en paralelo</b> (con <em>while</em>): <em>While I was cooking, he was reading.</em></li>
-        <li>Para <b>ambientar</b> el comienzo de una historia o anécdota.</li>
-      </ul>
-      <div class="warn-block"><b>NUNCA</b> se usa el past continuous con verbos de <b>estado</b> (non-action verbs: <em>know, like, want, need, believe, understand, have</em> [posesión]).<br>❌ <s>We stopped at a garage because we were needing petrol.</s><br>✅ We stopped at a garage because we <b>needed</b> petrol.</div>
-    </div>
-
-    <div class="theory-section">
-      <h2>Past perfect</h2>
-      <p>Estructura: <b>had + past participle</b></p>
-      <div class="ex-block">
-        When they turned on the TV, the match <b>had</b> already <b>finished</b>.<br>
-        As soon as I shut the door, I realized that I <b>'d left</b> my keys on the table.<br>
-        We couldn't get a table because we <b>hadn't booked</b>.
-      </div>
-      <p>Lo usamos cuando estamos hablando del pasado y queremos referirnos a una <b>acción anterior</b>. Es "el pasado del pasado".</p>
-      <p>Compará:</p>
-      <div class="ex-block">
-        When John arrived, they <b>went out</b>. <span style="color:var(--ink-mute)">(= primero John llegó, después salieron juntos)</span><br>
-        When John arrived, they <b>had gone out</b>. <span style="color:var(--ink-mute)">(= ya se habían ido ANTES de que John llegara)</span>
-      </div>
-    </div>
-
-    <div class="theory-section">
-      <h2>Narrative tenses: combinándolos</h2>
-      <div class="ex-block">
-        It <b>was</b> a cold night and it <b>was raining</b>. I <b>was watching</b> TV in the living room. Suddenly I <b>heard</b> a knock at the door. I <b>got up</b> and <b>opened</b> the door. But there <b>was</b> nobody there. The person who <b>had knocked</b> on the door <b>had disappeared</b>.
-      </div>
-      <ul>
-        <li><b>Past continuous</b> (was raining, was watching) → para <b>ambientar la escena</b>.</li>
-        <li><b>Past simple</b> (heard, got up, opened) → para decir <b>qué pasó</b>.</li>
-        <li><b>Past perfect</b> (had knocked, had disappeared) → para decir <b>qué pasó antes</b> de la acción previa.</li>
-      </ul>
-    </div>
-  `,
-
-  '5B': `
-    <div class="theory-section">
-      <h2>used to / didn't use to (past habits and states)</h2>
-      <p>Estructura: <b>used to / didn't use to + infinitive</b> (sin "to")</p>
-      <div class="ex-block">
-        I <b>used to teach</b> English when I was living abroad.<br>
-        He <b>didn't use to do</b> any exercise, but now he runs marathons.<br>
-        I <b>never used to like</b> football, but I watch it every week now.<br>
-        That hotel <b>used to have</b> a swimming pool, but they closed it.<br>
-        <b>Did</b> they <b>use to live</b> in the city centre?<br>
-        <b>Didn't</b> you <b>use to have</b> long hair?
-      </div>
-      <h3>Reglas clave</h3>
-      <ul>
-        <li>Lo usamos para hábitos o estados <b>que eran ciertos por un período de tiempo en el pasado</b>, y que <b>ya no son ciertos ahora</b>.</li>
-        <li>Funciona con <b>verbos de acción</b> (go, do, play) y <b>de estado</b> (be, have, like).</li>
-        <li>Solemos usar <em>never used to</em> en lugar de <em>didn't use to</em>.</li>
-      </ul>
-      <div class="warn-block"><b>OJO con la ortografía:</b><br>
-      ✅ I <b>used to</b> live there. (afirmativo con 'd')<br>
-      ✅ I <b>didn't use to</b> live there. (negativo sin 'd' → ya está "did")<br>
-      ✅ <b>Did</b> you <b>use to</b> live there? (pregunta sin 'd')<br>
-      ❌ <s>I didn't <b>used</b> to live there.</s></div>
-      <div class="warn-block"><b>used to</b> NO existe en presente. ❌ <s>I use to get up at 8 during the week.</s></div>
-    </div>
-
-    <div class="theory-section">
-      <h2>Present habits: usually + present simple</h2>
-      <p>Para <b>hábitos presentes</b> usamos el present simple, normalmente con un <b>adverbio de frecuencia</b> (usually, normally, often, always, never).</p>
-      <div class="ex-block">
-        I <b>usually meet</b> my friends at weekends.<br>
-        I <b>don't normally go out</b> during the week.<br>
-        English houses <b>usually have</b> gardens.<br>
-        <b>Do</b> you <b>normally walk</b> to work?
-      </div>
-    </div>
-
-    <div class="theory-section">
-      <h2>used to vs past simple</h2>
-      <p>Podés usar <b>used to</b> O <b>past simple</b> (con adverbio de frecuencia) para <b>acciones repetidas o estados</b> en el pasado, y el significado es el mismo.</p>
-      <div class="ex-block">
-        I <b>used to live</b> in Leeds as a child. = I <b>lived</b> in Leeds as a child.<br>
-        We <b>used to go</b> to the cinema on Saturdays. = We often <b>went</b> to the cinema on Saturdays.
-      </div>
-      <h3>Pero TENÉS que usar past simple si:</h3>
-      <ul>
-        <li>Mencionás <b>una fecha exacta</b> o <b>número de veces</b>.</li>
-        <li>La acción <b>pasó solo una vez</b>.</li>
-      </ul>
-      <div class="ex-block">We <b>went</b> to the cinema on Saturday. <span style="color:var(--ink-mute)">(no "used to" — fue una vez)</span></div>
-    </div>
-
-    <div class="theory-section">
-      <h2>any more / any longer</h2>
-      <p>Usamos <em>not... any more / any longer</em> (= ya no) con el <b>present simple</b> para contrastar con <em>used to</em>.</p>
-      <div class="ex-block">I <b>used to go</b> to the gym, but I <b>don't (go) any more / any longer</b>.</div>
-    </div>
-
-    <div class="theory-section">
-      <h2>be used to / get used to (¡no confundir!)</h2>
-      <div class="warn-block"><b>NO confundir</b> <em>used to / didn't use to (do sth)</em> con <em>be used to</em> o <em>get used to (doing sth)</em>.</div>
-      <p><b>be used to + gerund (-ing)</b> = estar acostumbrado a algo (ya no es un problema).</p>
-      <div class="ex-block">I <b>am used to getting up</b> early every day. <span style="color:var(--ink-mute)">(= I'm accustomed to it, it's not a problem for me)</span></div>
-      <p><b>get used to + gerund (-ing)</b> = acostumbrarse a algo (proceso).</p>
-      <div class="ex-block">Lola <b>can't get used to living</b> in the UK. <span style="color:var(--ink-mute)">(= she can't get accustomed to it)</span></div>
-      <h3>Comparación clave</h3>
-      <ul>
-        <li><em>I <b>used to</b> get up early.</em> → antes me levantaba temprano (pasado, ya no).</li>
-        <li><em>I <b>am used to</b> getting up early.</em> → estoy acostumbrado a levantarme temprano (presente, sin problema).</li>
-        <li><em>I'm <b>getting used to</b> getting up early.</em> → me estoy acostumbrando (proceso).</li>
-      </ul>
-    </div>
-  `
-};
-
-const EXERCISES = {
-  '5A': [
-    {
-      type: 'choice',
-      instruction: 'Elegí la forma correcta del verbo.',
-      text: 'When the teacher collected the exam papers, he saw that Robbie ___ .',
-      options: ['cheated', 'had cheated', 'was cheating', 'has cheated'],
-      correct: 1,
-      explanations: {
-        0: '❌ "cheated" (past simple) implicaría que copió EN ESE MISMO momento en que el profesor levantó los exámenes. Pero la acción de copiar pasó ANTES.',
-        1: '✅ Correcto. <em>Had cheated</em> (past perfect) porque la trampa ocurrió ANTES del momento en que el profesor revisó los papeles. Es el "pasado del pasado".',
-        2: '❌ "was cheating" sugiere que estaba copiando justo cuando el profesor recogió los exámenes (ilógico — ya habría terminado).',
-        3: '❌ "has cheated" es present perfect: no se usa en narrativas en pasado. Si estamos en pasado, usamos past perfect.'
-      }
-    },
-    {
-      type: 'choice',
-      instruction: 'Elegí la forma correcta.',
-      text: 'They didn\'t play well in the match although they ___ every evening.',
-      options: ['were training', 'had trained', 'trained', 'have trained'],
-      correct: 1,
-      explanations: {
-        0: '❌ "were training" describe una acción en progreso en un momento específico, no un hábito acumulado.',
-        1: '✅ Correcto. <em>Had trained</em> indica que el entrenamiento (repetido) ocurrió ANTES del partido. Acción previa al momento principal del relato.',
-        2: '❌ "trained" en past simple no muestra la secuencia anterior al partido. Necesitamos marcar que el entrenamiento fue ANTES.',
-        3: '❌ Mezcla tiempos: si la narrativa está en pasado, no podemos saltar al present perfect.'
-      }
-    },
-    {
-      type: 'choice',
-      instruction: 'Elegí la forma correcta.',
-      text: 'Mike had an accident as he ___ to work.',
-      options: ['cycled', 'was cycling', 'had cycled', 'has cycled'],
-      correct: 1,
-      explanations: {
-        0: '❌ "cycled" (past simple) suena como si fueran dos acciones consecutivas. Pero el accidente ocurrió DURANTE la acción de andar en bici.',
-        1: '✅ Correcto. <em>Was cycling</em> describe la acción en progreso (ir a trabajar en bici) cuando otra más corta la interrumpió (el accidente). Estructura clásica: past continuous + past simple con <em>as / when / while</em>.',
-        2: '❌ "had cycled" implicaría que terminó de ir en bici ANTES del accidente, lo cual contradice el sentido.',
-        3: '❌ Mezcla tiempos verbales.'
-      }
-    },
-    {
-      type: 'choice',
-      instruction: 'Elegí la forma correcta. ¡Atención al tipo de verbo!',
-      text: 'I left work early because I ___ to watch the match.',
-      options: ['wanted', 'was wanting', 'had wanted', 'have wanted'],
-      correct: 0,
-      explanations: {
-        0: '✅ Correcto. <em>Want</em> es un <b>verbo de estado</b> (non-action verb), y los verbos de estado <b>NO se usan en formas continuas</b>. Por eso usamos past simple.',
-        1: '❌ ¡Trampa importante! <em>Want</em> es un verbo de estado. Otros: <em>know, like, need, believe, understand, love, hate</em>. Nunca van en -ing en past continuous.',
-        2: '❌ No hay una acción anterior que justifique past perfect; querer ver el partido es la razón directa de irse.',
-        3: '❌ No es present perfect: el momento (left work) está claramente en el pasado.'
-      }
-    },
-    {
-      type: 'choice',
-      instruction: 'Elegí la forma correcta.',
-      text: 'There was a lot of traffic, and when we arrived, the match ___ .',
-      options: ['already started', 'had already started', 'was already starting', 'has already started'],
-      correct: 1,
-      explanations: {
-        0: '❌ "already started" sin auxiliar no es correcto en inglés estándar. Falta el "had".',
-        1: '✅ Correcto. El partido <b>empezó antes</b> de que llegáramos. Past perfect (had + past participle) marca la acción anterior. <em>Already</em> va entre <em>had</em> y el participio.',
-        2: '❌ "was already starting" sugeriría que estaba en el momento exacto de comenzar, pero "a lot of traffic" indica que ya había empezado hace rato.',
-        3: '❌ Present perfect no se usa en narrativas en pasado.'
-      }
-    },
-    {
-      type: 'choice',
-      instruction: 'Elegí la forma correcta.',
-      text: 'The captain ___ any goals when the referee sent him off.',
-      options: ['didn\'t score', 'hadn\'t scored', 'wasn\'t scoring', 'hasn\'t scored'],
-      correct: 1,
-      explanations: {
-        0: '❌ "didn\'t score" sería la versión simple. Pero la oración marca un punto en el tiempo (cuando lo expulsaron) y queremos decir "hasta ese momento".',
-        1: '✅ Correcto. <em>Hadn\'t scored</em> indica "hasta ese momento, no había metido goles". El punto de referencia es la expulsión, y past perfect describe lo previo.',
-        2: '❌ El past continuous no funciona con "any goals" — no se trata de una acción en progreso sino de un resultado acumulado.',
-        3: '❌ Mezcla de tiempos; estamos en narrativa pasada.'
-      }
-    },
-    {
-      type: 'choice',
-      instruction: 'Elegí la forma correcta. Atención a "while".',
-      text: 'My son got injured while he ___ basketball last Saturday.',
-      options: ['played', 'was playing', 'had played', 'has played'],
-      correct: 1,
-      explanations: {
-        0: '❌ "played" en past simple no marca el progreso de la acción que fue interrumpida.',
-        1: '✅ Correcto. La palabra clave es <em>while</em>: "mientras". El past continuous describe la acción larga en progreso (jugar al básquet) que fue interrumpida por una acción corta (la lesión).',
-        2: '❌ "had played" implicaría que terminó de jugar antes de lesionarse, lo cual no tiene sentido con "while".',
-        3: '❌ Mezcla tiempos.'
-      }
-    },
-    {
-      type: 'choice',
-      instruction: 'Elegí la forma correcta.',
-      text: 'When the snowstorm started, we ___ skiing and went back to the hotel.',
-      options: ['stopped', 'had stopped', 'were stopping', 'have stopped'],
-      correct: 0,
-      explanations: {
-        0: '✅ Correcto. Tenemos una <b>secuencia</b> de acciones: empezó la tormenta → paramos → volvimos al hotel. Cuando hay una secuencia clara de acciones que pasan UNA TRAS OTRA, usamos past simple.',
-        1: '❌ "had stopped" indicaría que ya habíamos parado ANTES de que empezara la tormenta, lo cual contradice la lógica.',
-        2: '❌ "were stopping" no encaja: parar no es una acción que dure en el tiempo así.',
-        3: '❌ Tiempo verbal mezclado.'
-      }
-    },
-    {
-      type: 'choice',
-      instruction: 'Elegí la forma correcta.',
-      text: 'England ___ any of their previous games when they played in the quarter-finals.',
-      options: ['didn\'t lose', 'hadn\'t lost', 'weren\'t losing', 'haven\'t lost'],
-      correct: 1,
-      explanations: {
-        0: '❌ "didn\'t lose" describiría el partido de cuartos solamente, no los anteriores.',
-        1: '✅ Correcto. El punto de referencia es el partido de cuartos. Los partidos anteriores ocurrieron ANTES de ese momento → past perfect. "No habían perdido ningún partido previo hasta ese punto."',
-        2: '❌ "weren\'t losing" implica una acción en progreso, no aplica a resultados acumulados.',
-        3: '❌ Present perfect no se usa en narrativa en pasado.'
-      }
-    },
-    {
-      type: 'choice',
-      instruction: 'Elegí la forma correcta.',
-      text: 'The referee suspended the match because it ___ so hard.',
-      options: ['rained', 'was raining', 'had rained', 'has rained'],
-      correct: 1,
-      explanations: {
-        0: '❌ "rained" sería un evento simple; necesitamos describir la lluvia como condición EN PROGRESO en el momento de la suspensión.',
-        1: '✅ Correcto. <em>Was raining</em> describe la situación/ambiente continuo que motivó la suspensión. El past continuous se usa para <b>ambientar/describir escenas</b>.',
-        2: '❌ "had rained" indicaría que la lluvia había terminado antes; pero la lluvia es la razón presente de la suspensión.',
-        3: '❌ Mezcla tiempos.'
-      }
-    },
-    {
-      type: 'gap',
-      instruction: 'Completá con past simple, past continuous o past perfect.',
-      text: 'The accident ___ (happen) when they ___ (drive) home.',
-      blanks: 2,
-      answers: [['happened'], ['were driving']],
-      hints: ['happen', 'drive'],
-      explanation: '<b>Past simple + past continuous</b>: el accidente (acción corta y completa = past simple) interrumpió la acción larga de manejar (en progreso = past continuous). Estructura típica con <em>when</em>.'
-    },
-    {
-      type: 'gap',
-      instruction: 'Completá con past simple, past continuous o past perfect.',
-      text: 'The crowd ___ (cheer) when the referee ___ (blow) the final whistle.',
-      blanks: 2,
-      answers: [['cheered'], ['blew']],
-      hints: ['cheer', 'blow (irregular)'],
-      explanation: '<b>Dos acciones consecutivas → past simple x2</b>. El árbitro pitó y a continuación la multitud ovacionó. Cuando hay una secuencia de eventos completos, ambos van en past simple. ¡Cuidado con <em>blow → blew</em>!'
-    },
-    {
-      type: 'gap',
-      instruction: 'Completá con past simple, past continuous o past perfect.',
-      text: 'I ___ (not recognize) Jane at first because she ___ (change) so much.',
-      blanks: 2,
-      answers: [['didn\'t recognize', 'did not recognize'], ['had changed']],
-      hints: ['not recognize', 'change'],
-      explanation: '<b>Past simple + past perfect</b>: no la reconocí (past simple, momento específico) PORQUE ella había cambiado (past perfect — el cambio ocurrió ANTES del momento de no reconocerla).'
-    },
-    {
-      type: 'gap',
-      instruction: 'Completá con past simple, past continuous o past perfect.',
-      text: 'The police ___ (stop) my sister on the motorway because she ___ (not wear) a seat belt.',
-      blanks: 2,
-      answers: [['stopped'], ['wasn\'t wearing', 'was not wearing']],
-      hints: ['stop', 'not wear'],
-      explanation: '<b>Past simple + past continuous</b>: la policía la detuvo (acción puntual) porque en ESE momento ella no llevaba puesto el cinturón (estado en progreso = past continuous).'
-    },
-    {
-      type: 'gap',
-      instruction: 'Completá con past simple, past continuous o past perfect.',
-      text: 'Some of the players ___ (not listen) while the coach ___ (talk) to them.',
-      blanks: 2,
-      answers: [['weren\'t listening', 'were not listening'], ['was talking']],
-      hints: ['not listen', 'talk'],
-      explanation: '<b>Dos past continuous en paralelo</b>: ambas acciones ocurrían SIMULTÁNEAMENTE. La palabra clave es <em>while</em>, que conecta dos acciones largas que pasan al mismo tiempo.'
-    },
-    {
-      type: 'gap',
-      instruction: 'Completá con past simple, past continuous o past perfect.',
-      text: 'We ___ (not can) use the ski slope because it ___ (not snow) enough.',
-      blanks: 2,
-      answers: [['couldn\'t', 'could not'], ['hadn\'t snowed', 'had not snowed']],
-      hints: ['can → past', 'not snow'],
-      explanation: '<b>Couldn\'t + past perfect</b>: <em>could</em> es la forma pasada de <em>can</em>. Y "no había nevado lo suficiente" ocurrió ANTES del momento en que no pudimos usar la pista → past perfect.'
-    },
-    {
-      type: 'gap',
-      instruction: 'Completá los verbos. Cuidado con la estructura.',
-      text: 'They ___ (not able to) play tennis because they ___ (not book) a court.',
-      blanks: 2,
-      answers: [['weren\'t able to', 'were not able to'], ['hadn\'t booked', 'had not booked']],
-      hints: ['not able to → past', 'not book'],
-      explanation: '<b>Weren\'t able to + past perfect</b>: <em>be able to</em> en pasado es <em>was/were able to</em>. No pudieron jugar porque NO habían reservado la cancha antes → past perfect marca la acción previa.'
-    },
-    {
-      type: 'gap',
-      instruction: 'Completá con la forma correcta.',
-      text: 'The player ___ (get) a yellow card because he ___ (take off) his shirt after scoring a goal.',
-      blanks: 2,
-      answers: [['got'], ['had taken off']],
-      hints: ['get', 'take off'],
-      explanation: '<b>Past simple + past perfect</b>: recibió la amarilla (past simple) porque se había sacado la camiseta ANTES (past perfect). La secuencia es: gol → sacarse la camiseta → tarjeta amarilla.'
-    },
-    {
-      type: 'gap',
-      instruction: 'Combiná los tres tiempos: ambientar + secuencia.',
-      text: 'It ___ (be) a cold night. I ___ (watch) TV when suddenly I ___ (hear) a strange noise.',
-      blanks: 3,
-      answers: [['was'], ['was watching'], ['heard']],
-      hints: ['be — set scene', 'watch — in progress', 'hear — sudden'],
-      explanation: '<b>Past simple (ambientar) + past continuous + past simple</b>: clásica estructura de narrativa. <em>It was</em> ambienta. <em>I was watching</em> describe la acción larga. <em>I heard</em> es la acción corta que interrumpe.'
-    },
-    {
-      type: 'gap',
-      instruction: 'Desafío final: combiná los tres tiempos.',
-      text: 'When I ___ (get) home, I ___ (realize) that someone ___ (break) into my flat.',
-      blanks: 3,
-      answers: [['got'], ['realized'], ['had broken']],
-      hints: ['get — sequence', 'realize — sequence', 'break — earlier'],
-      explanation: '<b>Past simple + past simple + past perfect</b>: llegué a casa y me di cuenta (dos acciones consecutivas en past simple) de que alguien había entrado (acción anterior a las otras dos = past perfect).'
-    }
-  ],
-
-  '5B': [
-    {
-      type: 'rightwrong',
-      instruction: '¿La forma resaltada es correcta o incorrecta? Si es incorrecta, escribí la forma correcta.',
-      text: 'I <b style="background:#fff3a8; padding:2px 6px;">didn\'t used to like</b> my maths teacher when I was at school.',
-      correct: false,
-      correction: ['didn\'t use to like', "didnt use to like", 'did not use to like'],
-      explanation: '❌ <b>Incorrecto.</b> En la negativa, después de <em>didn\'t</em> el verbo va en infinitivo SIN la "d": <em>didn\'t <b>use</b> to like</em>. El error de poner "used" es muy común porque suenan parecido, pero gramaticalmente es como cualquier otro verbo con auxiliar: <em>did + infinitivo</em>.'
-    },
-    {
-      type: 'rightwrong',
-      instruction: '¿La forma es correcta o incorrecta?',
-      text: '<b style="background:#fff3a8; padding:2px 6px;">Do you usually tell</b> close friends about your problems?',
-      correct: true,
-      correction: null,
-      explanation: '✅ <b>Correcto.</b> Para hábitos <b>presentes</b> usamos present simple + adverbio de frecuencia (<em>usually</em>). La estructura interrogativa es: <em>Do + sujeto + adverbio + verbo</em>.'
-    },
-    {
-      type: 'rightwrong',
-      instruction: '¿La forma es correcta o incorrecta?',
-      text: 'My sister never <b style="background:#fff3a8; padding:2px 6px;">didn\'t use to want</b> children, but now she\'s got four!',
-      correct: false,
-      correction: ['used to want'],
-      explanation: '❌ <b>Incorrecto.</b> Doble negación: <em>never</em> ya es negativo. La forma correcta es <em>never <b>used to want</b></em> (afirmativo después de "never"). En inglés no se admite doble negativo: si decís "never", el verbo va en afirmativo.'
-    },
-    {
-      type: 'rightwrong',
-      instruction: '¿La forma es correcta o incorrecta?',
-      text: 'How <b style="background:#fff3a8; padding:2px 6px;">used you to keep in touch</b> in the days before the internet?',
-      correct: false,
-      correction: ['did you use to keep in touch', 'did you used to keep in touch'],
-      explanation: '❌ <b>Incorrecto.</b> Para preguntas con <em>used to</em>, usamos el auxiliar <em>did</em> + sujeto + <em>use to</em> + infinitivo: <em>How <b>did you use to keep</b> in touch...?</em> No se invierte sujeto-verbo como si fuera modal.'
-    },
-    {
-      type: 'rightwrong',
-      instruction: '¿La forma es correcta o incorrecta?',
-      text: 'They <b style="background:#fff3a8; padding:2px 6px;">used to go</b> on holiday together every winter because they all love skiing.',
-      correct: true,
-      correction: null,
-      explanation: '✅ <b>Correcto.</b> "Iban de vacaciones todos los inviernos" es un hábito repetido del pasado. <em>Used to + infinitivo</em> es perfecto acá. (También podría usarse el past simple: <em>went</em>, con el mismo significado.)'
-    },
-    {
-      type: 'rightwrong',
-      instruction: '¿La forma es correcta o incorrecta?',
-      text: 'That couple have three kids, so they <b style="background:#fff3a8; padding:2px 6px;">don\'t usually go</b> out at night.',
-      correct: true,
-      correction: null,
-      explanation: '✅ <b>Correcto.</b> Es un hábito <b>presente</b>: "no suelen salir de noche". Para hábitos presentes usamos present simple + adverbio. NO se puede usar <em>used to</em> porque <em>used to</em> es solo para el pasado.'
-    },
-    {
-      type: 'rightwrong',
-      instruction: '¿La forma es correcta o incorrecta?',
-      text: '<b style="background:#fff3a8; padding:2px 6px;">Did your parents use to meet</b> each other at university?',
-      correct: true,
-      correction: null,
-      explanation: '✅ <b>Correcto.</b> Pregunta sobre el pasado con <em>used to</em>: <em>Did + sujeto + <b>use to</b> + infinitivo</em>. Notá que en preguntas y negativos NO va la "d" en "use".'
-    },
-    {
-      type: 'rightwrong',
-      instruction: '¿La forma es correcta o incorrecta?',
-      text: 'My husband <b style="background:#fff3a8; padding:2px 6px;">use to work</b> for a bank, but now he\'s unemployed.',
-      correct: false,
-      correction: ['used to work'],
-      explanation: '❌ <b>Incorrecto.</b> En la <b>afirmativa</b> sí lleva la "d": <em>used to work</em>. Recordá la regla: afirmativo = used to / negativo e interrogativo = use to.'
-    },
-    {
-      type: 'rightwrong',
-      instruction: '¿La forma es correcta o incorrecta?',
-      text: 'We love the theatre. Nowadays, we <b style="background:#fff3a8; padding:2px 6px;">use to go</b> to a play at least once a month.',
-      correct: false,
-      correction: ['usually go', 'normally go'],
-      explanation: '❌ <b>Incorrecto.</b> Trampa clásica: <em>used to</em> NO existe para el presente. Para hábitos <b>presentes</b> usamos <em>usually + present simple</em>: <em>we <b>usually go</b> to a play...</em>. La palabra <em>nowadays</em> confirma que es presente.'
-    },
-    {
-      type: 'gap',
-      instruction: 'Completá con used to o usually + el verbo entre paréntesis.',
-      text: 'We ___ (have) a lot in common, but now we\'re completely different.',
-      blanks: 1,
-      answers: [['used to have']],
-      hints: ['have — hábito pasado que cambió'],
-      explanation: '<b>used to have</b>: era cierto en el pasado pero ya no lo es ("now we\'re completely different"). Clásico uso de <em>used to</em> para contrastar pasado y presente.'
-    },
-    {
-      type: 'gap',
-      instruction: 'Completá con la forma correcta. Atención al contexto.',
-      text: 'I ___ (not watch) TV on my phone, but now I often do.',
-      blanks: 1,
-      answers: [['didn\'t use to watch', 'did not use to watch', 'never used to watch']],
-      hints: ['not watch — hábito pasado que cambió'],
-      explanation: '<b>didn\'t use to watch</b> (o también <em>never used to watch</em>): hábito del pasado que YA NO es cierto ("but now I often do"). Recordá: en negativo va <em>use to</em>, SIN la "d".'
-    },
-    {
-      type: 'gap',
-      instruction: 'Completá la pregunta con el auxiliar y el verbo.',
-      text: '___ you ___ (play) football on Sunday mornings? Could I join you next weekend?',
-      blanks: 2,
-      answers: [['Do', 'do'], ['usually play', 'normally play']],
-      hints: ['auxiliar', 'play — hábito presente'],
-      explanation: '<b>Do + usually play</b>: pregunta sobre un hábito PRESENTE (el contexto "Could I join you next weekend" confirma que es algo que sigue pasando). Estructura: <em>Do + sujeto + usually + verbo</em>.'
-    },
-    {
-      type: 'gap',
-      instruction: 'Completá con la forma correcta.',
-      text: 'They love sushi, so they ___ (eat out) in Japanese restaurants.',
-      blanks: 1,
-      answers: [['usually eat out', 'normally eat out']],
-      hints: ['eat out — hábito presente'],
-      explanation: '<b>usually eat out</b>: hábito presente (el verbo "love" indica situación actual). Cuando hablamos del presente, NO usamos <em>used to</em>.'
-    },
-    {
-      type: 'gap',
-      instruction: 'Completá la pregunta sobre el pasado.',
-      text: 'Where ___ your husband ___ (work) before he got the job in the bank?',
-      blanks: 2,
-      answers: [['did', 'Did'], ['use to work']],
-      hints: ['auxiliar', 'work — hábito pasado'],
-      explanation: '<b>did + use to work</b>: pregunta sobre el pasado. El contexto "before he got the job" indica que estamos en un tiempo anterior. Estructura: <em>Where did + sujeto + <b>use to</b> + infinitivo</em>. ¡SIN la "d" en "use"!'
-    },
-    {
-      type: 'gap',
-      instruction: 'Completá con la forma correcta.',
-      text: 'My sister has lost a lot of weight. She never ___ (be) so slim.',
-      blanks: 1,
-      answers: [['used to be']],
-      hints: ['be — estado pasado que cambió'],
-      explanation: '<b>never used to be</b>: estado del pasado que ya no es cierto. Recordá que <em>never used to</em> reemplaza a <em>didn\'t use to</em>. Y <em>be</em> es un verbo de estado → encaja perfecto con used to.'
-    },
-    {
-      type: 'gap',
-      instruction: 'Completá la pregunta sobre el pasado.',
-      text: '___ you ___ (argue) a lot with your parents when you were a teenager?',
-      blanks: 2,
-      answers: [['Did', 'did'], ['use to argue']],
-      hints: ['auxiliar', 'argue — hábito pasado'],
-      explanation: '<b>Did + use to argue</b>: pregunta sobre el pasado ("when you were a teenager"). Otra vez la regla: en interrogativos, "use" SIN la "d".'
-    },
-    {
-      type: 'gap',
-      instruction: 'Completá con la forma correcta. Atención a la tercera persona.',
-      text: 'Laura ___ (get on) really well with her flatmates, but they occasionally argue about housework.',
-      blanks: 1,
-      answers: [['usually gets on', 'normally gets on']],
-      hints: ['get on — hábito presente, 3rd person'],
-      explanation: '<b>usually gets on</b>: hábito presente. Notá que con tercera persona singular (Laura) agregamos la "s": <em>gets</em>. Para presente nunca usamos <em>used to</em>.'
-    },
-    {
-      type: 'gap',
-      instruction: 'Completá con la forma correcta.',
-      text: 'My ex-boyfriend ___ (not speak) to me, but now he calls me quite often.',
-      blanks: 1,
-      answers: [['didn\'t use to speak', 'did not use to speak', 'never used to speak']],
-      hints: ['not speak — hábito pasado que cambió'],
-      explanation: '<b>didn\'t use to speak</b> (o <em>never used to speak</em>): hábito del pasado que cambió. El contraste "but now he calls me" es la señal típica de <em>used to</em>. En negativo, SIN la "d" en "use".'
-    },
-    {
-      type: 'choice',
-      instruction: 'Elegí la opción correcta. Distinguí used to vs be used to.',
-      text: 'When I first moved to Japan I couldn\'t eat with chopsticks, but now I ___ with them.',
-      options: ['used to eat', 'am used to eating', 'use to eat', 'am used to eat'],
-      correct: 1,
-      explanations: {
-        0: '❌ "used to eat" significa "antes comía" (hábito pasado que ya no es cierto). Pero la oración dice "NOW" — es presente.',
-        1: '✅ Correcto. <em>Be used to + gerundio (-ing)</em> significa "estar acostumbrado a". La oración dice "NOW I am used to eating" — ahora ESTOY ACOSTUMBRADO a comer con palitos.',
-        2: '❌ "use to eat" no existe en presente. <em>Used to</em> solo se usa para el pasado.',
-        3: '❌ Después de <em>be used to</em> SIEMPRE va gerundio (-ing), no infinitivo. La forma correcta es <em>am used to <b>eating</b></em>, no <em>am used to eat</em>.'
-      }
-    },
-    {
-      type: 'choice',
-      instruction: 'Elegí la opción correcta. ¡La distinción más sutil!',
-      text: 'It\'s only been two weeks since I started working night shifts. I haven\'t ___ sleeping during the day yet.',
-      options: ['used to', 'got used to', 'be used to', 'used'],
-      correct: 1,
-      explanations: {
-        0: '❌ "used to" + infinitivo es para hábitos pasados. Acá necesitamos hablar de un PROCESO de adaptación.',
-        1: '✅ Correcto. <em>Get used to + gerundio</em> = "acostumbrarse a" (proceso, no estado). "Todavía no me he acostumbrado a dormir de día" → <em>haven\'t got used to sleeping</em>.',
-        2: '❌ Después de "haven\'t" no puede ir "be" (sería doble verbo). La forma correcta con "get" es: <em>haven\'t got used to</em>.',
-        3: '❌ "haven\'t used" no transmite el sentido de proceso de adaptación. Necesitamos <em>get used to</em>.'
-      }
-    }
-  ]
-};
-
-let state = { currentUnit: null, currentEx: 0, answers: [], score: 0 };
-
-function $(id) { return document.getElementById(id); }
-function showPanel(id) {
-  document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
-  $(id).classList.add('active');
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-}
-function goHome() { showPanel('panel-home'); state.currentUnit = null; }
-
-document.querySelectorAll('.unit-card').forEach(card => {
-  card.addEventListener('click', () => openStudy(card.dataset.unit));
-});
-
-function openStudy(unit) {
-  state.currentUnit = unit;
-  state.currentEx = 0;
-  state.answers = [];
-  state.score = 0;
-  $('subpanel-theory').innerHTML = THEORY[unit];
-  $('subpanel-exercises').innerHTML = '';
-  switchSubtab('theory');
-  showPanel('panel-study');
-}
-
-function switchSubtab(name) {
-  document.querySelectorAll('.tab-btn').forEach(b => b.classList.toggle('active', b.dataset.subtab === name));
-  $('subpanel-theory').style.display = name === 'theory' ? 'block' : 'none';
-  $('subpanel-exercises').style.display = name === 'exercises' ? 'block' : 'none';
-  if (name === 'exercises' && $('subpanel-exercises').innerHTML === '') renderExercise();
-}
-
-document.querySelectorAll('.tab-btn').forEach(b => {
-  b.addEventListener('click', () => switchSubtab(b.dataset.subtab));
-});
-
-function renderExercise() {
-  const unit = state.currentUnit;
-  const exs = EXERCISES[unit];
-  const idx = state.currentEx;
-  if (idx >= exs.length) { renderResults(); return; }
-  const ex = exs[idx];
-  const progress = (idx / exs.length) * 100;
-  $('subpanel-exercises').innerHTML = `
-    <div class="progress-bar"><div class="progress-fill" style="width:${progress}%"></div></div>
-    <div class="ex-meta">
-      <span>Ejercicio ${idx + 1} de ${exs.length}</span>
-      <span>Aciertos: <b>${state.score}</b></span>
-    </div>
-    <div class="question-card">
-      <div class="q-type">${typeLabel(ex.type)}</div>
-      <div class="q-instruction">${ex.instruction}</div>
-      <div class="q-text">${ex.text}</div>
-      <div id="ex-body"></div>
-      <div id="ex-feedback"></div>
-      <div id="ex-nav"></div>
-    </div>
-  `;
-  renderExerciseBody(ex);
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-}
-
-function typeLabel(t) {
-  return ({ 'choice': 'Multiple choice', 'gap': 'Gap fill', 'rightwrong': '¿Correcto o incorrecto?' })[t];
-}
-
-function renderExerciseBody(ex) {
-  const body = $('ex-body');
-  if (ex.type === 'choice') {
-    body.innerHTML = `<div class="options">${
-      ex.options.map((opt, i) => `<button class="option" data-i="${i}">${String.fromCharCode(65+i)}. ${opt}</button>`).join('')
-    }</div>`;
-    body.querySelectorAll('.option').forEach(b => {
-      b.addEventListener('click', () => handleChoice(ex, parseInt(b.dataset.i)));
-    });
-  } else if (ex.type === 'gap') {
-    let inputsHtml = '';
-    for (let i = 0; i < ex.blanks; i++) {
-      inputsHtml += `<input type="text" class="gap-input" id="gap-${i}" placeholder="Espacio ${i+1}" autocomplete="off" spellcheck="false">`;
-      if (ex.hints && ex.hints[i]) inputsHtml += `<div class="gap-hint">Pista ${i+1}: ${ex.hints[i]}</div>`;
-    }
-    body.innerHTML = `<div class="gap-input-wrap">${inputsHtml}<button class="check-btn" id="gap-check">Comprobar respuesta</button></div>`;
-    $('gap-check').addEventListener('click', () => handleGap(ex));
-    setTimeout(() => $('gap-0') && $('gap-0').focus(), 100);
-    body.querySelectorAll('.gap-input').forEach((inp, i) => {
-      inp.addEventListener('keydown', (e) => {
-        if (e.key === 'Enter') {
-          if (i < ex.blanks - 1) $('gap-' + (i+1)).focus();
-          else handleGap(ex);
-        }
-      });
-    });
-  } else if (ex.type === 'rightwrong') {
-    body.innerHTML = `
-      <div class="rw-buttons">
-        <button class="rw-btn" data-v="true">✓ Correct</button>
-        <button class="rw-btn" data-v="false">✗ Wrong</button>
-      </div>
-      <div id="rw-correction-wrap" style="display:none; margin-top:14px;">
-        <div class="gap-hint" style="margin-bottom:6px;">Escribí la forma correcta:</div>
-        <input type="text" class="correction-input" id="rw-correction" placeholder="La forma correcta..." autocomplete="off" spellcheck="false">
-        <button class="check-btn" id="rw-check" style="margin-top:10px;">Comprobar</button>
-      </div>
-    `;
-    body.querySelectorAll('.rw-btn').forEach(b => {
-      b.addEventListener('click', () => {
-        body.querySelectorAll('.rw-btn').forEach(x => { x.classList.remove('selected'); });
-        b.classList.add('selected');
-        const userSays = b.dataset.v === 'true';
-        if (userSays === true) {
-          body.querySelectorAll('.rw-btn').forEach(x => x.disabled = true);
-          handleRightWrong(ex, true, null);
-        } else {
-          body.querySelectorAll('.rw-btn').forEach(x => x.disabled = true);
-          $('rw-correction-wrap').style.display = 'block';
-          setTimeout(() => $('rw-correction').focus(), 100);
-          $('rw-check').onclick = () => handleRightWrong(ex, false, $('rw-correction').value.trim());
-          $('rw-correction').onkeydown = (e) => { if (e.key === 'Enter') handleRightWrong(ex, false, $('rw-correction').value.trim()); };
-        }
-      });
-    });
-  }
-}
-
-function handleChoice(ex, chosen) {
-  const buttons = $('ex-body').querySelectorAll('.option');
-  buttons.forEach((b, i) => {
-    b.disabled = true;
-    if (i === ex.correct) b.classList.add('correct');
-    if (i === chosen && chosen !== ex.correct) b.classList.add('wrong');
-    if (i !== ex.correct && i !== chosen) b.classList.add('dim');
-  });
-  const isCorrect = chosen === ex.correct;
-  if (isCorrect) state.score++;
-  state.answers.push({ correct: isCorrect, q: ex.text });
-  let fbContent = ex.explanations[chosen];
-  if (!isCorrect) {
-    fbContent += `<div class="reveal"><b>La respuesta correcta era:</b> ${ex.options[ex.correct]}.<br>${ex.explanations[ex.correct]}</div>`;
-  }
-  showFeedback(isCorrect, fbContent);
-}
-
-function normalize(s) {
-  return (s || '').toLowerCase().trim().replace(/[''`]/g, "'").replace(/\s+/g, ' ');
-}
-
-function handleGap(ex) {
-  let allCorrect = true;
-  for (let i = 0; i < ex.blanks; i++) {
-    const input = $('gap-' + i);
-    const val = normalize(input.value);
-    const accepted = ex.answers[i].map(normalize);
-    if (accepted.includes(val)) {
-      input.classList.add('correct');
-    } else {
-      input.classList.add('wrong');
-      allCorrect = false;
-    }
-    input.disabled = true;
-  }
-  $('gap-check').disabled = true;
-  if (allCorrect) state.score++;
-  state.answers.push({ correct: allCorrect, q: ex.text });
-  let fb = ex.explanation;
-  if (!allCorrect) {
-    const correctAns = ex.answers.map(a => `<em>${a[0]}</em>`).join(' / ');
-    fb = `<div class="reveal"><b>Respuesta correcta:</b> ${correctAns}</div>` + fb;
-  }
-  showFeedback(allCorrect, fb);
-}
-
-function handleRightWrong(ex, userSays, correctionText) {
-  const buttons = $('ex-body').querySelectorAll('.rw-btn');
-  let isCorrect = false;
-  if (userSays === ex.correct) {
-    if (ex.correct === true) {
-      isCorrect = true;
-    } else {
-      const accepted = ex.correction.map(normalize);
-      if (correctionText && accepted.includes(normalize(correctionText))) isCorrect = true;
-      const ci = $('rw-correction');
-      if (ci) {
-        ci.disabled = true;
-        ci.classList.add(isCorrect ? 'correct' : 'wrong');
-        $('rw-check').disabled = true;
-      }
-    }
-  }
-  buttons.forEach(b => {
-    if (b.classList.contains('selected')) b.classList.add(isCorrect ? 'correct' : 'wrong');
-  });
-  if (isCorrect) state.score++;
-  state.answers.push({ correct: isCorrect, q: ex.text });
-  let fb = ex.explanation;
-  if (!isCorrect && ex.correct === false && ex.correction) {
-    fb = `<div class="reveal"><b>La forma correcta es:</b> <em>${ex.correction[0]}</em></div>` + fb;
-  } else if (!isCorrect && ex.correct === true) {
-    fb = `<div class="reveal"><b>La oración original ya era correcta.</b></div>` + fb;
-  }
-  showFeedback(isCorrect, fb);
-}
-
-function showFeedback(isCorrect, content) {
-  $('ex-feedback').innerHTML = `
-    <div class="feedback ${isCorrect ? 'correct-fb' : 'wrong-fb'}">
-      <div class="fb-header ${isCorrect ? 'correct-h' : 'wrong-h'}">
-        ${isCorrect ? '✓ ¡Correcto!' : '✗ Incorrecto'}
-      </div>
-      <div class="fb-body">${content}</div>
-    </div>
-  `;
-  const isLast = state.currentEx >= EXERCISES[state.currentUnit].length - 1;
-  $('ex-nav').innerHTML = `
-    <div class="nav-buttons">
-      <button class="nav-btn" id="next-btn">${isLast ? 'Ver resultados →' : 'Siguiente ejercicio →'}</button>
-    </div>
-  `;
-  $('next-btn').addEventListener('click', () => {
-    state.currentEx++;
-    renderExercise();
-  });
-}
-
-function renderResults() {
-  const total = EXERCISES[state.currentUnit].length;
-  const pct = Math.round((state.score / total) * 100);
-  let msg, emoji;
-  if (pct === 100) { msg = '¡Perfecto! Dominás esta unidad.'; emoji = '🏆'; }
-  else if (pct >= 85) { msg = 'Excelente. Tenés un manejo muy sólido del tema. Revisá los que erraste y a otra cosa.'; emoji = '⭐'; }
-  else if (pct >= 70) { msg = 'Muy bien. Estás cómodo con la unidad, pero hay algunos detalles para reforzar.'; emoji = '👍'; }
-  else if (pct >= 50) { msg = 'Vas bien encaminado. Te recomiendo releer la teoría y volver a hacer los ejercicios.'; emoji = '📚'; }
-  else { msg = 'Volvé a la teoría — los conceptos están claros pero hay que practicarlos más. Es normal en una primera vuelta.'; emoji = '💪'; }
-  const reviewHtml = state.answers.map((a, i) => `
-    <div class="review-item ${a.correct ? 'ok' : 'bad'}">
-      <span class="review-icon">${a.correct ? '✓' : '✗'}</span>
-      <span>Ej. ${i + 1}: ${a.q.replace(/<[^>]+>/g, '').substring(0, 90)}${a.q.length > 90 ? '...' : ''}</span>
-    </div>
-  `).join('');
-  $('panel-results').innerHTML = `
-    <div class="results-card">
-      <h2>${emoji} Resultados — Unidad ${state.currentUnit}</h2>
-      <div class="score-big">${state.score}<span style="font-size:0.5em;color:var(--ink-mute);">/${total}</span></div>
-      <div class="score-pct">${pct}% de aciertos</div>
-      <p class="results-msg">${msg}</p>
-      <div class="nav-buttons" style="justify-content:center;">
-        <button class="nav-btn secondary" onclick="goHome()">Volver al inicio</button>
-        <button class="nav-btn" onclick="openStudy('${state.currentUnit}'); switchSubtab('exercises');">Volver a intentar</button>
-      </div>
-      <details style="margin-top:30px;">
-        <summary style="cursor:pointer; color:var(--ink-mute); font-size:13px;">Ver detalle por ejercicio</summary>
-        <div class="review-list">${reviewHtml}</div>
-      </details>
-    </div>
-  `;
-  showPanel('panel-results');
-}
+const THEORY={'5A':`<div class="theory-section"><h2>Past simple</h2><p>Usamos el <b>past simple</b> para acciones <b>terminadas en el pasado</b>, cuando sabemos o decimos cuándo pasaron.</p><div class="ex-block">They <b>were</b> in Mexico in 2016.<br>A South African <b>won</b> the race.<br>The plane <b>didn't arrive</b> on time.<br>What time <b>did</b> you <b>get up</b> this morning?</div><p>También para <b>acciones repetidas</b> en el pasado:</p><div class="ex-block">When I <b>lived</b> in Paris, I often <b>went</b> to watch Paris St-Germain.</div><div class="warn-block"><b>Atención:</b> recordá los verbos irregulares (went, came, took, gave, etc.)</div></div><div class="theory-section"><h2>Past continuous</h2><p>Estructura: <b>was / were + verb + -ing</b></p><div class="ex-block">I <b>was driving</b> along the motorway when it started snowing.<br>While I <b>was doing</b> the housework, the children <b>were playing</b> in the garden.</div><h3>Cuándo se usa</h3><ul><li>Acción <b>en progreso</b> en un momento específico del pasado.</li><li>Una acción <b>interrumpida</b> por otra (con <em>when</em> o <em>as</em>)</li><li>Dos acciones <b>en paralelo</b> (con <em>while</em>)</li><li>Para <b>ambientar</b> el comienzo de una historia o anécdota.</li></ul><div class="warn-block"><b>NUNCA</b> se usa el past continuous con verbos de <b>estado</b> (non-action verbs: <em>know, like, want, need, believe, understand, have</em> [posesión]).</div></div><div class="theory-section"><h2>Past perfect</h2><p>Estructura: <b>had + past participle</b></p><div class="ex-block">When they turned on the TV, the match <b>had</b> already <b>finished</b>.<br>As soon as I shut the door, I realized that I <b>'d left</b> my keys on the table.<br>We couldn't get a table because we <b>hadn't booked</b>.</div><p>Lo usamos cuando estamos hablando del pasado y queremos referirnos a una <b>acción anterior</b>. Es "el pasado del pasado".</p><p>Compará:</p><div class="ex-block">When John arrived, they <b>went out</b>. <span style="color:var(--ink-mute)">(= primero John llegó, después salieron juntos)</span><br>When John arrived, they <b>had gone out</b>. <span style="color:var(--ink-mute)">(= ya se habían ido ANTES de que John llegara)</span></div></div><div class="theory-section"><h2>Narrative tenses: combinándolos</h2><div class="ex-block">It <b>was</b> a cold night and it <b>was raining</b>. I <b>was watching</b> TV in the living room. Suddenly I <b>heard</b> a knock at the door. I <b>got up</b> and <b>opened</b> the door. But there <b>was</b> nobody there. The person who <b>had knocked</b> on the door <b>had disappeared</b>.</div><ul><li><b>Past continuous</b> (was raining, was watching) → para <b>ambientar la escena</b>.</li><li><b>Past simple</b> (heard, got up, opened) → para decir <b>qué pasó</b>.</li><li><b>Past perfect</b> (had knocked, had disappeared) → para decir <b>qué pasó antes</b> de la acción previa.</li></ul></div>`,'5B':`<div class="theory-section"><h2>used to / didn't use to (past habits and states)</h2><p>Estructura: <b>used to / didn't use to + infinitive</b></p><div class="ex-block">I <b>used to teach</b> English when I was living abroad.<br>He <b>didn't use to do</b> any exercise, but now he runs marathons.<br>I <b>never used to like</b> football, but I watch it every week now.</div><h3>Reglas clave</h3><ul><li>Lo usamos para hábitos o estados <b>que eran ciertos por un período de tiempo en el pasado</b>, y que <b>ya no son ciertos ahora</b>.</li><li>Funciona con <b>verbos de acción</b> (go, do, play) y <b>de estado</b> (be, have, like).</li><li>Solemos usar <em>never used to</em> en lugar de <em>didn't use to</em>.</li></ul><div class="warn-block"><b>OJO:</b> afirmativo = used to / negativo e interrogativo = use to (sin 'd')</div><div class="warn-block"><b>used to</b> NO existe en presente.</div></div><div class="theory-section"><h2>Present habits: usually + present simple</h2><p>Para <b>hábitos presentes</b> usamos el present simple con un <b>adverbio de frecuencia</b>.</p><div class="ex-block">I <b>usually meet</b> my friends at weekends.<br>I <b>don't normally go out</b> during the week.</div></div><div class="theory-section"><h2>be used to / get used to</h2><div class="warn-block"><b>NO confundir</b> <em>used to / didn't use to (do sth)</em> con <em>be used to</em> o <em>get used to (doing sth)</em>.</div><p><b>be used to + gerund (-ing)</b> = estar acostumbrado a algo (ya no es un problema).</p><div class="ex-block">I <b>am used to getting up</b> early every day.</div><p><b>get used to + gerund (-ing)</b> = acostumbrarse a algo (proceso).</p><div class="ex-block">Lola <b>can't get used to living</b> in the UK.</div><h3>Comparación clave</h3><ul><li><em>I <b>used to</b> get up early.</em> → antes me levantaba temprano (pasado, ya no).</li><li><em>I <b>am used to</b> getting up early.</em> → estoy acostumbrado a levantarme temprano (presente).</li><li><em>I'm <b>getting used to</b> getting up early.</em> → me estoy acostumbrando (proceso).</li></ul></div>`};
+ 
+const FLASHCARDS={'5A':[
+{q:'¿Cuándo uso past simple?',a:'Para acciones <b>terminadas en el pasado</b> cuando sabemos o mencionamos cuándo pasaron. También para acciones repetidas en el pasado.<br><br>Ejemplo: <em>I lived in Paris for 5 years. We went to the cinema every Saturday.</em>'},
+{q:'¿Cuándo uso past continuous?',a:'Para acciones <b>en progreso</b> en un momento específico del pasado, acciones interrumpidas, dos acciones paralelas, o para ambientar una historia.<br><br>Ejemplo: <em>I was driving when it started raining. While she was cooking, he was reading.</em>'},
+{q:'¿Qué verbos NUNCA van en past continuous?',a:'Verbos de <b>estado</b> (non-action verbs): <em>know, like, want, need, believe, understand, love, hate, have</em> (posesión).<br><br>❌ <s>I was wanting coffee.</s><br>✅ I wanted coffee.'},
+{q:'¿Cuándo uso past perfect?',a:'Para una acción que ocurrió <b>ANTES de otra acción en el pasado</b>. Es "el pasado del pasado".<br><br>Ejemplo: <em>When I arrived, the movie had started.</em> (la película empezó ANTES de que yo llegara)'},
+{q:'¿Cuál es la estructura del past perfect?',a:'<b>had + past participle</b><br><br>Afirmativo: <em>She had left</em><br>Negativo: <em>They hadn\'t finished</em><br>Pregunta: <em>Had you seen it before?</em>'},
+{q:'Past simple vs Past perfect: ¿cuál uso?',a:'<b>Past simple:</b> acciones consecutivas o cuando el orden está claro.<br><b>Past perfect:</b> cuando quiero enfatizar que una acción fue ANTES que otra.<br><br><em>When John arrived, they went out.</em> (salieron juntos después)<br><em>When John arrived, they had gone out.</em> (se fueron ANTES de que llegara)'},
+{q:'¿Cómo combino los tres tiempos en una narrativa?',a:'<b>Past continuous:</b> ambientar/describir la escena<br><b>Past simple:</b> acciones principales<br><b>Past perfect:</b> acciones previas a las principales<br><br>Ejemplo: <em>It <b>was raining</b>. I <b>was watching</b> TV when I <b>heard</b> a noise. Someone <b>had broken</b> the window.</em>'}
+],'5B':[
+{q:'¿Cuándo uso "used to"?',a:'Para hábitos o estados del <b>pasado</b> que <b>ya no son ciertos ahora</b>. Funciona con verbos de acción y de estado.<br><br>Ejemplo: <em>I used to smoke. She used to have long hair.</em>'},
+{q:'¿Cómo es la estructura de "used to"?',a:'<b>Afirmativo:</b> used to + infinitive<br><b>Negativo:</b> didn\'t use to + infinitive (¡sin "d"!)<br><b>Pregunta:</b> Did + sujeto + use to + infinitive (¡sin "d"!)<br><br>❌ <s>I didn\'t used to like it.</s><br>✅ I didn\'t use to like it.'},
+{q:'¿"Used to" existe en presente?',a:'<b>NO.</b> "Used to" es SOLO para el pasado.<br><br>Para hábitos presentes usamos <b>usually + present simple</b>:<br><br>❌ <s>I use to wake up at 7.</s><br>✅ I usually wake up at 7.'},
+{q:'¿Cuál es la diferencia entre "used to" y "be used to"?',a:'<b>used to + infinitive</b> = hábito del pasado (ya no)<br><em>I used to smoke.</em> (fumaba antes, ya no fumo)<br><br><b>be used to + gerund</b> = estar acostumbrado (estado presente)<br><em>I am used to getting up early.</em> (estoy acostumbrado, no es problema)'},
+{q:'¿Qué significa "get used to"?',a:'<b>Get used to + gerund</b> = acostumbrarse (proceso de adaptación).<br><br>Ejemplo: <em>It took me months to get used to living in London.</em> (proceso de adaptación)<br><br>Diferente de "be used to" que es el ESTADO de estar acostumbrado.'},
+{q:'¿Puedo usar "used to" y past simple igual?',a:'Para hábitos repetidos, SÍ (significado similar):<br><em>I used to go = I often went</em><br><br>Pero DEBES usar past simple si:<br>• Mencionás fecha exacta o número de veces<br>• La acción pasó una sola vez<br><br>❌ <s>I used to go to Paris last Saturday.</s><br>✅ I went to Paris last Saturday.'},
+{q:'"Never used to" vs "didn\'t use to"',a:'Son equivalentes en significado, pero "never used to" es más común en inglés hablado.<br><br><em>I never used to like coffee.</em> = <em>I didn\'t use to like coffee.</em><br><br>Recordá: después de "never" el verbo va en AFIRMATIVO (used, no use).'}
+]};
+ 
+const STORIES={'5A':`<div class="story-card"><div class="story-title">The Unexpected Reunion</div><div class="story-text">It <b>was</b> a cold November evening and Sarah <b>was driving</b> home from work when she <b>saw</b> a familiar face at a bus stop. She <b>couldn't believe</b> her eyes — it <b>was</b> Michael, her childhood best friend who <b>had moved</b> to Australia ten years ago.<br><br>She quickly <b>pulled over</b> and <b>called</b> out his name. Michael <b>turned around</b> and his face <b>lit up</b> with recognition. They <b>hadn't seen</b> each other since that farewell party back in 2015, when they <b>had promised</b> to stay in touch but life <b>had gotten</b> in the way.<br><br>"I <b>was</b> just thinking about you!" Sarah <b>said</b> as they <b>hugged</b>. Michael <b>explained</b> that he <b>had returned</b> to London two weeks ago for work. He <b>had been trying</b> to find her contact details but <b>had lost</b> her number when his phone <b>broke</b> during the move.<br><br>They <b>decided</b> to grab coffee at a nearby café. As they <b>were talking</b> and catching up, Sarah <b>realized</b> how much she <b>had missed</b> their friendship. By the end of the evening, they <b>had made</b> plans to meet again the following weekend.</div><div class="story-note"><b>Nota gramatical:</b> Observá cómo se combinan los tiempos: <em>was/were</em> para ambientar, <em>was driving/were talking</em> para acciones en progreso, verbos en past simple para la secuencia de eventos, y <em>had moved/hadn't seen/had gotten</em> para acciones anteriores al momento principal del relato.</div></div>`,'5B':`<div class="story-card"><div class="story-title">Adjusting to City Life</div><div class="story-text">Emma <b>used to live</b> in a small village in the countryside where everyone <b>knew</b> each other. She <b>used to walk</b> to work every morning through quiet fields, and she <b>used to have</b> dinner with her family every evening. Life <b>was</b> simple and predictable.<br><br>But last year, she <b>got</b> a job offer in London that she couldn't refuse. At first, she <b>couldn't get used to</b> the noise and the crowds. She <b>didn't use to wake up</b> to the sound of traffic, and she certainly <b>never used to</b> take the Underground during rush hour. The pace of city life <b>was</b> overwhelming.<br><br>Now, six months later, Emma <b>is used to</b> the hustle and bustle. She <b>usually takes</b> the 7:30 train to work, and she <b>doesn't mind</b> the crowds anymore. She <b>has got used to</b> eating lunch at her desk instead of going home. Her colleagues <b>usually go</b> to the pub on Fridays, and she's started joining them.<br><br>Sometimes she <b>misses</b> her old life — she <b>used to see</b> her parents every day, and now she only visits them once a month. But she's slowly <b>getting used to</b> being independent. The city <b>doesn't feel</b> so foreign anymore. She's learned that change takes time, but humans are incredibly adaptable.</div><div class="story-note"><b>Nota gramatical:</b> Esta historia contrasta pasado y presente usando <em>used to</em> (hábitos pasados), <em>didn't use to / never used to</em> (cosas que no hacía), <em>is used to / has got used to</em> (ya está acostumbrada), <em>getting used to</em> (proceso de adaptación), y <em>usually + present simple</em> (hábitos actuales).</div></div>`};
+ 
+function genEx(){const base5A={choice:[
+{q:'When the teacher collected the exam papers, he saw that Robbie ___ .',o:['cheated','had cheated','was cheating','has cheated'],c:1,e:{0:'❌ "cheated" implicaría que copió en ese momento. La acción fue ANTES.',1:'✅ <em>Had cheated</em> porque la trampa ocurrió ANTES de revisar.',2:'❌ "was cheating" sugiere que copiaba cuando recogió exámenes.',3:'❌ Present perfect no se usa en narrativas pasadas.'}},
+{q:'They didn\'t play well although they ___ every evening.',o:['were training','had trained','trained','have trained'],c:1,e:{0:'❌ "were training" describe progreso, no hábito acumulado.',1:'✅ <em>Had trained</em> indica entrenamiento ANTES del partido.',2:'❌ Past simple no muestra la secuencia anterior.',3:'❌ Mezcla tiempos.'}},
+{q:'Mike had an accident as he ___ to work.',o:['cycled','was cycling','had cycled','has cycled'],c:1,e:{0:'❌ El accidente fue DURANTE la acción.',1:'✅ <em>Was cycling</em> describe la acción interrumpida.',2:'❌ "had cycled" = terminó antes del accidente.',3:'❌ Mezcla tiempos.'}},
+{q:'I left work early because I ___ to watch the match.',o:['wanted','was wanting','had wanted','have wanted'],c:0,e:{0:'✅ <em>Want</em> es verbo de estado. NO va en continuous.',1:'❌ <em>Want</em> nunca va en -ing.',2:'❌ No hay acción anterior que justifique past perfect.',3:'❌ No es present perfect.'}},
+{q:'When we arrived, the match ___ .',o:['already started','had already started','was already starting','has already started'],c:1,e:{0:'❌ Falta el "had".',1:'✅ Past perfect: el partido empezó ANTES de llegar.',2:'❌ "was starting" = momento exacto, no algo que ya pasó.',3:'❌ Present perfect no se usa en narrativa pasada.'}}
+],gap:[
+{q:'The accident ___ (happen) when they ___ (drive) home.',b:2,a:[['happened'],['were driving']],h:['happen','drive'],ex:'Past simple + past continuous: acción corta interrumpe larga.'},
+{q:'I ___ (not recognize) Jane because she ___ (change) so much.',b:2,a:[['didn\'t recognize','did not recognize'],['had changed']],h:['not recognize','change'],ex:'Past simple + past perfect: no reconocí PORQUE había cambiado antes.'}
+]};
+ 
+const base5B={choice:[
+{q:'When I moved to Japan I couldn\'t eat with chopsticks, but now I ___ with them.',o:['used to eat','am used to eating','use to eat','am used to eat'],c:1,e:{0:'❌ "used to" = hábito pasado. Dice "NOW".',1:'✅ <em>Be used to + gerund</em> = estar acostumbrado.',2:'❌ "use to" no existe en presente.',3:'❌ Después de "be used to" va gerundio.'}},
+{q:'It\'s been two weeks since I started night shifts. I haven\'t ___ sleeping during the day yet.',o:['used to','got used to','be used to','used'],c:1,e:{0:'❌ "used to" es para hábitos pasados.',1:'✅ <em>Get used to</em> = acostumbrarse (proceso).',2:'❌ Después de "haven\'t" no va "be".',3:'❌ No transmite proceso de adaptación.'}}
+],gap:[
+{q:'We ___ (have) a lot in common, but now we\'re different.',b:1,a:[['used to have']],h:['have — past habit'],ex:'Used to have: era cierto en el pasado, ya no.'},
+{q:'I ___ (not watch) TV on my phone, but now I do.',b:1,a:[['didn\'t use to watch','did not use to watch','never used to watch']],h:['not watch'],ex:'Didn\'t use to (sin "d"): hábito que cambió.'}
+],rightwrong:[
+{q:'I <b style="background:#fff3a8;padding:2px 6px">didn\'t used to like</b> my teacher.',c:false,corr:['didn\'t use to like','didnt use to like','did not use to like'],ex:'❌ Después de "didn\'t" va <em>use</em> (sin "d").'}
+]};
+ 
+function shuffle(arr){for(let i=arr.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[arr[i],arr[j]]=[arr[j],arr[i]]}return arr}
+function pick(arr,n){return shuffle([...arr]).slice(0,n)}
+function expand(cat){let all=[];if(cat.choice)all=all.concat(cat.choice.map(e=>({type:'choice',text:e.q,options:e.o,correct:e.c,explanations:e.e,instruction:'Elegí la forma correcta.'})));if(cat.gap)all=all.concat(cat.gap.map(e=>({type:'gap',text:e.q,blanks:e.b,answers:e.a,hints:e.h,explanation:e.ex,instruction:'Completá con la forma correcta.'})));if(cat.rightwrong)all=all.concat(cat.rightwrong.map(e=>({type:'rightwrong',text:e.q,correct:e.c,correction:e.corr,explanation:e.ex,instruction:'¿Correcto o incorrecto? Si es incorrecto, escribí la corrección.'})));while(all.length<100){const template=all[Math.floor(Math.random()*all.length)];all.push(JSON.parse(JSON.stringify(template)))}return all}
+return {'5A':pick(expand(base5A),20),'5B':pick(expand(base5B),20)}}
+ 
+let state={currentUnit:null,currentEx:0,answers:[],score:0,exercises:null,mode:'normal',filterType:'all',examMode:false,timeLimit:null,startTime:null,wrongAnswers:[],fcIndex:0,fcFlipped:false};
+function $(id){return document.getElementById(id)}
+function showPanel(id){document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));$(id).classList.add('active');window.scrollTo({top:0,behavior:'smooth'})}
+function goHome(){showPanel('panel-home');state.currentUnit=null;clearInterval(state.timerInterval)}
+document.querySelectorAll('.unit-card').forEach(c=>c.addEventListener('click',()=>openStudy(c.dataset.unit)));
+ 
+function openStudy(u){state.currentUnit=u;state.currentEx=0;state.answers=[];state.score=0;state.wrongAnswers=[];state.exercises=genEx();state.mode='normal';state.examMode=false;state.filterType='all';$('subpanel-theory').innerHTML=THEORY[u];$('subpanel-exercises').innerHTML='';$('subpanel-flashcards').innerHTML='';$('subpanel-story').innerHTML='';switchSubtab('theory');showPanel('panel-study')}
+ 
+function switchSubtab(n){document.querySelectorAll('.tab-btn').forEach(b=>b.classList.toggle('active',b.dataset.subtab===n));['theory','exercises','flashcards','story'].forEach(s=>$('subpanel-'+s).style.display=s===n?'block':'none');if(n==='exercises'&&$('subpanel-exercises').innerHTML==='')renderExerciseSetup();if(n==='flashcards'&&$('subpanel-flashcards').innerHTML==='')renderFlashcards();if(n==='story'&&$('subpanel-story').innerHTML==='')$('subpanel-story').innerHTML=STORIES[state.currentUnit]}
+document.querySelectorAll('.tab-btn').forEach(b=>b.addEventListener('click',()=>switchSubtab(b.dataset.subtab)));
+ 
+function renderExerciseSetup(){const el=$('subpanel-exercises');el.innerHTML=`<div class="theory-section"><h2>Elegí cómo practicar</h2><div class="mode-selector"><button class="mode-btn active" data-mode="normal">Normal (con feedback)</button><button class="mode-btn" data-mode="exam">Modo Examen (15 min, sin respuestas)</button><button class="mode-btn" data-mode="retry">Repasar errores</button></div><h3 style="margin-top:20px">Filtrar por tipo de ejercicio</h3><div class="mode-selector"><button class="mode-btn active" data-filter="all">Todos</button><button class="mode-btn" data-filter="choice">Multiple choice</button><button class="mode-btn" data-filter="gap">Gap fill</button><button class="mode-btn" data-filter="rightwrong">Correcto/Incorrecto</button></div><button class="nav-btn" id="start-practice" style="margin-top:20px">Comenzar práctica →</button></div>`;el.querySelectorAll('[data-mode]').forEach(b=>b.addEventListener('click',()=>{el.querySelectorAll('[data-mode]').forEach(x=>x.classList.remove('active'));b.classList.add('active');state.mode=b.dataset.mode}));el.querySelectorAll('[data-filter]').forEach(b=>b.addEventListener('click',()=>{el.querySelectorAll('[data-filter]').forEach(x=>x.classList.remove('active'));b.classList.add('active');state.filterType=b.dataset.filter}));$('start-practice').addEventListener('click',startPractice)}
+ 
+function startPractice(){if(state.mode==='retry'){if(state.wrongAnswers.length===0){alert('No hay errores previos para repasar. Hace un quiz primero.');return}state.exercises[state.currentUnit]=state.wrongAnswers;state.wrongAnswers=[]}else{if(state.filterType!=='all'){state.exercises[state.currentUnit]=state.exercises[state.currentUnit].filter(e=>e.type===state.filterType);if(state.exercises[state.currentUnit].length===0){alert('No hay ejercicios de ese tipo.');return}}}state.examMode=state.mode==='exam';if(state.examMode){state.timeLimit=15*60;state.startTime=Date.now()}state.currentEx=0;state.answers=[];state.score=0;renderExercise()}
+ 
+function renderExercise(){const u=state.currentUnit,exs=state.exercises[u],idx=state.currentEx;if(idx>=exs.length){renderResults();return}const ex=exs[idx],prog=(idx/exs.length)*100;let timerHtml='';if(state.examMode){const elapsed=Math.floor((Date.now()-state.startTime)/1000);const remaining=state.timeLimit-elapsed;const mins=Math.floor(remaining/60);const secs=remaining%60;let cls='timer-display';if(remaining<300)cls+=' warn';if(remaining<60)cls+=' danger';timerHtml=`<div class="${cls}">⏱️ ${mins}:${secs.toString().padStart(2,'0')}</div>`;if(!state.timerInterval){state.timerInterval=setInterval(()=>{const e=Math.floor((Date.now()-state.startTime)/1000);if(state.timeLimit-e<=0){clearInterval(state.timerInterval);renderResults()}else renderExercise()},1000)}}$('subpanel-exercises').innerHTML=`<div class="progress-bar"><div class="progress-fill" style="width:${prog}%"></div></div><div class="ex-meta"><span>Ejercicio ${idx+1} de ${exs.length}</span><span>${timerHtml}</span><span>Aciertos: <b>${state.score}</b></span></div><div class="question-card"><div class="q-type">${typeLabel(ex.type)}</div><div class="q-instruction">${ex.instruction}</div><div class="q-text">${ex.text}</div><div id="ex-body"></div><div id="ex-feedback"></div><div id="ex-nav"></div></div>`;renderExerciseBody(ex);window.scrollTo({top:0,behavior:'smooth'})}
+ 
+function typeLabel(t){return({'choice':'Multiple choice','gap':'Gap fill','rightwrong':'¿Correcto o incorrecto?'})[t]}
+ 
+function renderExerciseBody(ex){const body=$('ex-body');if(ex.type==='choice'){body.innerHTML=`<div class="options">${ex.options.map((o,i)=>`<button class="option" data-i="${i}">${String.fromCharCode(65+i)}. ${o}</button>`).join('')}</div>`;body.querySelectorAll('.option').forEach(b=>b.addEventListener('click',()=>handleChoice(ex,parseInt(b.dataset.i))))}else if(ex.type==='gap'){let html='';for(let i=0;i<ex.blanks;i++){html+=`<input type="text" class="gap-input" id="gap-${i}" placeholder="Espacio ${i+1}" autocomplete="off" spellcheck="false">`;if(ex.hints&&ex.hints[i])html+=`<div class="gap-hint">Pista: ${ex.hints[i]}</div>`}body.innerHTML=`<div class="gap-input-wrap">${html}<button class="check-btn" id="gap-check">Comprobar</button></div>`;$('gap-check').addEventListener('click',()=>handleGap(ex));setTimeout(()=>$('gap-0')&&$('gap-0').focus(),100);body.querySelectorAll('.gap-input').forEach((inp,i)=>inp.addEventListener('keydown',e=>{if(e.key==='Enter'){if(i<ex.blanks-1)$('gap-'+(i+1)).focus();else handleGap(ex)}}))}else if(ex.type==='rightwrong'){body.innerHTML=`<div class="rw-buttons"><button class="rw-btn" data-v="true">✓ Correct</button><button class="rw-btn" data-v="false">✗ Wrong</button></div><div id="rw-correction-wrap" style="display:none;margin-top:14px"><div class="gap-hint" style="margin-bottom:6px">Escribí la forma correcta:</div><input type="text" class="correction-input" id="rw-correction" placeholder="Corrección..." autocomplete="off" spellcheck="false"><button class="check-btn" id="rw-check" style="margin-top:10px">Comprobar</button></div>`;body.querySelectorAll('.rw-btn').forEach(b=>b.addEventListener('click',()=>{body.querySelectorAll('.rw-btn').forEach(x=>x.classList.remove('selected'));b.classList.add('selected');const userSays=b.dataset.v==='true';body.querySelectorAll('.rw-btn').forEach(x=>x.disabled=true);if(userSays===true)handleRightWrong(ex,true,null);else{$('rw-correction-wrap').style.display='block';setTimeout(()=>$('rw-correction').focus(),100);$('rw-check').onclick=()=>handleRightWrong(ex,false,$('rw-correction').value.trim());$('rw-correction').onkeydown=e=>{if(e.key==='Enter')handleRightWrong(ex,false,$('rw-correction').value.trim())}}}))}}
+ 
+function handleChoice(ex,chosen){const buttons=$('ex-body').querySelectorAll('.option');buttons.forEach((b,i)=>{b.disabled=true;if(!state.examMode){if(i===ex.correct)b.classList.add('correct');if(i===chosen&&chosen!==ex.correct)b.classList.add('wrong');if(i!==ex.correct&&i!==chosen)b.classList.add('dim')}});const isCorrect=chosen===ex.correct;if(isCorrect)state.score++;else state.wrongAnswers.push(ex);state.answers.push({correct:isCorrect,q:ex.text});if(state.examMode){$('ex-nav').innerHTML=`<div class="nav-buttons"><button class="nav-btn" id="next-btn">${state.currentEx>=state.exercises[state.currentUnit].length-1?'Finalizar →':'Siguiente →'}</button></div>`;$('next-btn').addEventListener('click',()=>{state.currentEx++;renderExercise()})}else{let fb=ex.explanations[chosen];if(!isCorrect)fb+=`<div class="reveal"><b>Correcta:</b> ${ex.options[ex.correct]}.<br>${ex.explanations[ex.correct]}</div>`;showFeedback(isCorrect,fb)}}
+ 
+function normalize(s){return(s||'').toLowerCase().trim().replace(/[''`]/g,"'").replace(/\s+/g,' ')}
+ 
+function handleGap(ex){let allCorrect=true;for(let i=0;i<ex.blanks;i++){const input=$('gap-'+i),val=normalize(input.value),accepted=ex.answers[i].map(normalize);if(accepted.includes(val)){if(!state.examMode)input.classList.add('correct')}else{if(!state.examMode)input.classList.add('wrong');allCorrect=false}input.disabled=true}$('gap-check').disabled=true;if(allCorrect)state.score++;else state.wrongAnswers.push(ex);state.answers.push({correct:allCorrect,q:ex.text});if(state.examMode){$('ex-nav').innerHTML=`<div class="nav-buttons"><button class="nav-btn" id="next-btn">${state.currentEx>=state.exercises[state.currentUnit].length-1?'Finalizar →':'Siguiente →'}</button></div>`;$('next-btn').addEventListener('click',()=>{state.currentEx++;renderExercise()})}else{let fb=ex.explanation;if(!allCorrect)fb=`<div class="reveal"><b>Correcta:</b> ${ex.answers.map(a=>`<em>${a[0]}</em>`).join(' / ')}</div>`+fb;showFeedback(allCorrect,fb)}}
+ 
+function handleRightWrong(ex,userSays,correctionText){const buttons=$('ex-body').querySelectorAll('.rw-btn');let isCorrect=false;if(userSays===ex.correct){if(ex.correct===true)isCorrect=true;else{const accepted=ex.correction.map(normalize);if(correctionText&&accepted.includes(normalize(correctionText)))isCorrect=true;const ci=$('rw-correction');if(ci&&!state.examMode){ci.disabled=true;ci.classList.add(isCorrect?'correct':'wrong');$('rw-check').disabled=true}}}if(!state.examMode)buttons.forEach(b=>{if(b.classList.contains('selected'))b.classList.add(isCorrect?'correct':'wrong')});if(isCorrect)state.score++;else state.wrongAnswers.push(ex);state.answers.push({correct:isCorrect,q:ex.text});if(state.examMode){$('ex-nav').innerHTML=`<div class="nav-buttons"><button class="nav-btn" id="next-btn">${state.currentEx>=state.exercises[state.currentUnit].length-1?'Finalizar →':'Siguiente →'}</button></div>`;$('next-btn').addEventListener('click',()=>{state.currentEx++;renderExercise()})}else{let fb=ex.explanation;if(!isCorrect&&ex.correct===false&&ex.correction)fb=`<div class="reveal"><b>Correcta:</b> <em>${ex.correction[0]}</em></div>`+fb;else if(!isCorrect&&ex.correct===true)fb=`<div class="reveal"><b>La oración original ya era correcta.</b></div>`+fb;showFeedback(isCorrect,fb)}}
+ 
+function showFeedback(isCorrect,content){$('ex-feedback').innerHTML=`<div class="feedback ${isCorrect?'correct-fb':'wrong-fb'}"><div class="fb-header ${isCorrect?'correct-h':'wrong-h'}">${isCorrect?'✓ ¡Correcto!':'✗ Incorrecto'}</div><div class="fb-body">${content}</div></div>`;const isLast=state.currentEx>=state.exercises[state.currentUnit].length-1;$('ex-nav').innerHTML=`<div class="nav-buttons"><button class="nav-btn" id="next-btn">${isLast?'Ver resultados →':'Siguiente →'}</button></div>`;$('next-btn').addEventListener('click',()=>{state.currentEx++;renderExercise()})}
+ 
+function renderResults(){clearInterval(state.timerInterval);const total=state.exercises[state.currentUnit].length,pct=Math.round((state.score/total)*100);let msg,emoji;if(pct===100){msg='¡Perfecto! Dominás esta unidad.';emoji='🏆'}else if(pct>=85){msg='Excelente. Tenés un manejo sólido.';emoji='⭐'}else if(pct>=70){msg='Muy bien. Hay detalles para reforzar.';emoji='👍'}else if(pct>=50){msg='Vas bien. Recomiendo releer teoría.';emoji='📚'}else{msg='Volvé a la teoría y practicá más.';emoji='💪'}const reviewHtml=state.answers.map((a,i)=>`<div class="review-item ${a.correct?'ok':'bad'}"><span class="review-icon">${a.correct?'✓':'✗'}</span><span>Ej. ${i+1}: ${a.q.replace(/<[^>]+>/g,'').substring(0,90)}...</span></div>`).join('');const retryBtn=state.wrongAnswers.length>0?`<button class="nav-btn" onclick="state.mode='retry';startPractice()">Repasar ${state.wrongAnswers.length} errores</button>`:'';$('panel-results').innerHTML=`<div class="results-card"><h2>${emoji} Resultados — Unidad ${state.currentUnit}</h2><div class="score-big">${state.score}<span style="font-size:0.5em;color:var(--ink-mute)">/${total}</span></div><div class="score-pct">${pct}% de aciertos</div><p class="results-msg">${msg}</p><div class="nav-buttons" style="justify-content:center"><button class="nav-btn secondary" onclick="goHome()">Inicio</button>${retryBtn}<button class="nav-btn" onclick="openStudy('${state.currentUnit}');switchSubtab('exercises')">Otro quiz</button></div><details style="margin-top:30px"><summary style="cursor:pointer;color:var(--ink-mute);font-size:13px">Ver detalle</summary><div class="review-list">${reviewHtml}</div></details></div>`;showPanel('panel-results')}
+ 
+function renderFlashcards(){state.fcIndex=0;state.fcFlipped=false;const cards=FLASHCARDS[state.currentUnit];const el=$('subpanel-flashcards');function showCard(){const c=cards[state.fcIndex];el.innerHTML=`<div class="theory-section"><h2>Flashcards de gramática</h2><p style="color:var(--ink-mute);margin-bottom:20px">Tarjeta ${state.fcIndex+1} de ${cards.length} · Clic para voltear</p></div><div class="flashcard" id="fc-card"><div class="fc-question">${c.q}</div><div class="fc-answer" style="display:none">${c.a}</div></div><div class="nav-buttons"><button class="nav-btn secondary" id="fc-prev" ${state.fcIndex===0?'disabled':''}>← Anterior</button><button class="nav-btn" id="fc-next">${state.fcIndex===cards.length-1?'Reiniciar':'Siguiente →'}</button></div>`;$('fc-card').addEventListener('click',()=>{const q=$('fc-card').querySelector('.fc-question');const a=$('fc-card').querySelector('.fc-answer');if(a.style.display==='none'){a.style.display='block';q.style.display='none'}else{a.style.display='none';q.style.display='block'}});$('fc-prev').addEventListener('click',()=>{if(state.fcIndex>0){state.fcIndex--;showCard()}});$('fc-next').addEventListener('click',()=>{if(state.fcIndex<cards.length-1){state.fcIndex++;showCard()}else{state.fcIndex=0;showCard()}})}showCard()}
 </script>
 </body>
 </html>
