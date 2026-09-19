@@ -3,21 +3,282 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>English File Intermediate · Grammar Practice</title>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<title>English File Intermediate · Grammar &amp; Vocabulary</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script>try{const t=localStorage.getItem('ef-theme');if(t==='dark'||t==='light')document.documentElement.dataset.theme=t}catch(e){}</script>
 <style>
-:root{--ink:#0f1419;--ink-soft:#3a4a5c;--ink-mute:#6b7785;--paper:#f7f4ec;--paper-warm:#efeadb;--line:#d8d1bf;--accent:#1a4d8f;--accent-soft:#e3edf8;--correct:#2d6a4f;--correct-soft:#d8ebe0;--wrong:#b8341a;--wrong-soft:#f5d9d2;--hint:#7a5c00;--hint-soft:#f5ecc8}*{box-sizing:border-box;margin:0;padding:0}html,body{background:var(--paper);color:var(--ink);font-family:'Inter',-apple-system,sans-serif;-webkit-font-smoothing:antialiased;line-height:1.55}body{min-height:100vh;padding:0}.container{max-width:780px;margin:0 auto;padding:32px 20px 80px}header{text-align:center;margin-bottom:36px;padding-bottom:28px;border-bottom:1px solid var(--line)}.eyebrow{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:10px}h1{font-family:'Fraunces',Georgia,serif;font-weight:500;font-size:38px;line-height:1.1;letter-spacing:-.02em;margin-bottom:8px}.tagline{color:var(--ink-mute);font-size:14px}.tabs{display:flex;gap:4px;margin-bottom:28px;background:var(--paper-warm);padding:5px;border-radius:12px;border:1px solid var(--line)}.tab-btn{flex:1;padding:10px 14px;border:none;background:transparent;cursor:pointer;font-size:13px;font-weight:500;color:var(--ink-mute);border-radius:8px;transition:all .2s}.tab-btn:hover{color:var(--ink)}.tab-btn.active{background:var(--ink);color:var(--paper)}.panel{display:none}.panel.active{display:block;animation:fadeIn .3s ease}@keyframes fadeIn{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:translateY(0)}}.unit-card{background:white;border:1px solid var(--line);border-radius:14px;padding:24px;margin-bottom:14px;cursor:pointer;transition:all .2s}.unit-card:hover{border-color:var(--accent);transform:translateY(-1px);box-shadow:0 6px 18px rgba(26,77,143,.08)}.unit-card:focus-visible{outline:2px solid var(--accent);outline-offset:2px}.unit-card.new{border-color:var(--accent)}.new-badge{font-size:10px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:var(--paper);background:var(--accent);padding:3px 8px;border-radius:4px;margin-left:auto;align-self:center}.unit-card-head{display:flex;align-items:baseline;gap:12px;margin-bottom:8px}.unit-num{font-family:'Fraunces';font-size:32px;font-weight:600;color:var(--accent);letter-spacing:-.02em}.unit-title{font-family:'Fraunces';font-size:22px;font-weight:500}.unit-desc{color:var(--ink-soft);font-size:14px;margin-bottom:12px}.unit-meta{display:flex;gap:16px;font-size:12px;color:var(--ink-mute);flex-wrap:wrap}.theory-section{background:white;border:1px solid var(--line);border-radius:14px;padding:28px;margin-bottom:18px}.theory-section h2{font-family:'Fraunces';font-size:22px;font-weight:500;margin-bottom:14px;letter-spacing:-.01em}.theory-section h3{font-size:14px;font-weight:600;margin-top:18px;margin-bottom:8px;color:var(--accent);text-transform:uppercase;letter-spacing:.05em}.theory-section p{color:var(--ink-soft);margin-bottom:10px;font-size:14.5px}.theory-section ul{margin-left:18px;margin-bottom:12px}.theory-section li{color:var(--ink-soft);margin-bottom:6px;font-size:14.5px}.ex-block{background:var(--paper-warm);border-left:3px solid var(--accent);padding:12px 16px;margin:12px 0;border-radius:0 8px 8px 0;font-family:'Fraunces';font-size:15px;line-height:1.7;font-style:italic}.ex-block b{font-style:normal;font-weight:600;color:var(--accent)}.warn-block{background:var(--hint-soft);border-left:3px solid var(--hint);padding:12px 16px;margin:12px 0;border-radius:0 8px 8px 0;font-size:14px}.warn-block b{color:var(--hint)}.table-wrap{overflow-x:auto;margin:12px 0}.cmp-table{width:100%;border-collapse:collapse;font-size:13.5px}.cmp-table th,.cmp-table td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top;color:var(--ink-soft)}.cmp-table th{background:var(--paper-warm);font-weight:600;color:var(--ink)}.tr{color:var(--ink-mute);font-size:.92em}.ok-block{background:var(--correct-soft);border-left:3px solid var(--correct);padding:12px 16px;margin:14px 0 4px;border-radius:0 8px 8px 0;font-size:14px;line-height:1.7}.ok-block b{color:var(--correct)}.theory-section ol.steps{list-style:none;counter-reset:step;margin:14px 0 8px}.theory-section ol.steps>li{counter-increment:step;position:relative;padding-left:42px;margin-bottom:16px}.theory-section ol.steps>li::before{content:counter(step);position:absolute;left:0;top:-1px;width:28px;height:28px;border-radius:50%;background:var(--accent);color:var(--paper);font-weight:600;font-size:13px;display:flex;align-items:center;justify-content:center}.theory-section ol.steps .ex-block{margin:8px 0 0}.progress-bar{height:6px;background:var(--paper-warm);border-radius:4px;overflow:hidden;margin-bottom:18px;border:1px solid var(--line)}.progress-fill{height:100%;background:linear-gradient(90deg,var(--accent),#2d6a9f);transition:width .4s ease}.ex-meta{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;font-size:12.5px;color:var(--ink-mute)}.ex-meta b{color:var(--correct);font-weight:600}.question-card{background:white;border:1px solid var(--line);border-radius:14px;padding:28px;margin-bottom:18px}.q-type{display:inline-block;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);font-weight:600;background:var(--accent-soft);padding:4px 10px;border-radius:4px;margin-bottom:14px}.q-instruction{font-size:13px;color:var(--ink-mute);margin-bottom:12px;font-style:italic}.q-text{font-family:'Fraunces';font-size:19px;line-height:1.55;margin-bottom:22px;font-weight:400}.hl{background:#fff3a8;padding:2px 6px;border-radius:3px;font-weight:600}.blank-n{font-family:'Inter';font-size:.6em;color:var(--accent);font-weight:700;vertical-align:super;margin-left:1px}.options{display:flex;flex-direction:column;gap:8px}.option{display:block;padding:14px 18px;background:white;border:1.5px solid var(--line);border-radius:10px;cursor:pointer;transition:all .15s;font-size:15px;text-align:left;width:100%;color:var(--ink)}.option:hover:not(:disabled){border-color:var(--accent);background:var(--accent-soft)}.option:disabled{cursor:default}.option.picked{border-color:var(--accent);background:var(--accent-soft)}.option.correct{border-color:var(--correct);background:var(--correct-soft);color:var(--correct);font-weight:600}.option.wrong{border-color:var(--wrong);background:var(--wrong-soft);color:var(--wrong);font-weight:600}.option.dim{opacity:.5}.gap-input-wrap{display:flex;flex-direction:column;gap:12px}.gap-input{padding:14px 18px;border:1.5px solid var(--line);border-radius:10px;font-family:'Fraunces';font-size:17px;background:white;outline:none;transition:border-color .15s;width:100%;color:var(--ink)}.gap-input:focus{border-color:var(--accent)}.gap-input.correct{border-color:var(--correct);background:var(--correct-soft);color:var(--correct);font-weight:500}.gap-input.wrong{border-color:var(--wrong);background:var(--wrong-soft);color:var(--wrong);font-weight:500}.gap-hint{font-size:12.5px;color:var(--ink-mute);font-style:italic}.check-btn{padding:12px 22px;background:var(--ink);color:var(--paper);border:none;border-radius:10px;cursor:pointer;font-weight:500;font-size:14px;align-self:flex-start;transition:all .15s}.check-btn:hover{background:var(--accent)}.check-btn:disabled{opacity:.5;cursor:default}.rw-buttons{display:flex;gap:10px}.rw-btn{flex:1;padding:14px;border:1.5px solid var(--line);background:white;border-radius:10px;cursor:pointer;font-weight:500;font-size:15px;transition:all .15s;color:var(--ink)}.rw-btn:hover:not(:disabled){border-color:var(--accent)}.rw-btn.selected{border-color:var(--accent);background:var(--accent-soft)}.rw-btn.selected.correct{border-color:var(--correct);background:var(--correct-soft);color:var(--correct)}.rw-btn.selected.wrong{border-color:var(--wrong);background:var(--wrong-soft);color:var(--wrong)}.correction-input{padding:12px 16px;border:1.5px solid var(--line);border-radius:10px;font-family:'Fraunces';font-size:16px;background:white;width:100%;outline:none;color:var(--ink)}.correction-input:focus{border-color:var(--accent)}.correction-input.correct{border-color:var(--correct);background:var(--correct-soft)}.correction-input.wrong{border-color:var(--wrong);background:var(--wrong-soft)}.feedback{margin-top:20px;padding:18px 20px;border-radius:10px;animation:slideIn .3s ease}@keyframes slideIn{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:translateY(0)}}.feedback.correct-fb{background:var(--correct-soft);border-left:4px solid var(--correct)}.feedback.wrong-fb{background:var(--wrong-soft);border-left:4px solid var(--wrong)}.fb-header{display:flex;align-items:center;gap:8px;font-weight:600;font-size:14px;margin-bottom:8px}.fb-header.correct-h{color:var(--correct)}.fb-header.wrong-h{color:var(--wrong)}.fb-body{font-size:14.5px;line-height:1.65}.fb-body b{font-weight:600}.fb-body em{font-family:'Fraunces';font-style:italic;color:var(--accent);font-weight:500}.fb-body .reveal{margin-bottom:10px;padding:10px 14px;background:rgba(255,255,255,.6);border-radius:6px;font-size:13.5px}.fb-body .reveal b{color:var(--accent)}.nav-buttons{display:flex;gap:10px;margin-top:20px;flex-wrap:wrap}.nav-btn{padding:12px 22px;background:var(--ink);color:var(--paper);border:none;border-radius:10px;cursor:pointer;font-weight:500;font-size:14px;transition:all .15s}.nav-btn:hover{background:var(--accent)}.nav-btn:disabled{opacity:.4;cursor:default}.nav-btn.secondary{background:transparent;color:var(--ink);border:1.5px solid var(--line)}.nav-btn.secondary:hover{border-color:var(--accent);color:var(--accent);background:transparent}.results-card{background:white;border:1px solid var(--line);border-radius:14px;padding:36px;text-align:center}.results-card h2{font-family:'Fraunces';font-size:28px;font-weight:500;margin-bottom:8px}.score-big{font-family:'Fraunces';font-size:72px;font-weight:500;color:var(--accent);line-height:1;margin:18px 0;letter-spacing:-.04em}.score-pct{font-size:16px;color:var(--ink-mute);margin-bottom:24px}.results-msg{font-size:15px;color:var(--ink-soft);margin-bottom:28px;max-width:460px;margin-left:auto;margin-right:auto;line-height:1.6}.review-list{margin:24px 0;text-align:left}.review-item{padding:12px 14px;border-radius:8px;margin-bottom:6px;font-size:13.5px;display:flex;gap:10px;align-items:flex-start}.review-item.ok{background:var(--correct-soft)}.review-item.bad{background:var(--wrong-soft)}.review-item small{display:block;color:var(--ink-soft);margin-top:4px;font-size:12.5px}.review-icon{font-weight:700;min-width:18px}.review-item.ok .review-icon{color:var(--correct)}.review-item.bad .review-icon{color:var(--wrong)}.timer-display{font-family:'Fraunces';font-size:20px;font-weight:600;color:var(--accent)}.timer-display.warn{color:var(--hint)}.timer-display.danger{color:var(--wrong)}.mode-selector{display:flex;gap:8px;margin-bottom:20px;flex-wrap:wrap}.mode-btn{padding:8px 14px;background:white;border:1.5px solid var(--line);border-radius:8px;cursor:pointer;font-size:13px;font-weight:500;color:var(--ink-soft);transition:all .15s}.mode-btn:hover{border-color:var(--accent);color:var(--accent)}.mode-btn.active{background:var(--accent);color:var(--paper);border-color:var(--accent)}.mode-btn:disabled{opacity:.45;cursor:default}.flashcard{background:white;border:1px solid var(--line);border-radius:14px;padding:36px;margin-bottom:18px;min-height:300px;display:flex;flex-direction:column;justify-content:center;cursor:pointer}.fc-question{font-family:'Fraunces';font-size:24px;font-weight:500;text-align:center;margin-bottom:20px;color:var(--accent)}.fc-answer{font-family:'Fraunces';font-size:20px;line-height:1.7;color:var(--ink)}.story-card{background:white;border:1px solid var(--line);border-radius:14px;padding:28px;margin-bottom:18px}.story-title{font-family:'Fraunces';font-size:24px;font-weight:500;margin-bottom:16px;color:var(--accent)}.story-text{font-family:'Fraunces';font-size:17px;line-height:1.8;color:var(--ink);margin-bottom:16px}.story-text b{color:var(--accent);font-weight:600}.story-note{background:var(--accent-soft);padding:14px 18px;border-radius:8px;font-size:14px;color:var(--ink-soft);margin-top:16px}footer{text-align:center;padding-top:30px;margin-top:30px;border-top:1px solid var(--line);color:var(--ink-mute);font-size:12px}footer b{color:var(--ink-soft);font-weight:500}@media (max-width:600px){.container{padding:20px 14px 60px}h1{font-size:28px}.q-text{font-size:17px}.score-big{font-size:56px}.theory-section,.question-card{padding:20px}.unit-card{padding:18px}.rw-buttons{flex-direction:column}.mode-selector{gap:6px}.mode-btn{font-size:12px;padding:6px 10px}.tab-btn{padding:10px 6px;font-size:12px}}
+/* ===== Tokens (estilo iOS) ===== */
+:root{
+  --bg:#f2f2f7;--card:#ffffff;--card2:#f7f7fa;--ink:#1c1c1e;--ink-soft:#3a3a3c;--ink-mute:#8a8a8e;
+  --line:rgba(60,60,67,.13);--fill:rgba(118,118,128,.12);--seg-active:#ffffff;
+  --blue:#007aff;--purple:#8e44d6;
+  --correct:#248a3d;--correct-soft:#e4f6e8;--wrong:#d70015;--wrong-soft:#ffe8e6;--hint:#b25000;--hint-soft:#fff2e0;
+  --hl:#fff1a6;--shadow:0 1px 2px rgba(0,0,0,.04),0 6px 20px rgba(0,0,0,.06);--shadow-lg:0 2px 6px rgba(0,0,0,.05),0 14px 36px rgba(0,0,0,.09);
+  --accent:var(--blue);--on-tint:#fff;
+  --paper:var(--bg);--paper-warm:var(--card2);
+  --font:-apple-system,BlinkMacSystemFont,"SF Pro Text","Inter","Segoe UI",Roboto,sans-serif;
+}
+/* Modo oscuro: sigue al sistema salvo que el usuario elija con el botón (data-theme en <html>) */
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){--bg:#000;--card:#1c1c1e;--card2:#2c2c2e;--ink:#f5f5f7;--ink-soft:#d1d1d6;--ink-mute:#98989f;
+  --line:rgba(84,84,88,.55);--fill:rgba(118,118,128,.24);--seg-active:#636366;--blue:#0a84ff;--purple:#bf5af2;
+  --correct:#30d158;--correct-soft:rgba(48,209,88,.14);--wrong:#ff6961;--wrong-soft:rgba(255,69,58,.15);--hint:#ffb340;--hint-soft:rgba(255,159,10,.13);
+  --hl:rgba(255,214,10,.26);--shadow:none;--shadow-lg:0 0 0 1px rgba(255,255,255,.04);--on-tint:#0b0b0d;color-scheme:dark}
+}
+:root[data-theme="dark"]{--bg:#000;--card:#1c1c1e;--card2:#2c2c2e;--ink:#f5f5f7;--ink-soft:#d1d1d6;--ink-mute:#98989f;
+  --line:rgba(84,84,88,.55);--fill:rgba(118,118,128,.24);--seg-active:#636366;--blue:#0a84ff;--purple:#bf5af2;
+  --correct:#30d158;--correct-soft:rgba(48,209,88,.14);--wrong:#ff6961;--wrong-soft:rgba(255,69,58,.15);--hint:#ffb340;--hint-soft:rgba(255,159,10,.13);
+  --hl:rgba(255,214,10,.26);--shadow:none;--shadow-lg:0 0 0 1px rgba(255,255,255,.04);--on-tint:#0b0b0d;color-scheme:dark}
+/* Color de sección y de unidad */
+body{--tint:var(--accent)}
+body[data-section="vocab"]{--accent:var(--purple)}
+[data-unit="5A"]{--tint:#e8590c}[data-unit="5B"]{--tint:#d6336c}[data-unit="PV"]{--tint:#0c8599}[data-unit="MV"]{--tint:#5f3dc4}[data-unit="7A"]{--tint:#2b8a3e}[data-unit="7B"]{--tint:#1c7ed6}
+[data-unit="V5A"]{--tint:#e67700}[data-unit="V5B"]{--tint:#c2255c}[data-unit="V6A"]{--tint:#7048e8}[data-unit="V6B"]{--tint:#0b7285}[data-unit="V7A"]{--tint:#2f9e44}[data-unit="V7B"]{--tint:#9c36b5}
+body,[data-unit]{--tint-text:var(--tint);--tint-soft:color-mix(in srgb,var(--tint) 9%,var(--card));--tint-mid:color-mix(in srgb,var(--tint) 18%,var(--card))}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) [data-unit="5A"]{--tint:#ff922b}:root:not([data-theme="light"]) [data-unit="5B"]{--tint:#f783ac}:root:not([data-theme="light"]) [data-unit="PV"]{--tint:#3bc9db}:root:not([data-theme="light"]) [data-unit="MV"]{--tint:#a48bfc}:root:not([data-theme="light"]) [data-unit="7A"]{--tint:#51cf66}:root:not([data-theme="light"]) [data-unit="7B"]{--tint:#4dabf7}:root:not([data-theme="light"]) [data-unit="V5A"]{--tint:#ffb04d}:root:not([data-theme="light"]) [data-unit="V5B"]{--tint:#f06595}:root:not([data-theme="light"]) [data-unit="V6A"]{--tint:#b197fc}:root:not([data-theme="light"]) [data-unit="V6B"]{--tint:#22d3e0}:root:not([data-theme="light"]) [data-unit="V7A"]{--tint:#69db7c}:root:not([data-theme="light"]) [data-unit="V7B"]{--tint:#e599f7}:root:not([data-theme="light"]) body,:root:not([data-theme="light"]) [data-unit]{--tint-text:var(--tint);--tint-soft:color-mix(in srgb,var(--tint) 15%,var(--card));--tint-mid:color-mix(in srgb,var(--tint) 30%,var(--card))}}
+:root[data-theme="dark"] [data-unit="5A"]{--tint:#ff922b}:root[data-theme="dark"] [data-unit="5B"]{--tint:#f783ac}:root[data-theme="dark"] [data-unit="PV"]{--tint:#3bc9db}:root[data-theme="dark"] [data-unit="MV"]{--tint:#a48bfc}:root[data-theme="dark"] [data-unit="7A"]{--tint:#51cf66}:root[data-theme="dark"] [data-unit="7B"]{--tint:#4dabf7}:root[data-theme="dark"] [data-unit="V5A"]{--tint:#ffb04d}:root[data-theme="dark"] [data-unit="V5B"]{--tint:#f06595}:root[data-theme="dark"] [data-unit="V6A"]{--tint:#b197fc}:root[data-theme="dark"] [data-unit="V6B"]{--tint:#22d3e0}:root[data-theme="dark"] [data-unit="V7A"]{--tint:#69db7c}:root[data-theme="dark"] [data-unit="V7B"]{--tint:#e599f7}:root[data-theme="dark"] body,:root[data-theme="dark"] [data-unit]{--tint-text:var(--tint);--tint-soft:color-mix(in srgb,var(--tint) 15%,var(--card));--tint-mid:color-mix(in srgb,var(--tint) 30%,var(--card))}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--bg);color:var(--ink);font-family:var(--font);-webkit-font-smoothing:antialiased;line-height:1.5}
+body{min-height:100vh}
+.container{max-width:760px;margin:0 auto;padding:28px 16px 80px}
+button{font-family:inherit}
+
+/* ===== Barra superior (tipo navegación iOS) ===== */
+.topbar{position:sticky;top:0;z-index:20;display:flex;align-items:center;gap:8px;height:52px;padding:0 12px;background:color-mix(in srgb,var(--bg) 78%,transparent);-webkit-backdrop-filter:saturate(180%) blur(20px);backdrop-filter:saturate(180%) blur(20px);border-bottom:.5px solid var(--line)}
+body[data-view="panel-home"] .topbar{display:none}
+.back-btn{border:none;background:none;color:var(--tint-text);font-size:17px;font-weight:500;cursor:pointer;padding:8px 6px;display:flex;align-items:center;gap:2px;flex-shrink:0}
+.back-btn span{font-size:26px;line-height:1;margin-top:-3px}
+.topbar-title{flex:1;text-align:center;font-weight:600;font-size:16px;margin-right:70px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+/* ===== Botón de tema ===== */
+.theme-btn{position:fixed;top:8px;right:12px;z-index:30;width:38px;height:38px;border-radius:50%;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--tint-text);background:color-mix(in srgb,var(--card) 80%,transparent);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px);box-shadow:0 1px 3px rgba(0,0,0,.1),0 0 0 .5px var(--line);transition:transform .15s}
+.theme-btn:hover{transform:scale(1.06)}
+.theme-btn:active{transform:scale(.94)}
+.theme-btn:focus-visible{outline:3px solid var(--tint-mid);outline-offset:2px}
+.theme-btn svg{width:20px;height:20px}
+.theme-btn .i-sun{display:none}
+:root[data-theme="dark"] .theme-btn .i-sun{display:block}:root[data-theme="dark"] .theme-btn .i-moon{display:none}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .theme-btn .i-sun{display:block}:root:not([data-theme="light"]) .theme-btn .i-moon{display:none}}
+header{padding-right:44px}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .unit-num{background:linear-gradient(145deg,var(--tint),color-mix(in srgb,var(--tint) 55%,#000));color:#fff;box-shadow:none}}
+:root[data-theme="dark"] .unit-num{background:linear-gradient(145deg,var(--tint),color-mix(in srgb,var(--tint) 55%,#000));color:#fff;box-shadow:none}
+
+/* ===== Encabezado ===== */
+header{margin:18px 0 22px}
+body:not([data-view="panel-home"]) header{display:none}
+.eyebrow{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--tint-text);font-weight:700;margin-bottom:6px}
+h1{font-weight:800;font-size:34px;line-height:1.12;letter-spacing:-.025em;margin-bottom:8px}
+.tagline{color:var(--ink-mute);font-size:15px}
+
+/* ===== Control segmentado ===== */
+.tabs{display:flex;gap:2px;margin-bottom:22px;background:var(--fill);padding:3px;border-radius:12px}
+.tab-btn{flex:1;padding:9px 10px;border:none;background:transparent;cursor:pointer;font-size:14px;font-weight:500;color:var(--ink);border-radius:9px;transition:background .2s,box-shadow .2s}
+.tab-btn.active{background:var(--seg-active);font-weight:600;box-shadow:0 1px 3px rgba(0,0,0,.12),0 3px 8px rgba(0,0,0,.06)}
+.home-tabs .tab-btn{padding:10px}
+.panel{display:none}
+.panel.active{display:block;animation:fadeIn .3s ease}
+@keyframes fadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+
+/* ===== Tarjetas de unidad ===== */
+.unit-card{position:relative;display:grid;grid-template-columns:56px 1fr 14px;grid-template-areas:"icon title chev" "icon desc chev" "icon meta chev";column-gap:14px;align-items:start;background:var(--card);border-radius:20px;padding:18px 16px 16px 18px;margin-bottom:12px;cursor:pointer;box-shadow:var(--shadow);transition:transform .15s,box-shadow .2s}
+.unit-card:hover{transform:translateY(-2px);box-shadow:var(--shadow-lg)}
+.unit-card:active{transform:scale(.99)}
+.unit-card:focus-visible{outline:3px solid var(--tint);outline-offset:2px}
+.unit-card::after{content:"›";grid-area:chev;align-self:center;color:var(--ink-mute);font-size:24px;font-weight:300}
+.unit-card-head{display:contents}
+.unit-num{grid-area:icon;width:56px;height:56px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:19px;font-weight:800;letter-spacing:-.02em;color:var(--on-tint);background:linear-gradient(145deg,color-mix(in srgb,var(--tint) 75%,#fff),var(--tint));box-shadow:0 4px 12px color-mix(in srgb,var(--tint) 30%,transparent)}
+.unit-title{grid-area:title;font-size:18px;font-weight:700;letter-spacing:-.01em;line-height:1.25;margin:2px 0 4px;padding-right:60px}
+.new-badge{position:absolute;top:16px;right:36px;font-size:10.5px;letter-spacing:.04em;text-transform:uppercase;font-weight:700;color:var(--tint-text);background:var(--tint-mid);padding:3px 8px;border-radius:999px}
+.unit-desc{grid-area:desc;color:var(--ink-soft);font-size:14px;margin-bottom:10px}
+.unit-meta{grid-area:meta;display:flex;gap:6px;flex-wrap:wrap}
+.unit-meta span{font-size:12px;color:var(--ink-soft);background:var(--fill);padding:3px 9px;border-radius:999px}
+.unit-meta span:first-child{background:var(--tint-soft);color:var(--tint-text);font-weight:600}
+
+/* ===== Encabezado de la unidad ===== */
+.study-head{display:flex;align-items:center;gap:14px;margin:14px 0 20px}
+.study-head .unit-num{flex-shrink:0;width:60px;height:60px;border-radius:16px;font-size:20px}
+.study-head h1{font-size:28px;margin:0}
+.study-head .eyebrow{margin-bottom:2px}
+
+/* ===== Teoría / listas ===== */
+.theory-section{background:var(--card);border-radius:20px;padding:24px;margin-bottom:14px;box-shadow:var(--shadow)}
+.theory-section h2{font-size:21px;font-weight:700;margin-bottom:12px;letter-spacing:-.015em}
+.theory-section h3{font-size:12.5px;font-weight:700;margin:20px 0 8px;color:var(--tint-text);text-transform:uppercase;letter-spacing:.06em}
+.theory-section p{color:var(--ink-soft);margin-bottom:10px;font-size:15px}
+.theory-section ul{margin-left:20px;margin-bottom:12px}
+.theory-section li{color:var(--ink-soft);margin-bottom:6px;font-size:15px}
+.theory-section li::marker{color:var(--tint)}
+.theory-section b{color:var(--ink)}
+.theory-section em{color:var(--tint-text);font-style:italic}
+
+/* Ejemplos: bloque con color de la unidad, inglés destacado y traducción en gris */
+.ex-block{background:var(--tint-soft);border-left:4px solid var(--tint);padding:12px 16px;margin:12px 0;border-radius:4px 14px 14px 4px;font-size:15.5px;line-height:1.65;color:var(--ink);font-weight:500}
+.ex-block b,.theory-section .ex-block b{color:var(--tint-text);font-weight:700}
+.tr{color:var(--ink-mute);font-size:.9em;font-style:italic;font-weight:400}
+.warn-block{background:var(--hint-soft);border-left:4px solid var(--hint);padding:12px 16px;margin:12px 0;border-radius:4px 14px 14px 4px;font-size:14.5px;line-height:1.65;color:var(--ink)}
+.warn-block b,.theory-section .warn-block b{color:var(--hint)}
+.ok-block{background:var(--correct-soft);border-left:4px solid var(--correct);padding:12px 16px;margin:14px 0 4px;border-radius:4px 14px 14px 4px;font-size:14.5px;line-height:1.7;color:var(--ink)}
+.ok-block b,.theory-section .ok-block b{color:var(--correct)}
+.warn-block em,.ok-block em{color:var(--ink)}
+
+/* Tablas */
+.table-wrap{overflow-x:auto;margin:12px 0}
+.cmp-table{width:100%;border-collapse:separate;border-spacing:0;font-size:14px;border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.cmp-table th,.cmp-table td{padding:10px 12px;text-align:left;vertical-align:top;color:var(--ink-soft);border-top:1px solid var(--line)}
+.cmp-table tr:first-child th,.cmp-table tr:first-child td{border-top:none}
+.cmp-table th{background:var(--tint-soft);font-weight:700;color:var(--tint-text);font-size:12.5px;text-transform:uppercase;letter-spacing:.04em}
+.cmp-table tr:nth-child(even) td{background:color-mix(in srgb,var(--card2) 60%,var(--card))}
+.cmp-table td b{color:var(--tint-text)}
+
+/* Pasos */
+.theory-section ol.steps{list-style:none;counter-reset:step;margin:14px 0 8px}
+.theory-section ol.steps>li{counter-increment:step;position:relative;padding-left:42px;margin-bottom:16px}
+.theory-section ol.steps>li::before{content:counter(step);position:absolute;left:0;top:-1px;width:28px;height:28px;border-radius:50%;background:var(--tint);color:var(--on-tint);font-weight:700;font-size:13px;display:flex;align-items:center;justify-content:center}
+.theory-section ol.steps .ex-block{margin:8px 0 0}
+
+/* Vocabulario */
+.home-tabs{margin-bottom:20px}
+.vocab-table td:first-child{width:44%}
+.vw{font-weight:700;color:var(--tint-text);font-size:15.5px}
+.ipa{display:block;color:var(--ink-mute);font-size:12.5px;font-weight:400;margin-top:1px}
+.fc-question .ipa{font-size:15px;margin-top:8px;color:var(--ink-mute)}
+.vex{display:block;font-style:italic;color:var(--ink-soft);font-size:13px;margin-top:4px;padding-left:10px;border-left:2px solid var(--tint-mid)}
+
+/* ===== Ejercicios ===== */
+.progress-bar{height:6px;background:var(--fill);border-radius:999px;overflow:hidden;margin-bottom:14px}
+.progress-fill{height:100%;background:var(--tint);border-radius:999px;transition:width .4s ease}
+.ex-meta{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:13px;color:var(--ink-mute)}
+.ex-meta b{color:var(--correct);font-weight:700}
+.question-card{background:var(--card);border-radius:22px;padding:24px;margin-bottom:14px;box-shadow:var(--shadow)}
+.q-type{display:inline-block;font-size:11.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--tint-text);font-weight:700;background:var(--tint-soft);padding:4px 10px;border-radius:999px;margin-bottom:12px}
+.q-instruction{font-size:13.5px;color:var(--ink-mute);margin-bottom:10px}
+.q-text{font-size:19px;line-height:1.5;margin-bottom:20px;font-weight:500;letter-spacing:-.01em}
+.hl{background:var(--hl);padding:1px 6px;border-radius:6px;font-weight:700}
+.blank-n{font-size:.6em;color:var(--tint-text);font-weight:700;vertical-align:super;margin-left:1px}
+.options{display:flex;flex-direction:column;gap:8px}
+.option{padding:14px 16px;border:1.5px solid var(--line);background:var(--card);border-radius:14px;cursor:pointer;text-align:left;font-size:15.5px;color:var(--ink);transition:all .15s}
+.option:hover:not(:disabled){border-color:var(--tint);background:var(--tint-soft)}
+.option:disabled{cursor:default}
+.option.picked{border-color:var(--tint);background:var(--tint-soft)}
+.option.correct{border-color:var(--correct);background:var(--correct-soft);color:var(--correct);font-weight:600}
+.option.wrong{border-color:var(--wrong);background:var(--wrong-soft);color:var(--wrong);font-weight:600}
+.option.dim{opacity:.45}
+.gap-input-wrap{display:flex;flex-direction:column;gap:10px}
+.gap-input,.correction-input{padding:13px 16px;border:2px solid transparent;border-radius:12px;font-family:inherit;font-size:17px;background:var(--fill);width:100%;outline:none;color:var(--ink);transition:border-color .15s,background .15s}
+.gap-input:focus,.correction-input:focus{border-color:var(--tint);background:var(--card)}
+.gap-input.correct,.correction-input.correct{border-color:var(--correct);background:var(--correct-soft);color:var(--correct);font-weight:600}
+.gap-input.wrong,.correction-input.wrong{border-color:var(--wrong);background:var(--wrong-soft);color:var(--wrong);font-weight:600}
+.gap-hint{font-size:13px;color:var(--ink-mute)}
+.check-btn,.nav-btn{padding:13px 22px;background:var(--tint);color:var(--on-tint);border:none;border-radius:12px;cursor:pointer;font-weight:600;font-size:15px;transition:filter .15s,transform .1s}
+.check-btn{align-self:flex-start}
+.check-btn:hover,.nav-btn:hover{filter:brightness(1.08)}
+.check-btn:active,.nav-btn:active{transform:scale(.97)}
+.check-btn:disabled,.nav-btn:disabled{opacity:.4;cursor:default;filter:none;transform:none}
+.nav-btn.secondary{background:var(--fill);color:var(--tint-text)}
+.nav-btn.secondary:hover{filter:brightness(.97)}
+.rw-buttons{display:flex;gap:10px}
+.rw-btn{flex:1;padding:14px;border:1.5px solid var(--line);background:var(--card);border-radius:14px;cursor:pointer;font-weight:600;font-size:15.5px;color:var(--ink);transition:all .15s}
+.rw-btn:hover:not(:disabled){border-color:var(--tint);background:var(--tint-soft)}
+.rw-btn.selected{border-color:var(--tint);background:var(--tint-soft)}
+.rw-btn.selected.correct{border-color:var(--correct);background:var(--correct-soft);color:var(--correct)}
+.rw-btn.selected.wrong{border-color:var(--wrong);background:var(--wrong-soft);color:var(--wrong)}
+.feedback{margin-top:18px;padding:16px 18px;border-radius:16px;animation:slideIn .3s ease}
+@keyframes slideIn{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:none}}
+.feedback.correct-fb{background:var(--correct-soft)}
+.feedback.wrong-fb{background:var(--wrong-soft)}
+.fb-header{display:flex;align-items:center;gap:8px;font-weight:700;font-size:15px;margin-bottom:6px}
+.fb-header.correct-h{color:var(--correct)}
+.fb-header.wrong-h{color:var(--wrong)}
+.fb-body{font-size:14.5px;line-height:1.65;color:var(--ink)}
+.fb-body b{font-weight:700}
+.fb-body em{font-style:italic;color:var(--tint-text);font-weight:600}
+.fb-body .reveal{margin-bottom:10px;padding:10px 14px;background:color-mix(in srgb,var(--card) 70%,transparent);border-radius:10px;font-size:14px}
+.fb-body .reveal b{color:var(--tint-text)}
+.nav-buttons{display:flex;gap:10px;margin-top:18px;flex-wrap:wrap}
+
+/* ===== Resultados ===== */
+.results-card{background:var(--card);border-radius:24px;padding:32px 24px;text-align:center;box-shadow:var(--shadow)}
+.results-card h2{font-size:24px;font-weight:700;margin-bottom:6px;letter-spacing:-.015em}
+.score-big{font-size:76px;font-weight:800;color:var(--tint-text);line-height:1;margin:18px 0 10px;letter-spacing:-.04em}
+.score-pct{font-size:16px;color:var(--ink-mute);margin-bottom:20px}
+.results-msg{font-size:15px;color:var(--ink-soft);margin:0 auto 24px;max-width:460px;line-height:1.6}
+.results-card summary{color:var(--tint-text)!important;font-weight:500}
+.review-list{margin:20px 0;text-align:left}
+.review-item{padding:12px 14px;border-radius:12px;margin-bottom:6px;font-size:14px;display:flex;gap:10px;align-items:flex-start}
+.review-item.ok{background:var(--correct-soft)}
+.review-item.bad{background:var(--wrong-soft)}
+.review-item small{display:block;color:var(--ink-soft);margin-top:4px;font-size:13px}
+.review-icon{font-weight:800;min-width:18px}
+.review-item.ok .review-icon{color:var(--correct)}
+.review-item.bad .review-icon{color:var(--wrong)}
+.timer-display{font-size:19px;font-weight:700;color:var(--tint-text);font-variant-numeric:tabular-nums}
+.timer-display.warn{color:var(--hint)}
+.timer-display.danger{color:var(--wrong)}
+
+/* ===== Chips ===== */
+.mode-selector{display:flex;gap:8px;margin-bottom:18px;flex-wrap:wrap}
+.mode-btn{padding:8px 14px;background:var(--fill);border:none;border-radius:999px;cursor:pointer;font-size:13.5px;font-weight:500;color:var(--ink);transition:all .15s}
+.mode-btn:hover:not(:disabled){background:var(--tint-soft);color:var(--tint-text)}
+.mode-btn.active,.mode-btn.active:hover{background:var(--tint);color:var(--on-tint)}
+.mode-btn:disabled{opacity:.4;cursor:default}
+.fc-dir{margin:12px 0 0}
+
+/* ===== Flashcards ===== */
+.flashcard{background:linear-gradient(180deg,var(--tint-soft),var(--card) 55%);border-radius:26px;padding:36px 28px;margin-bottom:16px;min-height:300px;display:flex;flex-direction:column;justify-content:center;cursor:pointer;box-shadow:var(--shadow-lg);border:1px solid var(--line);transition:transform .15s}
+.flashcard:active{transform:scale(.99)}
+.fc-question{font-size:26px;font-weight:700;text-align:center;color:var(--tint-text);letter-spacing:-.015em;line-height:1.3}
+.fc-answer{font-size:18px;line-height:1.7;color:var(--ink)}
+.fc-answer b{color:var(--tint-text)}
+.fc-answer em{color:var(--ink-soft)}
+
+/* ===== Historias ===== */
+.story-card{background:var(--card);border-radius:22px;padding:26px;margin-bottom:16px;box-shadow:var(--shadow);border-top:5px solid var(--tint)}
+.story-title{font-size:23px;font-weight:800;margin-bottom:14px;color:var(--tint-text);letter-spacing:-.02em}
+.story-text{font-size:17px;line-height:1.8;color:var(--ink);margin-bottom:14px}
+.story-text b{color:var(--tint-text);font-weight:700;background:var(--tint-soft);padding:1px 2px;margin:0 -2px;border-radius:5px;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.nav-btn:focus-visible,.check-btn:focus-visible,.option:focus-visible,.rw-btn:focus-visible,.mode-btn:focus-visible,.tab-btn:focus-visible,.back-btn:focus-visible{outline:3px solid var(--tint-mid);outline-offset:2px}
+.story-note{background:var(--hint-soft);padding:14px 16px;border-radius:14px;font-size:14px;color:var(--ink);margin-top:14px}
+.story-note b{color:var(--hint)}
+
+footer{text-align:center;padding-top:26px;margin-top:26px;color:var(--ink-mute);font-size:12.5px}
+footer b{color:var(--ink-soft);font-weight:600}
+
+@media (max-width:600px){
+  .container{padding:16px 16px 60px}
+  h1{font-size:30px}
+  .study-head h1{font-size:24px}
+  .q-text{font-size:17.5px}
+  .score-big{font-size:60px}
+  .theory-section,.question-card{padding:18px}
+  .unit-card{grid-template-columns:48px 1fr 12px;column-gap:12px;padding:16px 14px}
+  .unit-num{width:48px;height:48px;font-size:16px;border-radius:12px}
+  .unit-title{font-size:17px}
+  .rw-buttons{flex-direction:column}
+  .mode-btn{font-size:12.5px;padding:7px 12px}
+  .tab-btn{padding:8px 4px;font-size:12.5px}
+  .flashcard{padding:28px 20px}
+  .fc-question{font-size:22px}
+}
 </style>
 </head>
-<body>
+<body data-view="panel-home" data-section="grammar">
+<button class="theme-btn" id="theme-btn" type="button" aria-label="Cambiar entre modo claro y oscuro" title="Modo claro / oscuro"><svg class="i-moon" viewBox="0 0 24 24" fill="currentColor"><path d="M21 14.3A8.5 8.5 0 0 1 9.7 3a.6.6 0 0 0-.8-.7A9.5 9.5 0 1 0 21.7 15.1a.6.6 0 0 0-.7-.8z"/></svg><svg class="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.2" fill="currentColor" stroke="none"/><path d="M12 2.5v2M12 19.5v2M4.6 4.6l1.4 1.4M18 18l1.4 1.4M2.5 12h2M19.5 12h2M4.6 19.4 6 18M18 6l1.4-1.4"/></svg></button>
+<nav class="topbar"><button class="back-btn" onclick="goHome()"><span>‹</span>Inicio</button><span class="topbar-title" id="topbar-title"></span></nav>
 <div class="container">
 <header>
 <div class="eyebrow">English File · Intermediate · 4th Edition</div>
-<h1>Grammar Practice — Exam Study Prep</h1>
-<p class="tagline">Tiempos pasados · Hábitos · Voz pasiva · Verbos modales · First &amp; Second Conditional</p>
+<h1 id="main-title">Grammar Practice — Exam Study Prep</h1>
+<p class="tagline" id="main-tagline">Tiempos pasados · Hábitos · Voz pasiva · Verbos modales · First &amp; Second Conditional</p>
 </header>
 
 <div id="panel-home" class="panel active">
+<div class="tabs home-tabs">
+<button class="tab-btn active" data-section="grammar">📐 Grammar</button>
+<button class="tab-btn" data-section="vocab">📘 Vocabulary</button>
+</div>
+
+<div id="section-grammar">
 <div class="unit-card" data-unit="5A" role="button" tabindex="0">
 <div class="unit-card-head">
 <span class="unit-num">5A</span>
@@ -104,10 +365,51 @@
 </div>
 </div>
 
+</div>
+
+<div id="section-vocab" style="display:none">
+<div class="unit-card" data-unit="V5A" role="button" tabindex="0">
+<div class="unit-card-head"><span class="unit-num">5A</span><span class="unit-title">Sport</span></div>
+<p class="unit-desc">Personas y lugares (coach, referee, pitch, court), verbos (win vs beat, score, draw) y phrasal verbs (warm up, work out, be sent off).</p>
+<div class="unit-meta"><span class="word-count">📘 Palabras</span><span class="ex-count">✍️ Ejercicios</span><span>🃏 Flashcards</span><span>📚 Lectura</span></div>
+</div>
+
+<div class="unit-card" data-unit="V5B" role="button" tabindex="0">
+<div class="unit-card-head"><span class="unit-num">5B</span><span class="unit-title">Relationships</span></div>
+<p class="unit-desc">Personas (colleague, flatmate, fiancé, ex) y frases verbales (get to know, get on, break up, lose touch, get married).</p>
+<div class="unit-meta"><span class="word-count">📘 Palabras</span><span class="ex-count">✍️ Ejercicios</span><span>🃏 Flashcards</span><span>📚 Lectura</span></div>
+</div>
+
+<div class="unit-card" data-unit="V6A" role="button" tabindex="0">
+<div class="unit-card-head"><span class="unit-num">6A</span><span class="unit-title">Cinema</span></div>
+<p class="unit-desc">Tipos de película, personas y cosas (cast, plot, review, sequel) y frases como be based on, be set in, be dubbed.</p>
+<div class="unit-meta"><span class="word-count">📘 Palabras</span><span class="ex-count">✍️ Ejercicios</span><span>🃏 Flashcards</span><span>📚 Lectura</span></div>
+</div>
+
+<div class="unit-card" data-unit="V6B" role="button" tabindex="0">
+<div class="unit-card-head"><span class="unit-num">6B</span><span class="unit-title">The body</span></div>
+<p class="unit-desc">Partes del cuerpo y verbos relacionados (bite, clap, nod, stare, taste, whistle). Posesivos con el cuerpo.</p>
+<div class="unit-meta"><span class="word-count">📘 Palabras</span><span class="ex-count">✍️ Ejercicios</span><span>🃏 Flashcards</span><span>📚 Lectura</span></div>
+</div>
+
+<div class="unit-card" data-unit="V7A" role="button" tabindex="0">
+<div class="unit-card-head"><span class="unit-num">7A</span><span class="unit-title">Education</span></div>
+<p class="unit-desc">El sistema escolar en UK y US, disciplina (make, let, be allowed to) y exámenes (take, pass, fail, revise).</p>
+<div class="unit-meta"><span class="word-count">📘 Palabras</span><span class="ex-count">✍️ Ejercicios</span><span>🃏 Flashcards</span><span>📚 Lectura</span></div>
+</div>
+
+<div class="unit-card" data-unit="V7B" role="button" tabindex="0">
+<div class="unit-card-head"><span class="unit-num">7B</span><span class="unit-title">Houses</span></div>
+<p class="unit-desc">Dónde vive la gente (in / on), partes de una casa (attic, basement, chimney, roof) y cómo describirla (cosy, spacious).</p>
+<div class="unit-meta"><span class="word-count">📘 Palabras</span><span class="ex-count">✍️ Ejercicios</span><span>🃏 Flashcards</span><span>📚 Lectura</span></div>
+</div>
+</div>
+
 <footer>Basado en <b>English File Intermediate (4th Edition)</b> · Oxford University Press<br>Hecho para el grupo de estudio 📚</footer>
 </div>
 
 <div id="panel-study" class="panel">
+<div class="study-head"><span class="unit-num" id="study-icon"></span><div><div class="eyebrow" id="study-kind"></div><h1 id="study-title"></h1></div></div>
 <div class="tabs">
 <button class="tab-btn active" data-subtab="theory">📖 Teoría</button>
 <button class="tab-btn" data-subtab="exercises">✍️ Ejercicios</button>
@@ -611,6 +913,469 @@ rightwrong:[
 };
 Object.keys(EXTRA).forEach(u=>['choice','gap','rightwrong'].forEach(t=>BANK[u][t].push(...EXTRA[u][t])));
 
+/* =====================  VOCABULARIO (Vocabulary Bank 5A–7B)  =====================
+   Cada unidad: name, page, sections [{h, words:[[inglés, IPA, español, ejemplo?]]}], notes, story, bank (mismo formato que BANK)
+*/
+const VOCAB={
+'V5A':{name:'Sport',page:157,
+sections:[
+{h:'People and places',words:[
+['captain','ˈkæptɪn','capitán / capitana del equipo'],
+['coach','kəʊtʃ','entrenador/a','The coach gave the players instructions.'],
+['fans','fænz','hinchas, aficionados'],
+['players','ˈpleɪəz','jugadores'],
+['referee','refəˈriː','árbitro (fútbol, rugby, boxeo)'],
+['umpire','ˈʌmpaɪə','árbitro (tenis, cricket, béisbol)'],
+['spectators','spekˈteɪtəz','espectadores'],
+['the crowd','kraʊd','la multitud, el público'],
+['sports hall','ˈspɔːts hɔːl','polideportivo (cubierto)'],
+['stadium','ˈsteɪdiəm','estadio'],
+['team','tiːm','equipo']]},
+{h:'Where you do sport',words:[
+['court','kɔːt','cancha (tenis, básquet)','tennis court, basketball court'],
+['pitch','pɪtʃ','cancha (fútbol, rugby, hockey)','football pitch'],
+['pool','puːl','pileta (natación, clavados)','swimming pool'],
+['track','træk','pista (atletismo)','running track'],
+['circuit','ˈsɜːkɪt','circuito (Fórmula 1, motociclismo)'],
+['course','kɔːs','campo (golf)','golf course'],
+['slope','sləʊp','pista (esquí)','ski slope']]},
+{h:'Verbs',words:[
+['beat – beat – beaten','biːt','vencer a (un rival)','Milan beat Chelsea 3–0.'],
+['win – won – won','wɪn','ganar (un partido, una medalla, un trofeo)','Milan won the match 3–0.'],
+['lose – lost – lost','luːz','perder','We lost the final.'],
+['draw – drew – drawn','drɔː','empatar','Spain drew with Brazil 2–2.'],
+['do (yoga, t’ai chi)','duː','hacer (yoga, artes marciales…)','My brothers do yoga.'],
+['get fit','ɡet fɪt','ponerse en forma','I go to the gym because I want to get fit.'],
+['get injured','ɡet ˈɪndʒəd','lesionarse','Don’t play on a wet court. You might get injured.'],
+['go (swimming, running)','ɡəʊ','ir a (nadar, correr…)','Would you like to go swimming?'],
+['kick','kɪk','patear','He kicked the ball into the goal.'],
+['score','skɔː','marcar (un gol, puntos)','He scored two goals.'],
+['throw','θrəʊ','lanzar, tirar','In basketball, players throw the ball to each other.'],
+['train','treɪn','entrenar','Professional sportspeople train every day.']]},
+{h:'Phrasal verbs',words:[
+['warm up','wɔːm ʌp','entrar en calor, calentar','It’s important to warm up before you exercise.'],
+['work out','wɜːk aʊt','hacer ejercicio (en el gimnasio)','My daughter works out every afternoon.'],
+['be sent off','biː sent ɒf','ser expulsado (de la cancha)','The player got a red card and was sent off.'],
+['be knocked out','biː nɒkt aʊt','ser eliminado (de una competición)','My team was knocked out in the semi-finals.']]}
+],
+notes:`<div class="warn-block"><b>win o beat?</b><br>Se <b>win</b> un partido, una competición, una medalla o un trofeo: <em>We won the match.</em><br>Se <b>beat</b> a otro equipo o persona: <em>PSG beat Chelsea.</em> ❌ <s>We won Chelsea.</s></div><div class="ok-block"><b>do, play o go?</b><br><b>play</b> + deportes con pelota o de competencia: <em>play tennis, play football</em><br><b>go</b> + deportes en -ing: <em>go swimming, go running, go skiing</em><br><b>do</b> + otras actividades: <em>do yoga, do judo, do exercise</em></div>`,
+story:`<div class="story-card"><div class="story-title">The Cup Final</div><div class="story-text">It was the last match of the season and the <b>stadium</b> was full. Forty thousand <b>fans</b> were singing, and the <b>crowd</b> went crazy when the <b>players</b> came out onto the <b>pitch</b>. Before the match, the <b>coach</b> had told the <b>team</b> to <b>warm up</b> carefully, because two players had <b>got injured</b> the week before.<br><br>In the first half, our <b>captain</b> <b>kicked</b> the ball from thirty metres and <b>scored</b> an amazing goal. But ten minutes later, one of our defenders <b>was sent off</b> by the <b>referee</b>, and the other team scored twice. At half-time we were losing 2–1.<br><br>In the second half we played brilliantly. We scored two more goals and <b>beat</b> them 3–2. We <b>won</b> the cup! Last year we <b>were knocked out</b> in the semi-finals, so this time the <b>spectators</b> celebrated for hours.</div><div class="story-note">💡 Fijate: <b>won</b> + the cup (el trofeo) pero <b>beat</b> + them (el rival). <b>be sent off</b> y <b>be knocked out</b> van en voz pasiva.</div></div>`,
+bank:{
+choice:[
+{q:"Real Madrid ___ Barcelona 3–1 last night.",o:["beat","won","scored","drew"],c:0,e:["✅ <em>beat</em> + rival: vencer a otro equipo.","❌ <em>win</em> va con el partido, un trofeo o una medalla, no con el rival.","❌ <em>score</em> = marcar goles o puntos, no vencer a un equipo.","❌ <em>drew</em> = empataron, pero 3–1 no es un empate."]},
+{q:"The ___ blew his whistle and showed the player a red card.",o:["referee","coach","captain","spectator"],c:0,e:["✅ El <em>referee</em> es el árbitro en fútbol, rugby o boxeo.","❌ <em>coach</em> = entrenador; no dirige el partido.","❌ <em>captain</em> = capitán del equipo.","❌ <em>spectator</em> = espectador."]},
+{q:"In tennis, the person who controls the match is the ___.",o:["umpire","referee","coach","fan"],c:0,e:["✅ En tenis y cricket el árbitro es el <em>umpire</em>.","❌ <em>referee</em> se usa en fútbol, rugby o boxeo.","❌ <em>coach</em> = entrenador.","❌ <em>fan</em> = hincha."]},
+{q:"The athletes are running round the ___.",o:["track","court","pitch","course"],c:0,e:["✅ <em>track</em> = pista de atletismo.","❌ <em>court</em> = cancha de tenis o básquet.","❌ <em>pitch</em> = cancha de fútbol, rugby o hockey.","❌ <em>course</em> = campo de golf."]},
+{q:"It's important to ___ before you start running, or you might get injured.",o:["warm up","work out","knock out","send off"],c:0,e:["✅ <em>warm up</em> = hacer ejercicio suave para entrar en calor.","❌ <em>work out</em> = entrenar en el gimnasio; no es la preparación previa.","❌ <em>knock out</em> = eliminar de una competición.","❌ <em>send off</em> = expulsar."]},
+{q:"Our team ___ in the semi-finals, so we didn't play in the final.",o:["was knocked out","was sent off","warmed up","beat"],c:0,e:["✅ <em>be knocked out</em> = ser eliminado de una competición.","❌ <em>be sent off</em> = ser expulsado de la cancha (un jugador).","❌ <em>warm up</em> = entrar en calor.","❌ <em>beat</em> necesita un rival y significa ganar: lo contrario."]},
+{q:"The ___ went wild when the team scored in the last minute.",o:["crowd","coach","umpire","stadium"],c:0,e:["✅ <em>the crowd</em> = la multitud, el público.","❌ <em>coach</em> es una sola persona (el entrenador).","❌ <em>umpire</em> = árbitro de tenis o cricket.","❌ <em>stadium</em> es el lugar, no las personas."]},
+{q:"My sister ___ yoga three times a week.",o:["does","plays","goes","makes"],c:0,e:["✅ <em>do</em> + yoga, t'ai chi, judo, gimnasia.","❌ <em>play</em> va con deportes de pelota o competencia: <em>play tennis</em>.","❌ <em>go</em> va con -ing: <em>go swimming</em>.","❌ No se dice <em>make yoga</em>."]},
+{q:"Chelsea and Arsenal ___ 2–2.",o:["drew","beat","won","lost"],c:0,e:["✅ <em>draw – drew – drawn</em> = empatar.","❌ <em>beat</em> necesita un rival como objeto y alguien tiene que ganar.","❌ Con 2–2 nadie ganó.","❌ Con 2–2 nadie perdió."]},
+{q:"Who ___ the gold medal in the 100 metres?",o:["won","beat","scored","trained"],c:0,e:["✅ <em>win</em> + medalla, trofeo, partido o competición.","❌ <em>beat</em> va con un rival, no con una medalla.","❌ <em>score</em> = marcar goles o puntos.","❌ <em>train</em> = entrenar; no se entrena una medalla."]},
+{q:"We need a new ___ — the old one was so bad that the players didn't respect him.",o:["coach","fan","crowd","spectator"],c:0,e:["✅ <em>coach</em> = el entrenador que dirige a los jugadores.","❌ <em>fan</em> = hincha; no dirige al equipo.","❌ <em>crowd</em> = el público.","❌ <em>spectator</em> = espectador."]}
+],
+gap:[
+{q:"The skiers took the lift to the top of the ___.",a:[["slope","slopes"]],h:["pista de esquí"],ex:"<em>slope</em> = pista de esquí. <em>ski slope</em>."},
+{q:"Rugby and hockey are played on a ___.",a:[["pitch"]],h:["cancha de fútbol, rugby, hockey"],ex:"<em>pitch</em> para fútbol, rugby y hockey; <em>court</em> para tenis y básquet."},
+{q:"He's the best striker in the league. He ___ 30 goals last season.",a:[["scored"]],h:["marcar (pasado)"],ex:"<em>score a goal</em> = marcar un gol."},
+{q:"I go to the gym every day. I work ___ for about an hour.",a:[["out"]],h:["hacer ejercicio: work ___"],ex:"<em>work out</em> = hacer ejercicio, normalmente en el gimnasio."},
+{q:"The player was ___ off for hitting another player.",a:[["sent"]],h:["ser expulsado: be ___ off"],ex:"<em>be sent off</em> = ser expulsado de la cancha."},
+{q:"Be careful on the wet court. You might get ___.",a:[["injured","hurt"]],h:["lesionarse"],ex:"<em>get injured</em> = lesionarse."},
+{q:"Formula 1 cars race around a ___.",a:[["circuit","track"]],h:["circuito"],ex:"<em>circuit</em> para Fórmula 1 y motociclismo."},
+{q:"We lost the match. The other team ___ us 4–0.",a:[["beat"]],h:["vencer (pasado)"],ex:"<em>beat – beat – beaten</em>. El pasado es igual al presente."},
+{q:"I've started running because I want to get ___.",a:[["fit"]],h:["ponerse en forma"],ex:"<em>get fit</em> = ponerse en forma."},
+{q:"Golfers play on a golf ___.",a:[["course"]],h:["campo"],ex:"<em>golf course</em> = campo de golf."},
+{q:"The ___ is the player who leads the team and wears the armband.",a:[["captain"]],h:["capitán"],ex:"<em>captain</em> /ˈkæptɪn/."}
+],
+rightwrong:[
+{q:"We [[won]] the other team 2–0.",c:false,corr:["beat"],ex:"❌ Al rival se lo <em>beat</em>; se <em>win</em> un partido, un trofeo o una medalla."},
+{q:"Manchester United [[beat]] Liverpool last Sunday.",c:true,corr:null,ex:"✅ Correcto. <em>beat</em> + rival. El pasado de <em>beat</em> es <em>beat</em>."},
+{q:"My brother [[plays]] judo on Saturdays.",c:false,corr:["does"],ex:"❌ Con artes marciales, yoga o gimnasia usamos <em>do</em>."},
+{q:"The tennis players walked onto the [[court]].",c:true,corr:null,ex:"✅ Correcto. Tenis y básquet se juegan en un <em>court</em>."},
+{q:"Thousands of [[spectators]] watched the final.",c:true,corr:null,ex:"✅ Correcto. <em>spectators</em> = espectadores."},
+{q:"They [[losed]] the match in the last minute.",c:false,corr:["lost"],ex:"❌ <em>lose</em> es irregular: <em>lose – lost – lost</em>."},
+{q:"Let's [[go swimming]] this afternoon.",c:true,corr:null,ex:"✅ Correcto. <em>go</em> + -ing: <em>go swimming, go running</em>."},
+{q:"The swimmers dived into the [[track]].",c:false,corr:["pool"],ex:"❌ Para natación y clavados: <em>pool</em> (pileta)."}
+]}},
+
+'V5B':{name:'Relationships',page:158,
+sections:[
+{h:'People',words:[
+['classmate','ˈklɑːsmeɪt','compañero/a de clase','a person who is in the same class as you'],
+['close friend','kləʊs ˈfrend','amigo/a íntimo/a','a very good friend that you can talk to about anything'],
+['colleague','ˈkɒliːɡ','colega, compañero/a de trabajo','a person that you work with'],
+['couple','ˈkʌpl','pareja (dos personas)','two people who are married or in a romantic relationship'],
+['ex','eks','ex (pareja)','(colloquial) a person you used to have a relationship with'],
+['fiancé (fiancée)','fiˈɒnseɪ','prometido (prometida)','the person that you are engaged to be married to'],
+['flatmate','ˈflætmeɪt','compañero/a de departamento','a person that you share a flat with'],
+['partner','ˈpɑːtnə','pareja (esposo/a, novio/a)','your husband, wife, boyfriend or girlfriend']]},
+{h:'Verb phrases',words:[
+['meet (met)','miːt','conocer (por primera vez)','I met Mark when I was studying at university.'],
+['get to know (got to know)','ɡet tə nəʊ','llegar a conocer, ir conociendo','We got to know each other quickly.'],
+['become friends (became)','bɪˈkʌm frendz','hacerse amigos','We soon became friends.'],
+['have (sth) in common (had)','ɪn ˈkɒmən','tener (algo) en común','We had a lot in common.'],
+['go out together (went out)','ɡəʊ aʊt təˈɡeðə','salir (como pareja)','We went out together in our second term.'],
+['be together (were)','biː təˈɡeðə','estar juntos (en pareja)','We were together for two years.'],
+['get on (well) (got on)','ɡet ɒn','llevarse bien','This time we got on better than before.'],
+['break up / split up (broke up)','breɪk ʌp','cortar, separarse','We argued a lot and we broke up.'],
+['lose touch (lost touch)','luːz tʌtʃ','perder contacto','After university, we lost touch.'],
+['get in touch (got in touch)','ɡet ɪn tʌtʃ','ponerse en contacto','Five years later, we got in touch again on Facebook.'],
+['propose (proposed)','prəˈpəʊz','proponer matrimonio','After two months, Mark proposed and I accepted.'],
+['get married (got married)','ɡet ˈmærid','casarse','We got married last summer.']]}
+],
+notes:`<div class="warn-block"><b>meet, know o get to know?</b><br><b>meet</b> = conocer a alguien por primera vez (una acción): <em>I met her at a party.</em><br><b>know</b> = conocer (un estado): <em>I've known her for years.</em><br><b>get to know</b> = ir conociendo a alguien de a poco: <em>We got to know each other at work.</em></div><div class="ok-block"><b>Preposiciones que cambian respecto al español</b><br><b>get married to</b> sb / <b>marry</b> sb (sin preposición) — ❌ <s>married with</s><br><b>have sth in common</b> — ❌ <s>on common</s><br><b>propose to</b> sb = pedirle matrimonio a alguien</div>`,
+story:`<div class="story-card"><div class="story-title">An Old Classmate</div><div class="story-text">I <b>met</b> Daniel on my first day at secondary school. We were <b>classmates</b> for five years, and we soon <b>became friends</b> because we <b>had</b> so much <b>in common</b>: we both loved music and hated maths. After school, he moved to Canada and we <b>lost touch</b>.<br><br>Twelve years later, a <b>colleague</b> at work showed me a photo on Instagram. It was Daniel! I <b>got in touch</b> with him immediately. He had just <b>broken up</b> with his <b>ex</b>, and I was living with two <b>flatmates</b> in London.<br><br>When he came back to England, we met for a coffee and we <b>got on</b> even better than before. We started <b>going out together</b>, and slowly we <b>got to know</b> each other again. We <b>were together</b> for three years before he <b>proposed</b>. Now he's my <b>fiancé</b> and we're <b>getting married</b> next spring. My <b>close friend</b> Sara from school will be at the wedding!</div><div class="story-note">💡 <b>meet</b> = conocer a alguien por primera vez; <b>get to know</b> = ir conociéndolo de a poco. <b>get married to</b> sb, nunca <s>with</s>.</div></div>`,
+bank:{
+choice:[
+{q:"Laura and I sat next to each other at school for six years. She was my ___.",o:["classmate","colleague","flatmate","fiancée"],c:0,e:["✅ <em>classmate</em> = compañero/a de clase.","❌ <em>colleague</em> = compañero/a de trabajo.","❌ <em>flatmate</em> = compañero/a de departamento.","❌ <em>fiancée</em> = prometida."]},
+{q:"I share a flat with two people. My ___ are both students.",o:["flatmates","classmates","colleagues","exes"],c:0,e:["✅ <em>flatmates</em> = personas con las que compartís departamento.","❌ <em>classmates</em> = compañeros de clase.","❌ <em>colleagues</em> = compañeros de trabajo.","❌ <em>exes</em> = ex parejas."]},
+{q:"Tom is my ___ — we work in the same office.",o:["colleague","classmate","fiancé","ex"],c:0,e:["✅ <em>colleague</em> /ˈkɒliːɡ/ = compañero de trabajo.","❌ <em>classmate</em> = compañero de clase.","❌ <em>fiancé</em> = prometido.","❌ <em>ex</em> = ex pareja."]},
+{q:"They ___ after ten years together. Now they're just friends.",o:["broke up","got on","got married","got in touch"],c:0,e:["✅ <em>break up</em> = cortar, terminar una relación.","❌ <em>get on</em> = llevarse bien.","❌ <em>get married</em> = casarse; no encaja con \"now they're just friends\".","❌ <em>get in touch</em> = ponerse en contacto."]},
+{q:"We ___ when we were both working in a café in Paris.",o:["met","knew","got on","became"],c:0,e:["✅ <em>meet</em> = conocerse por primera vez (acción puntual).","❌ <em>know</em> es un estado; no describe el primer encuentro.","❌ <em>get on</em> = llevarse bien; necesita <em>well</em> o contexto.","❌ <em>become</em> necesita algo después: <em>became friends</em>."]},
+{q:"I really ___ well with my sister-in-law. We never argue.",o:["get on","get to know","get in touch","go out"],c:0,e:["✅ <em>get on well</em> = llevarse bien.","❌ <em>get to know</em> necesita objeto: <em>get to know sb</em>.","❌ <em>get in touch</em> = ponerse en contacto.","❌ <em>go out</em> = salir."]},
+{q:"After school we ___ touch, but last year we found each other online.",o:["lost","broke","missed","left"],c:0,e:["✅ <em>lose touch</em> = perder contacto.","❌ No se dice <em>break touch</em>.","❌ No se dice <em>miss touch</em>.","❌ No se dice <em>leave touch</em>."]},
+{q:"He ___ to her on a beach at sunset, and she said yes!",o:["proposed","married","got engaged","asked"],c:0,e:["✅ <em>propose to sb</em> = pedirle matrimonio a alguien.","❌ <em>marry</em> no lleva <em>to</em>, y \"she said yes\" indica una pregunta.","❌ <em>get engaged</em> es a lo que llegan después; no lleva <em>to her</em> en este sentido.","❌ <em>ask</em> necesitaría <em>asked her to marry him</em>."]},
+{q:"Sam and I have a lot ___ common. We both love jazz and cooking.",o:["in","on","at","with"],c:0,e:["✅ <em>have sth in common</em> = tener algo en común.","❌ No se dice <em>on common</em>.","❌ No se dice <em>at common</em>.","❌ No se dice <em>with common</em>."]},
+{q:"Anna is my ___. We're getting married next June.",o:["fiancée","ex","colleague","flatmate"],c:0,e:["✅ <em>fiancée</em> = prometida (la persona con la que te vas a casar).","❌ <em>ex</em> = ex pareja; no te casás con ella.","❌ <em>colleague</em> = compañera de trabajo.","❌ <em>flatmate</em> = compañera de departamento."]}
+],
+gap:[
+{q:"It takes time to ___ to know people when you move to a new city.",a:[["get"]],h:["llegar a conocer: ___ to know"],ex:"<em>get to know sb</em> = ir conociendo a alguien."},
+{q:"I haven't spoken to Mark for years. We ___ touch after university.",a:[["lost"]],h:["perder contacto (pasado)"],ex:"<em>lose – lost – lost</em>. <em>lose touch</em> = perder contacto."},
+{q:"They went out together for two years but then they split ___.",a:[["up"]],h:["separarse: split ___"],ex:"<em>split up</em> = <em>break up</em> = separarse."},
+{q:"Here's my number. Get ___ touch when you get back from holiday.",a:[["in"]],h:["ponerse en contacto: get ___ touch"],ex:"<em>get in touch</em> = ponerse en contacto."},
+{q:"My parents got ___ in 1995, and they're still together.",a:[["married"]],h:["casarse"],ex:"<em>get married</em> = casarse."},
+{q:"Jack is a ___ friend — I can tell him anything.",a:[["close","good"]],h:["íntimo"],ex:"<em>close friend</em> /kləʊs/ = amigo íntimo."},
+{q:"My ___ and I have been together for five years, but we aren't married.",a:[["partner","boyfriend","girlfriend"]],h:["pareja"],ex:"<em>partner</em> = pareja (esposo/a o novio/a)."},
+{q:"We ___ friends on the first day of university.",a:[["became"]],h:["hacerse (pasado)"],ex:"<em>become – became – become</em>. <em>become friends</em> = hacerse amigos."},
+{q:"Tom and Jess are a lovely ___. They've been together since school.",a:[["couple"]],h:["pareja (dos personas)"],ex:"<em>couple</em> /ˈkʌpl/ = dos personas en una relación."},
+{q:"We were together for two years, but we argued a lot and finally we ___ up.",a:[["broke","split"]],h:["cortar (pasado)"],ex:"<em>break up – broke up</em> / <em>split up – split up</em>."}
+],
+rightwrong:[
+{q:"She got married [[with]] a doctor.",c:false,corr:["to"],ex:"❌ <em>get married <b>to</b></em> sb (o <em>marry</em> sb, sin preposición)."},
+{q:"I [[met]] my wife at a party in 2010.",c:true,corr:null,ex:"✅ Correcto. <em>meet</em> = conocer a alguien por primera vez."},
+{q:"We [[knew]] each other at a party last year.",c:false,corr:["met"],ex:"❌ Para el primer encuentro usamos <em>meet</em>. <em>know</em> es un estado."},
+{q:"My ex and I still [[get on]] quite well.",c:true,corr:null,ex:"✅ Correcto. <em>get on (well)</em> = llevarse bien."},
+{q:"They [[broke up]] last month after a big argument.",c:true,corr:null,ex:"✅ Correcto. <em>break up</em> = separarse."},
+{q:"We don't have anything [[on common]].",c:false,corr:["in common"],ex:"❌ La expresión es <em>in common</em>."},
+{q:"He [[married with]] his girlfriend last year.",c:false,corr:["married"],ex:"❌ <em>marry</em> no lleva preposición: <em>He married his girlfriend</em>."},
+{q:"She's my [[colleague]] — we both work at the bank.",c:true,corr:null,ex:"✅ Correcto. <em>colleague</em> = compañero/a de trabajo."}
+]}},
+
+'V6A':{name:'Cinema',page:159,
+sections:[
+{h:'Kinds of film',words:[
+['an action film','ˈækʃn fɪlm','película de acción'],
+['an animation','ænɪˈmeɪʃn','película animada'],
+['a comedy','ˈkɒmədi','comedia'],
+['a drama','ˈdrɑːmə','drama'],
+['a historical film','hɪˈstɒrɪkl fɪlm','película histórica'],
+['a horror film','ˈhɒrə fɪlm','película de terror'],
+['a musical','ˈmjuːzɪkl','musical'],
+['a rom-com (romantic comedy)','ˈrɒm kɒm','comedia romántica'],
+['a science fiction film','saɪəns ˈfɪkʃn fɪlm','película de ciencia ficción'],
+['a thriller','ˈθrɪlə','película de suspenso'],
+['a war film','ˈwɔː fɪlm','película bélica'],
+['a western','ˈwestən','western, película del oeste']]},
+{h:'People and things',words:[
+['audience','ˈɔːdiəns','público (en un cine o teatro)','the people who watch a film in a cinema'],
+['cast','kɑːst','elenco, reparto','all the people who act in a film'],
+['critic','ˈkrɪtɪk','crítico/a (la persona)','a person who writes film reviews for the press'],
+['extra','ˈekstrə','extra','a person employed to play a very small part, usually in a crowd'],
+['plot','plɒt','argumento, trama','the story of a film'],
+['review','rɪˈvjuː','reseña, crítica (el artículo)','an article which gives an opinion about a new film'],
+['scene','siːn','escena','a part of a film which happens in one place'],
+['script','skrɪpt','guion','the words of a film'],
+['sequel','ˈsiːkwəl','secuela','a film which continues the story of an earlier film'],
+['set','set','set, escenario','the place where a film is shot; the scenery'],
+['soundtrack','ˈsaʊndtræk','banda sonora','the music of a film'],
+['special effects','ˈspeʃl ɪˈfekts','efectos especiales','images often created by a computer'],
+['star','stɑː','estrella, protagonista (verbo: protagonizar)','the most important actor in a film'],
+['subtitles','ˈsʌbtaɪtlz','subtítulos','the translation of the dialogue on screen'],
+['trailer','ˈtreɪlə','tráiler, avance','short scenes from a film, shown to advertise it']]},
+{h:'Verbs and verb phrases',words:[
+['be based on','biː beɪst ɒn','estar basado en','The film is based on a true story.'],
+['be set in','biː set ɪn','estar ambientado en','It is set in New York during the 1940s.'],
+['be directed by','biː dəˈrektɪd baɪ','estar dirigido por','It is directed by Stephen Frears.'],
+['play the part of','pleɪ ðə pɑːt əv','hacer el papel de, interpretar a','Hugh Grant plays the part of her husband.'],
+['be shot / filmed on location','ʃɒt ɒn ləʊˈkeɪʃn','filmarse en exteriores (fuera del estudio)','It was shot on location in Liverpool.'],
+['be dubbed','biː dʌbd','estar doblado','It is dubbed into other languages.']]}
+],
+notes:`<div class="warn-block"><b>Falsos amigos</b><br><b>critic</b> = el crítico (la persona) · <b>review</b> = la crítica (el artículo)<br><b>audience</b> = el público de un cine o teatro — ❌ <s>the public</s><br><b>horror film</b> = película de terror — ❌ <s>terror film</s><br><b>argument</b> ≠ argumento: el argumento de una película es el <b>plot</b>.</div><div class="ok-block"><b>Frases en pasiva (conecta con la gramática de 6A)</b><br><em>It <b>is based on</b> a novel. It <b>is set in</b> Paris. It <b>was directed by</b> Nolan. It <b>was shot on location</b>. It <b>is dubbed</b>.</em></div>`,
+story:`<div class="story-card"><div class="story-title">My Favourite Film</div><div class="story-text">My favourite film is a <b>historical film</b> called <em>The Last Queen</em>. It <b>is based on</b> the true story of a Scottish queen, and it <b>is set in</b> Edinburgh in the 16th century. It <b>was directed by</b> a young French director and it <b>was shot on location</b> in Scotland, not in a studio.<br><br>The <b>cast</b> is fantastic. The <b>star</b> is an Irish actress who <b>plays the part of</b> the queen, and my cousin was one of the <b>extras</b> — you can see him in a battle <b>scene</b>! The <b>plot</b> is exciting, the <b>script</b> is intelligent and the <b>soundtrack</b> is beautiful. There aren't many <b>special effects</b>, but it doesn't need them.<br><br>When I saw it, the <b>audience</b> clapped at the end, and most <b>critics</b> wrote excellent <b>reviews</b>. In Spain it <b>was dubbed</b>, but I watched it in English with <b>subtitles</b>. I've just seen the <b>trailer</b> for the <b>sequel</b> and I can't wait!</div><div class="story-note">💡 <b>critic</b> = la persona; <b>review</b> = el artículo. Todas las frases en azul del primer párrafo están en voz pasiva.</div></div>`,
+bank:{
+choice:[
+{q:"I love films with car chases, fights and explosions. ___ films are my favourite.",o:["Action","Musical","Romantic","Western"],c:0,e:["✅ <em>action film</em> = película de acción.","❌ En un <em>musical</em> los personajes cantan y bailan.","❌ <em>romantic</em> se refiere a historias de amor.","❌ Un <em>western</em> es del oeste (cowboys)."]},
+{q:"The film takes place in the future, on a spaceship. It's a ___.",o:["science fiction film","western","historical film","musical"],c:0,e:["✅ <em>science fiction</em> = ciencia ficción: futuro, espacio, tecnología.","❌ Un <em>western</em> ocurre en el oeste americano del siglo XIX.","❌ Un <em>historical film</em> transcurre en el pasado.","❌ Un <em>musical</em> se centra en canciones."]},
+{q:"The ___ was great — I bought the album with all the music.",o:["soundtrack","script","plot","trailer"],c:0,e:["✅ <em>soundtrack</em> = banda sonora.","❌ <em>script</em> = guion (las palabras).","❌ <em>plot</em> = argumento.","❌ <em>trailer</em> = avance."]},
+{q:"I didn't understand the ___ — the story was so complicated!",o:["plot","cast","set","audience"],c:0,e:["✅ <em>plot</em> = la historia, el argumento.","❌ <em>cast</em> = el elenco.","❌ <em>set</em> = el escenario.","❌ <em>audience</em> = el público."]},
+{q:"I read a terrible ___ of the film in the newspaper.",o:["review","critic","trailer","sequel"],c:0,e:["✅ <em>review</em> = la crítica (el artículo).","❌ <em>critic</em> es la persona que escribe la crítica. ¡Falso amigo!","❌ <em>trailer</em> = avance; no se lee en un diario.","❌ <em>sequel</em> = secuela."]},
+{q:"The film ___ in Paris in the 1920s.",o:["is set","is based","is directed","is dubbed"],c:0,e:["✅ <em>be set in</em> = estar ambientado en (lugar y época).","❌ <em>be based on</em> va con una historia o un libro, no con un lugar.","❌ <em>be directed by</em> + director.","❌ <em>be dubbed</em> = estar doblado."]},
+{q:"Meryl Streep ___ the part of Florence.",o:["plays","makes","does","stars"],c:0,e:["✅ <em>play the part of</em> = interpretar el papel de.","❌ No se dice <em>make the part</em>.","❌ No se dice <em>do the part</em>.","❌ <em>star in a film</em> = protagonizar; no se dice <em>star the part</em>."]},
+{q:"I prefer watching foreign films in the original language with ___.",o:["subtitles","trailers","extras","scenes"],c:0,e:["✅ <em>subtitles</em> = subtítulos.","❌ <em>trailers</em> = avances.","❌ <em>extras</em> = extras (actores).","❌ <em>scenes</em> = escenas."]},
+{q:"The ___ clapped and cheered at the end of the film.",o:["audience","public","critic","set"],c:0,e:["✅ <em>audience</em> = el público de un cine o teatro.","❌ <em>public</em> = el público en general (la gente), no los espectadores de una función.","❌ <em>critic</em> es una sola persona.","❌ <em>set</em> es el escenario."]},
+{q:"I couldn't sleep after watching that ___ film. It was so scary!",o:["horror","terror","war","animation"],c:0,e:["✅ <em>horror film</em> = película de terror.","❌ <em>terror film</em> no se usa. ¡Falso amigo!","❌ Una <em>war film</em> es bélica.","❌ <em>animation</em> es un sustantivo: <em>an animation</em>."]}
+],
+gap:[
+{q:"The Godfather Part II is the ___ to The Godfather.",a:[["sequel"]],h:["secuela"],ex:"<em>sequel</em> /ˈsiːkwəl/ = continuación de una película anterior."},
+{q:"My cousin was an ___ in a Hollywood film. You can see him in the crowd for two seconds!",a:[["extra"]],h:["actor sin diálogo"],ex:"<em>extra</em> = persona que hace un papel muy pequeño, normalmente en una multitud."},
+{q:"The film was ___ on location in New Zealand.",a:[["shot","filmed"]],h:["filmado"],ex:"<em>be shot / filmed on location</em> = filmado fuera del estudio."},
+{q:"The film is ___ on a true story.",a:[["based"]],h:["basado"],ex:"<em>be based on</em> = estar basado en."},
+{q:"Jurassic Park was ___ by Steven Spielberg.",a:[["directed"]],h:["dirigido"],ex:"<em>be directed by</em> = estar dirigido por."},
+{q:"I hate films that are ___ — I prefer hearing the actors' real voices.",a:[["dubbed"]],h:["doblado"],ex:"<em>be dubbed</em> = estar doblado."},
+{q:"The ___ effects in Avatar were amazing.",a:[["special"]],h:["efectos especiales"],ex:"<em>special effects</em> = efectos especiales."},
+{q:"A romantic comedy is often called a ___.",a:[["rom-com","romcom","rom com"]],h:["abreviatura"],ex:"<em>rom-com</em> /ˈrɒm kɒm/ = romantic comedy."},
+{q:"The actors had to learn the whole ___ in two weeks.",a:[["script"]],h:["guion"],ex:"<em>script</em> = las palabras (el guion) de una película."},
+{q:"Did you see the ___ for the new Marvel film? It looks great.",a:[["trailer"]],h:["avance"],ex:"<em>trailer</em> = escenas cortas para promocionar la película."},
+{q:"The ___ of the film includes Brad Pitt and Margot Robbie.",a:[["cast"]],h:["elenco"],ex:"<em>cast</em> = todas las personas que actúan en la película."}
+],
+rightwrong:[
+{q:"The film is based [[in]] a novel by Stephen King.",c:false,corr:["on"],ex:"❌ <em>be based <b>on</b></em> sth."},
+{q:"The [[critic]] of the film in The Times was excellent.",c:false,corr:["review"],ex:"❌ <em>critic</em> es la persona; el artículo es <em>review</em> (falso amigo con \"crítica\")."},
+{q:"The film is set [[in]] London in the 1960s.",c:true,corr:null,ex:"✅ Correcto. <em>be set in</em> + lugar / época."},
+{q:"The [[cast]] includes some very famous actors.",c:true,corr:null,ex:"✅ Correcto. <em>cast</em> = elenco."},
+{q:"Who [[plays the part]] of the detective?",c:true,corr:null,ex:"✅ Correcto. <em>play the part of</em> = interpretar el papel de."},
+{q:"I watched a [[terror]] film and couldn't sleep.",c:false,corr:["horror"],ex:"❌ En inglés es <em>horror film</em>."},
+{q:"The [[public]] loved the film and clapped at the end.",c:false,corr:["audience"],ex:"❌ El público de un cine o teatro es la <em>audience</em>."},
+{q:"Tom Hanks [[stars]] in the new Spielberg film.",c:true,corr:null,ex:"✅ Correcto. <em>star</em> también es verbo: <em>star in a film</em> = protagonizar."}
+]}},
+
+'V6B':{name:'The body',page:160,
+sections:[
+{h:'Parts of the body',words:[
+['arms','ɑːmz','brazos'],['back','bæk','espalda'],['chin','tʃɪn','mentón, pera'],['ears','ɪəz','orejas, oídos'],
+['eyes','aɪz','ojos'],['face','feɪs','cara'],['feet (sing. foot)','fiːt / fʊt','pies (pie)'],['fingers','ˈfɪŋɡəz','dedos (de la mano)'],
+['hands','hændz','manos'],['head','hed','cabeza'],['knees','niːz','rodillas'],['legs','leɡz','piernas'],
+['lips','lɪps','labios'],['mouth','maʊθ','boca'],['neck','nek','cuello'],['nose','nəʊz','nariz'],
+['shoulders','ˈʃəʊldəz','hombros'],['stomach','ˈstʌmək','estómago, panza'],['teeth (sing. tooth)','tiːθ / tuːθ','dientes (diente)'],
+['thumb','θʌm','pulgar'],['toes','təʊz','dedos del pie'],['tongue','tʌŋ','lengua']]},
+{h:'Verbs related to the body',words:[
+['bite','baɪt','morder','Don’t be frightened of the dog. He won’t bite.'],
+['clap','klæp','aplaudir','The audience clapped when I finished singing.'],
+['kick','kɪk','patear','Jason kicked the ball too hard.'],
+['nod','nɒd','asentir con la cabeza','Everybody nodded in agreement.'],
+['point','pɔɪnt','señalar','It’s rude to point at people.'],
+['smell','smel','oler','Mmm! Something smells delicious!'],
+['smile','smaɪl','sonreír','He’s very serious – he never smiles.'],
+['stare','steə','mirar fijamente','The stranger stared at me for a long time.'],
+['taste','teɪst','probar; tener sabor a','Can you taste the sauce?'],
+['touch','tʌtʃ','tocar','Don’t touch the oven door! It’s really hot.'],
+['whistle','ˈwɪsl','silbar','My dog always comes back when I whistle.']]}
+],
+notes:`<div class="warn-block"><b>Posesivos con partes del cuerpo</b><br>En inglés usamos <em>my, your, his…</em> con las partes del cuerpo, no el artículo <em>the</em>.<br>✅ <em>Give me <b>your</b> hand. I've hurt <b>my</b> back.</em><br>❌ <s>Give me the hand. I've hurt the back.</s></div><div class="ok-block"><b>Pronunciación y plurales</b><br>Letras mudas: <b>thumb</b> /θʌm/ (sin b), <b>knees</b> /niːz/ (sin k)<br><b>stomach</b> /ˈstʌmək/ · <b>tongue</b> /tʌŋ/<br>Plurales irregulares: <b>foot → feet</b>, <b>tooth → teeth</b><br><b>smell / taste + adjetivo</b>: <em>It smells delicious. It tastes salty.</em><br><b>stare at, point at, smile at</b> — con <em>at</em>.</div>`,
+story:`<div class="story-card"><div class="story-title">The Man on the Train</div><div class="story-text">Last week I was on the train when a man sat down opposite me. He didn't say anything — he just <b>stared</b> at me. I <b>smiled</b>, but he didn't smile back. He had a big scar on his <b>chin</b> and very long <b>fingers</b>. He kept <b>touching</b> his <b>nose</b> and <b>pointing</b> at my bag.<br><br>I was nervous. My <b>hands</b> were shaking, my <b>knees</b> felt weak and I had a strange feeling in my <b>stomach</b>. Finally, he <b>nodded</b> his <b>head</b> towards the floor. I looked down: my wallet had fallen out of my bag and was next to my <b>feet</b>!<br><br>I picked it up and said, "Thank you!" The man laughed, put his <b>hand</b> on my <b>shoulder</b> and got off at the next station, <b>whistling</b> a happy song. Two women in the carriage <b>clapped</b>.</div><div class="story-note">💡 Fijate en los posesivos: <em>his chin, my hands, my feet</em> — nunca <s>the chin</s>. Y los verbos con <b>at</b>: <em>stared at, pointing at</em>.</div></div>`,
+bank:{
+choice:[
+{q:"The audience ___ their hands when the concert finished.",o:["clapped","nodded","pointed","stared"],c:0,e:["✅ <em>clap your hands</em> = aplaudir.","❌ <em>nod</em> se hace con la cabeza.","❌ <em>point</em> se hace con un dedo.","❌ <em>stare</em> se hace con los ojos."]},
+{q:"He didn't answer — he just ___ to show he agreed.",o:["nodded","pointed","stared","whistled"],c:0,e:["✅ <em>nod</em> = mover la cabeza para decir que sí.","❌ <em>point</em> = señalar.","❌ <em>stare</em> = mirar fijamente; no muestra acuerdo.","❌ <em>whistle</em> = silbar."]},
+{q:"Please don't ___ at me like that. It makes me feel uncomfortable.",o:["stare","nod","clap","taste"],c:0,e:["✅ <em>stare at sb</em> = mirar fijamente a alguien.","❌ <em>nod</em> no lleva <em>at me</em> en este sentido y no incomoda.","❌ <em>clap</em> = aplaudir.","❌ <em>taste</em> = probar (comida)."]},
+{q:"Mmm, this soup ___ delicious. Can I have some more?",o:["tastes","touches","bites","stares"],c:0,e:["✅ <em>taste + adjetivo</em> = tener sabor a.","❌ <em>touch</em> = tocar.","❌ <em>bite</em> = morder.","❌ <em>stare</em> = mirar fijamente."]},
+{q:"Be careful, that dog might ___ you!",o:["bite","taste","nod","clap"],c:0,e:["✅ <em>bite</em> = morder.","❌ <em>taste</em> = probar; no es un peligro.","❌ <em>nod</em> = asentir.","❌ <em>clap</em> = aplaudir."]},
+{q:"The teacher ___ at Brazil on the map and said, \"This is where I was born.\"",o:["pointed","nodded","whistled","kicked"],c:0,e:["✅ <em>point at</em> = señalar algo con el dedo.","❌ <em>nod</em> = asentir con la cabeza.","❌ <em>whistle</em> = silbar.","❌ <em>kick</em> = patear."]},
+{q:"Give me ___ hand. I'll help you up.",o:["your","the","a","one"],c:0,e:["✅ Con partes del cuerpo usamos posesivos: <em>your hand</em>.","❌ En inglés no se usa <em>the</em> con partes del cuerpo de alguien.","❌ <em>a hand</em> cambia el sentido.","❌ No suena natural aquí."]},
+{q:"I brush my ___ twice a day.",o:["teeth","tooths","tongues","lips"],c:0,e:["✅ <em>tooth → teeth</em> (plural irregular).","❌ <em>tooths</em> no existe.","❌ La lengua no se cepilla (normalmente).","❌ Los labios no se cepillan."]},
+{q:"These shoes are too small. They hurt my ___.",o:["toes","fingers","thumbs","chin"],c:0,e:["✅ <em>toes</em> = dedos del pie.","❌ <em>fingers</em> = dedos de la mano.","❌ <em>thumbs</em> = pulgares de la mano.","❌ <em>chin</em> = mentón."]},
+{q:"She hurt her ___ playing volleyball, so she can't hold a pen.",o:["thumb","toe","knee","chin"],c:0,e:["✅ Sin el <em>thumb</em> (pulgar) es difícil agarrar una lapicera.","❌ <em>toe</em> es del pie.","❌ <em>knee</em> es la rodilla.","❌ <em>chin</em> es el mentón."]}
+],
+gap:[
+{q:"One foot, two ___.",a:[["feet"]],h:["plural irregular"],ex:"<em>foot → feet</em> /fiːt/.",ins:"Completá con el plural."},
+{q:"One tooth, two ___.",a:[["teeth"]],h:["plural irregular"],ex:"<em>tooth → teeth</em> /tiːθ/.",ins:"Completá con el plural."},
+{q:"You have five ___ on each foot.",a:[["toes"]],h:["dedos del pie"],ex:"<em>toes</em> = dedos del pie; <em>fingers</em> = dedos de la mano."},
+{q:"The ___ is the short, thick finger on your hand.",a:[["thumb"]],h:["pulgar"],ex:"<em>thumb</em> /θʌm/ — la b es muda."},
+{q:"My ___ hurts. I think I ate too much.",a:[["stomach"]],h:["estómago"],ex:"<em>stomach</em> /ˈstʌmək/."},
+{q:"I can't ___. I've never learned to make music with my lips.",a:[["whistle"]],h:["silbar"],ex:"<em>whistle</em> /ˈwɪsl/ — la t es muda."},
+{q:"Don't ___ the plate! It's very hot.",a:[["touch"]],h:["tocar"],ex:"<em>touch</em> /tʌtʃ/ = tocar."},
+{q:"He ___ the ball so hard that it went over the wall.",a:[["kicked"]],h:["patear (pasado)"],ex:"<em>kick</em> = patear."},
+{q:"Something ___ strange. Is something burning?",a:[["smells"]],h:["oler (presente)"],ex:"<em>smell + adjetivo</em>: <em>It smells strange.</em>"},
+{q:"She ___ at me and I smiled back.",a:[["smiled"]],h:["sonreír (pasado)"],ex:"<em>smile at sb</em> = sonreírle a alguien."},
+{q:"Use your ___ to taste the food.",a:[["tongue","mouth"]],h:["lengua"],ex:"<em>tongue</em> /tʌŋ/ = lengua."}
+],
+rightwrong:[
+{q:"She hurt [[the]] back playing tennis.",c:false,corr:["her"],ex:"❌ Con partes del cuerpo usamos posesivos: <em>her back</em>."},
+{q:"I've got two left [[foots]]!",c:false,corr:["feet"],ex:"❌ <em>foot → feet</em>."},
+{q:"Everybody [[clapped]] at the end of the show.",c:true,corr:null,ex:"✅ Correcto. <em>clap</em> = aplaudir."},
+{q:"He [[stared]] at me for a long time without saying anything.",c:true,corr:null,ex:"✅ Correcto. <em>stare at</em> = mirar fijamente."},
+{q:"This cake [[tastes]] wonderful!",c:true,corr:null,ex:"✅ Correcto. <em>taste + adjetivo</em>."},
+{q:"He [[nodded]] his head to say no.",c:false,corr:["shook"],ex:"❌ <em>nod</em> = asentir (sí). Para decir que no: <em>shake your head</em> (pasado: <em>shook</em>)."},
+{q:"Wash [[the]] hands before dinner!",c:false,corr:["your"],ex:"❌ Con partes del cuerpo: <em>Wash your hands.</em>"},
+{q:"It's rude to [[point]] at people.",c:true,corr:null,ex:"✅ Correcto. <em>point at</em> = señalar."}
+]}},
+
+'V7A':{name:'Education',page:161,
+sections:[
+{h:'The school system in the UK',words:[
+['nursery school','ˈnɜːsəri skuːl','jardín de infantes (2–4 años, no obligatorio)'],
+['primary school','ˈpraɪməri skuːl','escuela primaria (5–11 años)'],
+['secondary school','ˈsekəndri skuːl','escuela secundaria (11–18 años)'],
+['state school','steɪt skuːl','escuela pública (la paga el gobierno)'],
+['private school','ˈpraɪvɪt skuːl','escuela privada (pagan los padres)'],
+['boarding school','ˈbɔːdɪŋ skuːl','internado (estudian, comen y duermen)'],
+['pupils','ˈpjuːplz','alumnos (de primaria)'],
+['students','ˈstjuːdnts','estudiantes (secundaria y universidad)'],
+['head (teacher)','hed','director/a de la escuela'],
+['terms','tɜːmz','trimestres (el año escolar tiene tres)'],
+['degree','dɪˈɡriː','título universitario','A person who has finished university and has a degree is a graduate.']]},
+{h:'The school system in the US',words:[
+['kindergarten','ˈkɪndəɡɑːtn','preescolar (antes de first grade)'],
+['elementary school','elɪˈmentəri skuːl','escuela primaria'],
+['middle school / junior high','ˈmɪdl skuːl','escuela intermedia (primeros años de secundaria)'],
+['high school','haɪ skuːl','escuela secundaria'],
+['grades','ɡreɪdz','grados / años (y también: notas)','first grade … twelfth grade'],
+['twelfth grade','twelfθ ɡreɪd','último año de la secundaria'],
+['semesters','sɪˈmestəz','semestres (el año escolar tiene dos)'],
+['college','ˈkɒlɪdʒ','universidad, educación superior']]},
+{h:'Discipline',words:[
+['be allowed to / not be allowed to','əˈlaʊd tə','tener / no tener permiso para','We aren’t allowed to take our phones to school.'],
+['let (sb do sth)','let','dejar (a alguien hacer algo)','They don’t let us bring unhealthy food.'],
+['make (sb do sth)','meɪk','obligar, hacer (que alguien haga algo)','She made us do extra homework.'],
+['misbehave','mɪsbɪˈheɪv','portarse mal','If you misbehave, you’ll be punished.'],
+['be punished','biː ˈpʌnɪʃt','ser castigado','The teacher will make you stay behind after class.'],
+['cheat','tʃiːt','copiarse, hacer trampa','If you cheat in an exam, you might be expelled.'],
+['be expelled','biː ɪkˈspeld','ser expulsado (de la escuela)']]},
+{h:'Exams',words:[
+['take (or do) an exam','teɪk','rendir un examen','Marc has to take an English exam next week.'],
+['pass','pɑːs','aprobar','He hopes he’ll pass.'],
+['fail','feɪl','desaprobar, reprobar','He’s worried that he might fail.'],
+['revise','rɪˈvaɪz','repasar, estudiar (para un examen)','He hasn’t had much time to revise.'],
+['result','rɪˈzʌlt','resultado, nota','He won’t get the result until July.']]}
+],
+notes:`<div class="warn-block"><b>Falsos amigos en los exámenes</b><br><b>take</b> an exam = <b>rendir</b> un examen<br><b>pass</b> an exam = <b>aprobar</b> — ❌ <s>approve an exam</s><br><b>fail</b> an exam = desaprobar</div><div class="ok-block"><b>make, let y allow</b><br><b>make / let</b> + objeto + infinitivo <b>sin to</b>: <em>She <b>made us do</b> homework. They <b>let us play</b> games.</em><br><b>allow</b> + objeto + infinitivo <b>con to</b>: <em>They don't <b>allow us to take</b> phones.</em><br>En pasiva usamos <b>be allowed to</b>, nunca <em>let</em>: <em>We're allowed to play…</em> ❌ <s>We're let play…</s></div>`,
+story:`<div class="story-card"><div class="story-title">Two Countries, Two Schools</div><div class="story-text">Lucía went to school in two different countries. She started at a <b>nursery school</b> in London when she was three. Then she went to a <b>state</b> <b>primary school</b>, where the <b>pupils</b> wore uniforms and the school year had three <b>terms</b>. The <b>head teacher</b> was very strict: students <b>weren't allowed to</b> run in the corridors, and if you <b>misbehaved</b>, you <b>were punished</b>.<br><br>When she was twelve, her family moved to Boston. She went to middle school and then to <b>high school</b>, where the year had two <b>semesters</b>. The teachers <b>let</b> students use their phones at lunch, but they <b>made</b> them do a lot of homework. One boy <b>was expelled</b> because he <b>cheated</b> in an important exam.<br><br>In <b>twelfth grade</b>, Lucía <b>revised</b> every weekend. She <b>took</b> her final exams in May and <b>passed</b> them all with excellent <b>grades</b>. Now she's at <b>college</b>, doing a <b>degree</b> in Education. One day she wants to open her own <b>private school</b>.</div><div class="story-note">💡 <b>took</b> her exams = rindió; <b>passed</b> = aprobó. Y fijate: <em>let students use</em>, <em>made them do</em> (sin <em>to</em>) pero <em>weren't allowed <b>to</b> run</em>.</div></div>`,
+bank:{
+choice:[
+{q:"In the UK, children go to ___ school between the ages of 5 and 11.",o:["primary","secondary","nursery","boarding"],c:0,e:["✅ <em>primary school</em> = escuela primaria (5–11).","❌ <em>secondary school</em> es de 11 a 18.","❌ <em>nursery school</em> es antes de los 5 (2–4).","❌ <em>boarding school</em> = internado, no indica la edad."]},
+{q:"A school where students study, eat and sleep is a ___ school.",o:["boarding","state","private","nursery"],c:0,e:["✅ <em>boarding school</em> = internado.","❌ <em>state school</em> = escuela pública.","❌ <em>private school</em> = privada, pero no necesariamente internado.","❌ <em>nursery school</em> = jardín de infantes."]},
+{q:"Schools that are paid for by the government are ___ schools.",o:["state","private","boarding","high"],c:0,e:["✅ <em>state school</em> = escuela pública, gratuita.","❌ En una <em>private school</em> pagan los padres.","❌ <em>boarding</em> = internado.","❌ <em>high school</em> = secundaria en EE. UU."]},
+{q:"I need to ___ for my exam tomorrow. Can we go out another day?",o:["revise","pass","take","cheat"],c:0,e:["✅ <em>revise</em> = repasar, estudiar para un examen.","❌ <em>pass</em> = aprobar; no se aprueba \"para\" un examen.","❌ <em>take</em> = rendir; se dice <em>take an exam</em>, sin <em>for</em>.","❌ <em>cheat</em> = copiarse."]},
+{q:"She studied very hard and ___ all her exams.",o:["passed","took","approved","revised"],c:0,e:["✅ <em>pass an exam</em> = aprobar.","❌ <em>took</em> = rindió; no dice si aprobó (y el contexto lo sugiere).","❌ <em>approve</em> no se usa con exámenes. ¡Falso amigo!","❌ <em>revise</em> = repasar; se repasa <em>for</em> un examen."]},
+{q:"Our French teacher ___ us do extra homework every weekend.",o:["made","let","allowed","was allowed"],c:0,e:["✅ <em>make sb do sth</em> = obligar a alguien a hacer algo.","❌ <em>let</em> = dejar; no tiene sentido que \"nos dejara\" hacer tarea extra.","❌ <em>allow</em> necesita <em>to</em>: <em>allowed us to do</em>.","❌ Voz pasiva: no encaja con \"us\"."]},
+{q:"My parents don't ___ me stay out after 11 p.m.",o:["let","allow","make","permit"],c:0,e:["✅ <em>let sb do sth</em> (sin <em>to</em>).","❌ <em>allow</em> necesita <em>to</em>: <em>allow me to stay</em>.","❌ <em>make</em> = obligar; cambia el sentido.","❌ <em>permit</em> también necesita <em>to</em>."]},
+{q:"We ___ use our phones in class. It's against the rules.",o:["aren't allowed to","don't let","aren't let","mustn't to"],c:0,e:["✅ <em>not be allowed to</em> = no tener permiso.","❌ <em>let</em> necesita un objeto: <em>They don't let us use</em>.","❌ <em>let</em> no se usa en pasiva.","❌ Después de <em>mustn't</em> no va <em>to</em>."]},
+{q:"He was ___ from school for fighting. He can't go back.",o:["expelled","punished","failed","misbehaved"],c:0,e:["✅ <em>be expelled</em> = ser expulsado.","❌ <em>punished</em> = castigado, pero no se usa con <em>from school</em>.","❌ <em>failed</em> = desaprobado.","❌ <em>misbehave</em> no se usa en pasiva."]},
+{q:"In the US, the school year is divided into two ___.",o:["semesters","terms","grades","degrees"],c:0,e:["✅ En EE. UU.: dos <em>semesters</em>.","❌ <em>terms</em> son los tres trimestres británicos.","❌ <em>grades</em> = grados / años escolares.","❌ <em>degree</em> = título universitario."]},
+{q:"I'm going to ___ my driving test next week. I hope I pass!",o:["take","pass","approve","give"],c:0,e:["✅ <em>take a test</em> = rendir un examen.","❌ Si fuera <em>pass</em>, no diría después \"I hope I pass\".","❌ <em>approve</em> no se usa con exámenes.","❌ <em>give a test</em> es lo que hace el profesor."]}
+],
+gap:[
+{q:"He was caught trying to ___ in the exam by copying from his neighbour.",a:[["cheat"]],h:["copiarse"],ex:"<em>cheat</em> = copiarse, hacer trampa."},
+{q:"She finished university with a ___ in History.",a:[["degree"]],h:["título universitario"],ex:"<em>degree</em> /dɪˈɡriː/ = título."},
+{q:"Children at primary school are often called ___.",a:[["pupils"]],h:["alumnos"],ex:"<em>pupils</em> en primaria; <em>students</em> en secundaria y universidad."},
+{q:"The ___ teacher is the person in charge of the school.",a:[["head"]],h:["director/a"],ex:"<em>head teacher</em> (o simplemente <em>the head</em>)."},
+{q:"If you ___ in class, the teacher will make you stay behind.",a:[["misbehave"]],h:["portarse mal"],ex:"<em>misbehave</em> /mɪsbɪˈheɪv/ = portarse mal."},
+{q:"In the US, the last year of high school is ___ grade.",a:[["twelfth","12th"]],h:["duodécimo"],ex:"<em>twelfth grade</em> /twelfθ/."},
+{q:"Before starting first grade, American children go to ___.",a:[["kindergarten"]],h:["preescolar"],ex:"<em>kindergarten</em> /ˈkɪndəɡɑːtn/."},
+{q:"In the UK, the school year is divided into three ___.",a:[["terms"]],h:["trimestres"],ex:"<em>terms</em> en el Reino Unido; <em>semesters</em> en EE. UU."},
+{q:"Our IT teacher lets us ___ games every Friday.",a:[["play"]],h:["jugar"],ex:"<em>let sb do sth</em>: infinitivo sin <em>to</em>."},
+{q:"I don't think I'll pass. I'm sure I'm going to ___.",a:[["fail"]],h:["desaprobar"],ex:"<em>fail</em> = desaprobar."},
+{q:"In the US, university is often called ___.",a:[["college"]],h:["universidad"],ex:"<em>college</em> /ˈkɒlɪdʒ/ = educación superior."}
+],
+rightwrong:[
+{q:"I [[approved]] all my exams!",c:false,corr:["passed"],ex:"❌ Aprobar un examen = <em>pass</em>. <em>approve</em> es un falso amigo."},
+{q:"My parents let me [[to go]] to the party.",c:false,corr:["go"],ex:"❌ <em>let sb do sth</em>: sin <em>to</em>."},
+{q:"We aren't allowed [[to wear]] jeans at school.",c:true,corr:null,ex:"✅ Correcto. <em>be allowed + to</em>."},
+{q:"We [[aren't let]] to use calculators in the exam.",c:false,corr:["aren't allowed"],ex:"❌ <em>let</em> no se usa en pasiva. Se dice <em>We aren't allowed to…</em>"},
+{q:"I have to [[take]] an important exam tomorrow.",c:true,corr:null,ex:"✅ Correcto. <em>take an exam</em> = rendir."},
+{q:"The teacher made us [[to write]] it again.",c:false,corr:["write"],ex:"❌ <em>make sb do sth</em>: sin <em>to</em>."},
+{q:"I'm going to [[revise]] for the test this weekend.",c:true,corr:null,ex:"✅ Correcto. <em>revise</em> = repasar para un examen."},
+{q:"She got a [[degree]] in Medicine from Oxford.",c:true,corr:null,ex:"✅ Correcto. <em>degree</em> = título universitario."}
+]}},
+
+'V7B':{name:'Houses',page:162,
+sections:[
+{h:'Where people live',words:[
+['in the country','ɪn ðə ˈkʌntri','en el campo','I live in the country, surrounded by fields.'],
+['on the outskirts (of)','ɒn ði ˈaʊtskɜːts','en las afueras (de)','I live on the outskirts of Oxford.'],
+['in a village / town / city','ɪn ə ˈvɪlɪdʒ','en un pueblo / una ciudad'],
+['on the (east) coast','ɒn ðə kəʊst','en la costa (este)','Cromer is a small town on the east coast.'],
+['on the (second) floor','ɒn ðə flɔː','en el (segundo) piso','I live on the second floor of a block of flats.'],
+['in a suburb','ɪn ə ˈsʌbɜːb','en un barrio residencial de las afueras','Croydon is a suburb of London.']]},
+{h:'Parts of a house',words:[
+['attic','ˈætɪk','altillo, ático (debajo del techo)'],
+['balcony','ˈbælkəni','balcón'],
+['basement','ˈbeɪsmənt','sótano'],
+['chimney','ˈtʃɪmni','chimenea (la estructura en el techo, por donde sale el humo)'],
+['entrance','ˈentrəns','entrada'],
+['gate','ɡeɪt','portón, reja (del jardín)'],
+['ground floor (AmE first floor)','ɡraʊnd ˈflɔː','planta baja'],
+['path','pɑːθ','camino, sendero'],
+['roof','ruːf','techo (exterior de la casa)'],
+['steps','steps','escalones'],
+['terrace / patio','ˈterəs / ˈpætiəʊ','terraza / patio'],
+['top floor','tɒp ˈflɔː','último piso'],
+['wall','wɔːl','pared, muro']]},
+{h:'Describing a house or flat',words:[
+['cottage','ˈkɒtɪdʒ','casa de campo (pequeña y antigua)','I live in a cottage in the country.'],
+['made of stone','meɪd əv stəʊn','de piedra','It’s old and made of stone.'],
+['ceiling','ˈsiːlɪŋ','techo (interior de una habitación)','The rooms have very low ceilings.'],
+['an open fire / fireplace','ˈfaɪəpleɪs','hogar, chimenea (donde se quema leña)','There’s an open fire in the living room.'],
+['cosy','ˈkəʊzi','acogedor','It’s very cosy in the winter.'],
+['modern','ˈmɒdn','moderno','I live in a modern flat in the city centre.'],
+['spacious','ˈspeɪʃəs','amplio, espacioso','It’s spacious and very light.'],
+['light','laɪt','luminoso'],
+['wooden floors','ˈwʊdn flɔːz','pisos de madera','with wooden floors and big windows']]}
+],
+notes:`<div class="warn-block"><b>chimney o fireplace? · roof o ceiling?</b><br><b>chimney</b> = la chimenea <b>sobre el techo</b>, por donde sale el humo. El lugar donde se quema la leña es el <b>fireplace</b> (o <em>open fire</em>). ¡Falso amigo!<br><b>roof</b> = el techo de la casa (afuera) · <b>ceiling</b> = el techo de una habitación (adentro).</div><div class="ok-block"><b>in o on?</b><br><b>in</b> the country · <b>in</b> a village / town / city · <b>in</b> a suburb<br><b>on</b> the coast · <b>on</b> the outskirts · <b>on</b> the second floor<br>🇬🇧 <em>ground floor</em> = 🇺🇸 <em>first floor</em> (planta baja)</div>`,
+story:`<div class="story-card"><div class="story-title">The House of My Dreams</div><div class="story-text">When I was a child, we lived <b>on the outskirts</b> of a big city, <b>on the tenth floor</b> of an ugly block of flats. So I always dreamed of a house <b>in the country</b>.<br><br>Now I live in a small <b>cottage</b> <b>in a village</b> <b>on the west coast</b>. It's old and <b>made of stone</b>, and there's a garden with a stone <b>wall</b> and a wooden <b>gate</b>. A <b>path</b> goes from the gate to three <b>steps</b> and the front <b>entrance</b>.<br><br>Inside, the rooms have low <b>ceilings</b>, but the house is very <b>cosy</b>, especially in winter when we light the <b>open fire</b>. From the garden you can see the smoke coming out of the <b>chimney</b> on the <b>roof</b>. We use the <b>attic</b> as a study and the <b>basement</b> to keep our bikes. In summer we have dinner on the <b>terrace</b>.<br><br>My sister prefers <b>modern</b> flats. Hers is on the <b>top floor</b> of a building in the city centre. It's very <b>light</b> and <b>spacious</b>, with <b>wooden floors</b> and a <b>balcony</b>. We're very different!</div><div class="story-note">💡 <b>on</b> the outskirts / the coast / the tenth floor, pero <b>in</b> the country / a village. Y el humo sale por la <b>chimney</b>, mientras el fuego está en el <b>open fire</b>.</div></div>`,
+bank:{
+choice:[
+{q:"I live ___ the outskirts of Madrid.",o:["on","in","at","by"],c:0,e:["✅ <em>on the outskirts</em> = en las afueras.","❌ Con <em>outskirts</em> la preposición que usa el libro es <em>on</em>.","❌ No se usa <em>at</em> aquí.","❌ <em>by</em> = cerca de; cambia el sentido."]},
+{q:"They live ___ the country, surrounded by fields.",o:["in","on","at","into"],c:0,e:["✅ <em>in the country</em> = en el campo.","❌ <em>on the country</em> no se usa.","❌ <em>at the country</em> no se usa.","❌ <em>into</em> indica movimiento."]},
+{q:"Our flat is ___ the third floor.",o:["on","in","at","over"],c:0,e:["✅ <em>on the (third) floor</em>.","❌ No se dice <em>in the floor</em> para pisos de un edificio.","❌ No se usa <em>at</em>.","❌ <em>over</em> = encima de."]},
+{q:"We keep old boxes and suitcases in the ___, right under the roof.",o:["attic","basement","balcony","path"],c:0,e:["✅ <em>attic</em> = altillo, bajo el techo.","❌ El <em>basement</em> está debajo de la casa.","❌ El <em>balcony</em> está afuera.","❌ <em>path</em> = sendero del jardín."]},
+{q:"There's a ___ under the house where we keep the washing machine.",o:["basement","attic","roof","terrace"],c:0,e:["✅ <em>basement</em> = sótano (debajo de la casa).","❌ <em>attic</em> está arriba, bajo el techo.","❌ <em>roof</em> es el techo exterior.","❌ <em>terrace</em> está afuera."]},
+{q:"Smoke was coming out of the ___ on the roof.",o:["chimney","fireplace","ceiling","gate"],c:0,e:["✅ <em>chimney</em> = la estructura en el techo por donde sale el humo.","❌ El <em>fireplace</em> está adentro de la casa.","❌ <em>ceiling</em> = techo de una habitación.","❌ <em>gate</em> = portón."]},
+{q:"We sat in front of the ___ and the fire kept us warm.",o:["fireplace","chimney","roof","basement"],c:0,e:["✅ <em>fireplace</em> = hogar, donde se enciende el fuego.","❌ <em>chimney</em> es la parte en el techo. ¡Falso amigo!","❌ <em>roof</em> = techo exterior.","❌ <em>basement</em> = sótano."]},
+{q:"The rooms have very low ___ — tall people have to be careful!",o:["ceilings","roofs","walls","steps"],c:0,e:["✅ <em>ceiling</em> = el techo de una habitación (adentro).","❌ <em>roof</em> = el techo de la casa (afuera).","❌ Las <em>walls</em> no son \"bajas\" para la cabeza.","❌ <em>steps</em> = escalones."]},
+{q:"The flat is very ___ — there's lots of space for all of us.",o:["spacious","cosy","light","made of stone"],c:0,e:["✅ <em>spacious</em> = amplio, con mucho espacio.","❌ <em>cosy</em> = acogedor; no habla del tamaño.","❌ <em>light</em> = luminoso.","❌ <em>made of stone</em> = de piedra."]},
+{q:"It's a small, warm room with an open fire and soft armchairs. It's really ___.",o:["cosy","spacious","modern","wooden"],c:0,e:["✅ <em>cosy</em> = acogedor.","❌ <em>spacious</em> contradice \"small\".","❌ Nada indica que sea moderno.","❌ <em>wooden</em> = de madera."]}
+],
+gap:[
+{q:"In American English, the ground floor is called the ___ floor.",a:[["first"]],h:["AmE"],ex:"🇬🇧 <em>ground floor</em> = 🇺🇸 <em>first floor</em>."},
+{q:"Our flat is on the ___ floor, so we have amazing views of the city.",a:[["top"]],h:["último piso"],ex:"<em>top floor</em> = último piso."},
+{q:"Walk up the ___ to the front door.",a:[["steps"]],h:["escalones"],ex:"<em>steps</em> = escalones."},
+{q:"Close the ___ so the dog can't get out into the street.",a:[["gate"]],h:["portón"],ex:"<em>gate</em> = portón / reja del jardín."},
+{q:"We had breakfast outside on the ___.",a:[["terrace","patio","balcony"]],h:["terraza"],ex:"<em>terrace</em> /ˈterəs/ o <em>patio</em>."},
+{q:"It's an old house and it's made of ___.",a:[["stone"]],h:["piedra"],ex:"<em>made of stone</em> = de piedra."},
+{q:"I live in Croydon, a ___ of London.",a:[["suburb"]],h:["barrio de las afueras"],ex:"<em>suburb</em> /ˈsʌbɜːb/."},
+{q:"The flat is very ___ because it has big windows.",a:[["light","bright"]],h:["luminoso"],ex:"<em>light</em> = luminoso."},
+{q:"Rain is coming in! There's a hole in the ___.",a:[["roof"]],h:["techo (exterior)"],ex:"<em>roof</em> = el techo de la casa."},
+{q:"She stood on the ___ outside her bedroom window and waved.",a:[["balcony"]],h:["balcón"],ex:"<em>balcony</em> /ˈbælkəni/."},
+{q:"There's a small stone ___ from the gate to the front door.",a:[["path"]],h:["camino, sendero"],ex:"<em>path</em> /pɑːθ/."}
+],
+rightwrong:[
+{q:"I live [[in]] the coast, near the beach.",c:false,corr:["on"],ex:"❌ <em>on the coast</em>."},
+{q:"Our flat is [[in]] the fifth floor.",c:false,corr:["on"],ex:"❌ <em>on the fifth floor</em>."},
+{q:"We light a fire in the [[chimney]] in the living room every winter.",c:false,corr:["fireplace"],ex:"❌ El fuego se enciende en el <em>fireplace</em>. La <em>chimney</em> está en el techo."},
+{q:"There's a spider on the [[roof]] of my bedroom.",c:false,corr:["ceiling"],ex:"❌ El techo de una habitación es el <em>ceiling</em>."},
+{q:"They live [[in]] a small village near Oxford.",c:true,corr:null,ex:"✅ Correcto. <em>in a village</em>."},
+{q:"The kitchen has [[wooden floors]] and a big window.",c:true,corr:null,ex:"✅ Correcto. <em>wooden floors</em> = pisos de madera."},
+{q:"I live [[on]] the outskirts of the city.",c:true,corr:null,ex:"✅ Correcto. <em>on the outskirts</em>."},
+{q:"We keep our bikes in the [[basement]], under the house.",c:true,corr:null,ex:"✅ Correcto. <em>basement</em> = sótano."}
+]}}
+};
+
+/* Integra el vocabulario con el motor de estudio (teoría → lista de palabras, mismo banco de ejercicios) */
+function vocabCount(u){return VOCAB[u].sections.reduce((n,s)=>n+s.words.length,0)}
+function vocabTheory(u){
+  const v=VOCAB[u];
+  const secs=v.sections.map((s,i)=>`<div class="theory-section"><h2>${i+1} · ${s.h}</h2><div class="table-wrap"><table class="cmp-table vocab-table"><tr><th>English</th><th>Español</th></tr>${s.words.map(([en,ipa,es,ex])=>`<tr><td><span class="vw">${en}</span><span class="ipa">/${ipa}/</span></td><td>${es}${ex?`<span class="vex">${ex}</span>`:''}</td></tr>`).join('')}</table></div></div>`).join('');
+  return `<div class="theory-section"><h2>Vocabulary: ${v.name}</h2><p>Vocabulary Bank, página ${v.page}. Después practicá con los ejercicios y las flashcards.</p></div>${secs}<div class="theory-section"><h2>Para tener en cuenta</h2>${v.notes}</div>`;
+}
+function vocabCards(u,dir){
+  return VOCAB[u].sections.flatMap(s=>s.words.map(([en,ipa,es,ex])=>{
+    const enHtml=`<b>${en}</b><br><span class="ipa">/${ipa}/</span>`;
+    return dir==='es'
+      ?{q:es,a:`${enHtml}${ex?`<br><br><em>${ex}</em>`:''}`}
+      :{q:`${en}<div class="ipa">/${ipa}/</div>`,a:`<b>${es}</b>${ex?`<br><br><em>${ex}</em>`:''}`};
+  }));
+}
+Object.keys(VOCAB).forEach(u=>{
+  const v=VOCAB[u];
+  v.bank.gap.forEach(g=>{g.ins=g.ins||'Completá con la palabra correcta.'});
+  UNITS[u]='Vocabulary: '+v.name;
+  THEORY[u]=vocabTheory(u);
+  STORIES[u]=v.story;
+  BANK[u]=v.bank;
+});
+
 /* =====================  UTILIDADES  ===================== */
 function shuffle(arr){for(let i=arr.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[arr[i],arr[j]]=[arr[j],arr[i]]}return arr}
 function pick(arr,n){return shuffle([...arr]).slice(0,Math.min(arr.length,n))}
@@ -664,21 +1429,39 @@ function materialize(item){
 /* =====================  ESTADO Y NAVEGACIÓN  ===================== */
 let state={currentUnit:null,currentEx:0,answers:[],score:0,quiz:[],mode:'normal',filterType:'all',quizSize:15,examMode:false,timeLimit:null,startTime:null,timerInterval:null,wrongAnswers:[],answered:false,fcIndex:0};
 function $(id){return document.getElementById(id)}
-function showPanel(id){document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));$(id).classList.add('active');window.scrollTo({top:0,behavior:'smooth'})}
+function showPanel(id){document.body.dataset.view=id;document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));$(id).classList.add('active');window.scrollTo({top:0,behavior:'smooth'})}
 function stopTimer(){clearInterval(state.timerInterval);state.timerInterval=null}
-function goHome(){stopTimer();showPanel('panel-home');state.currentUnit=null}
+function goHome(){stopTimer();showPanel('panel-home');state.currentUnit=null;delete document.body.dataset.unit}
 
 document.querySelectorAll('.unit-card').forEach(c=>{
   const u=c.dataset.unit,n=POOLS[u].length;
   const cnt=c.querySelector('.ex-count');if(cnt)cnt.textContent=`✍️ ${n} ejercicios`;
+  const wc=c.querySelector('.word-count');if(wc)wc.textContent=`📘 ${vocabCount(u)} palabras`;
   c.addEventListener('click',()=>openStudy(u));
   c.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openStudy(u)}});
 });
 
-function openStudy(u){stopTimer();state.currentUnit=u;state.currentEx=0;state.answers=[];state.score=0;state.wrongAnswers=[];state.quiz=[];state.mode='normal';state.examMode=false;state.filterType='all';$('subpanel-theory').innerHTML=THEORY[u];$('subpanel-exercises').innerHTML='';$('subpanel-flashcards').innerHTML='';$('subpanel-story').innerHTML='';switchSubtab('theory');showPanel('panel-study')}
+function isDark(){const t=document.documentElement.dataset.theme;return t?t==='dark':matchMedia('(prefers-color-scheme: dark)').matches}
+$('theme-btn').addEventListener('click',()=>{const t=isDark()?'light':'dark';document.documentElement.dataset.theme=t;try{localStorage.setItem('ef-theme',t)}catch(e){}});
 
-function switchSubtab(n){document.querySelectorAll('.tab-btn').forEach(b=>b.classList.toggle('active',b.dataset.subtab===n));['theory','exercises','flashcards','story'].forEach(s=>$('subpanel-'+s).style.display=s===n?'block':'none');if(n==='exercises'&&$('subpanel-exercises').innerHTML==='')renderExerciseSetup();if(n==='flashcards'&&$('subpanel-flashcards').innerHTML==='')renderFlashcards();if(n==='story'&&$('subpanel-story').innerHTML==='')$('subpanel-story').innerHTML=STORIES[state.currentUnit]}
-document.querySelectorAll('.tab-btn').forEach(b=>b.addEventListener('click',()=>switchSubtab(b.dataset.subtab)));
+const SECTIONS={
+  grammar:{title:'Grammar Practice — Exam Study Prep',tagline:'Tiempos pasados · Hábitos · Voz pasiva · Verbos modales · First &amp; Second Conditional'},
+  vocab:{title:'Vocabulary Practice — Exam Study Prep',tagline:'Sport · Relationships · Cinema · The body · Education · Houses'}
+};
+function switchSection(n){
+  document.querySelectorAll('.home-tabs .tab-btn').forEach(b=>b.classList.toggle('active',b.dataset.section===n));
+  Object.keys(SECTIONS).forEach(k=>$('section-'+k).style.display=k===n?'block':'none');
+  $('main-title').textContent=SECTIONS[n].title;$('main-tagline').innerHTML=SECTIONS[n].tagline;
+  document.body.dataset.section=n;
+  try{localStorage.setItem('ef-section',n)}catch(e){}
+}
+document.querySelectorAll('.home-tabs .tab-btn').forEach(b=>b.addEventListener('click',()=>switchSection(b.dataset.section)));
+try{const saved=localStorage.getItem('ef-section');if(saved&&SECTIONS[saved])switchSection(saved)}catch(e){}
+
+function openStudy(u){stopTimer();state.currentUnit=u;state.currentEx=0;state.answers=[];state.score=0;state.wrongAnswers=[];state.quiz=[];state.mode='normal';state.examMode=false;state.filterType='all';$('subpanel-theory').innerHTML=THEORY[u];$('subpanel-exercises').innerHTML='';$('subpanel-flashcards').innerHTML='';$('subpanel-story').innerHTML='';const isV=!!VOCAB[u];document.body.dataset.unit=u;document.body.dataset.section=isV?'vocab':'grammar';$('study-icon').textContent=isV?u.slice(1):u;$('study-kind').textContent=isV?'Vocabulary · Unidad '+u.slice(1):'Grammar · '+u;$('study-title').textContent=isV?VOCAB[u].name:UNITS[u];$('topbar-title').textContent=isV?VOCAB[u].name:UNITS[u];document.querySelector('#panel-study [data-subtab=theory]').textContent=isV?'📘 Palabras':'📖 Teoría';document.querySelector('#panel-study [data-subtab=story]').textContent=isV?'📚 Lectura':'📚 Historia';switchSubtab('theory');showPanel('panel-study')}
+
+function switchSubtab(n){document.querySelectorAll('#panel-study .tab-btn').forEach(b=>b.classList.toggle('active',b.dataset.subtab===n));['theory','exercises','flashcards','story'].forEach(s=>$('subpanel-'+s).style.display=s===n?'block':'none');if(n==='exercises'&&$('subpanel-exercises').innerHTML==='')renderExerciseSetup();if(n==='flashcards'&&$('subpanel-flashcards').innerHTML==='')renderFlashcards();if(n==='story'&&$('subpanel-story').innerHTML==='')$('subpanel-story').innerHTML=STORIES[state.currentUnit]}
+document.querySelectorAll('#panel-study .tab-btn').forEach(b=>b.addEventListener('click',()=>switchSubtab(b.dataset.subtab)));
 
 function renderExerciseSetup(){
   const el=$('subpanel-exercises'),pool=POOLS[state.currentUnit];
@@ -870,14 +1653,17 @@ function renderResults(){
 
 function renderFlashcards(){
   state.fcIndex=0;
-  const cards=FLASHCARDS[state.currentUnit],el=$('subpanel-flashcards');
+  const u=state.currentUnit,isV=!!VOCAB[u],dir=state.fcDir||'en';
+  const cards=isV?shuffle(vocabCards(u,dir)):FLASHCARDS[u],el=$('subpanel-flashcards');
+  const dirHtml=isV?`<div class="mode-selector fc-dir"><button class="mode-btn ${dir==='en'?'active':''}" data-dir="en">Inglés → Español</button><button class="mode-btn ${dir==='es'?'active':''}" data-dir="es">Español → Inglés</button></div>`:'';
   function showCard(){
     const c=cards[state.fcIndex];
-    el.innerHTML=`<div class="theory-section"><h2>Flashcards de gramática</h2><p style="color:var(--ink-mute)">Tarjeta ${state.fcIndex+1} de ${cards.length} · Clic en la tarjeta para voltearla</p></div><div class="flashcard" id="fc-card" role="button" tabindex="0"><div class="fc-question">${c.q}</div><div class="fc-answer" style="display:none">${c.a}</div></div><div class="nav-buttons"><button class="nav-btn secondary" id="fc-prev" ${state.fcIndex===0?'disabled':''}>← Anterior</button><button class="nav-btn" id="fc-next">${state.fcIndex===cards.length-1?'Reiniciar':'Siguiente →'}</button></div>`;
+    el.innerHTML=`<div class="theory-section"><h2>Flashcards de ${isV?'vocabulario':'gramática'}</h2><p style="color:var(--ink-mute)">Tarjeta ${state.fcIndex+1} de ${cards.length} · Clic en la tarjeta para voltearla${isV?' · Orden aleatorio':''}</p>${dirHtml}</div><div class="flashcard" id="fc-card" role="button" tabindex="0"><div class="fc-question">${c.q}</div><div class="fc-answer" style="display:none">${c.a}</div></div><div class="nav-buttons"><button class="nav-btn secondary" id="fc-prev" ${state.fcIndex===0?'disabled':''}>← Anterior</button><button class="nav-btn" id="fc-next">${state.fcIndex===cards.length-1?'Reiniciar':'Siguiente →'}</button></div>`;
     const card=$('fc-card');
     const flip=()=>{const q=card.querySelector('.fc-question'),a=card.querySelector('.fc-answer');const showA=a.style.display==='none';a.style.display=showA?'block':'none';q.style.display=showA?'none':'block'};
     card.addEventListener('click',flip);
     card.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();flip()}});
+    el.querySelectorAll('[data-dir]').forEach(b=>b.addEventListener('click',()=>{state.fcDir=b.dataset.dir;renderFlashcards()}));
     $('fc-prev').addEventListener('click',()=>{if(state.fcIndex>0){state.fcIndex--;showCard()}});
     $('fc-next').addEventListener('click',()=>{state.fcIndex=state.fcIndex<cards.length-1?state.fcIndex+1:0;showCard()});
   }
